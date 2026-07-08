@@ -1,0 +1,20 @@
+<svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kamobo">
+  <defs>
+    <linearGradient id="kg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34E0B4"/>
+      <stop offset="1" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+  <!-- Mark: modular node "k" — a stem node with two branching solutions -->
+  <g>
+    <rect x="4" y="8" width="48" height="48" rx="14" fill="url(#kg)"/>
+    <g stroke="#07130E" stroke-width="4.5" stroke-linecap="round" fill="none">
+      <line x1="20" y1="18" x2="20" y2="46"/>
+      <path d="M20 33 L33 20"/>
+      <path d="M20 31 L34 45"/>
+    </g>
+    <circle cx="20" cy="33" r="4" fill="#07130E"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="66" y="41" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-size="30" font-weight="600" letter-spacing="-0.5" fill="#E9F1EE">kamobo</text>
+</svg>
