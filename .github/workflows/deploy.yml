@@ -1,0 +1,36 @@
+name: Deploy to DigitalOcean
+
+# Triggers a fresh DigitalOcean App Platform deployment whenever main changes.
+# The app (kamobo-web) pulls this repo at build time, so create-deployment
+# re-fetches the latest commit and rebuilds the static site.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Never run two deploys at once; let an in-flight deploy finish.
+concurrency:
+  group: deploy-digitalocean
+  cancel-in-progress: false
+
+env:
+  APP_ID: 266261e0-953f-4627-acd2-b47921716243
+
+jobs:
+  deploy:
+    name: Deploy static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Trigger App Platform deployment
+        run: doctl apps create-deployment "$APP_ID" --force-rebuild --wait
+
+      - name: Report result
+        run: |
+          echo "Deployment finished. Recent deployments:"
+          doctl apps list-deployments "$APP_ID" --format ID,Cause,Progress,Phase,Created --no-header | head -3
