@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private LLM Deployment &amp; RAG Platforms | Kamobo</title>
+  <meta name="description" content="Private LLM deployment and RAG platforms from a UK consultancy. Self-hosted AI on vLLM and Ollama, so your documents stay inside your own boundary." />
+  <meta name="theme-color" content="#0A0F1C" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/services/private-llm-rag/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Private LLM Deployment &amp; RAG Platforms | Kamobo" />
+  <meta property="og:description" content="Private LLM deployment and RAG platforms from a UK consultancy. Self-hosted AI on vLLM and Ollama, so your documents stay inside your own boundary." />
+  <meta property="og:url" content="https://kamobo.co.uk/services/private-llm-rag/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamobo.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://kamobo.co.uk/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Private LLM & RAG Platforms", "item": "https://kamobo.co.uk/services/private-llm-rag/" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Private LLM & RAG Platforms",
+        "serviceType": "Private LLM deployment and RAG implementation consultancy",
+        "description": "Private LLM deployment and RAG platforms from a UK consultancy. Self-hosted AI on vLLM and Ollama, so your documents stay inside your own boundary.",
+        "provider": {
+          "@type": ["Organization", "ProfessionalService"],
+          "name": "Kamobo Ltd",
+          "url": "https://kamobo.co.uk/",
+          "email": "hello@kamobo.co.uk",
+          "logo": "https://kamobo.co.uk/assets/logo.svg",
+          "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+        },
+        "areaServed": [{ "@type": "Country", "name": "United Kingdom" }, "Remote worldwide"],
+        "url": "https://kamobo.co.uk/services/private-llm-rag/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a private LLM and how is it different from ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A private LLM is a large language model that runs on infrastructure you control: your cloud subscription, a private AI cloud, or your own hardware. Unlike public ChatGPT, your prompts, documents and logs never pass to a third-party provider, and nothing you type is used to train someone else's model. You choose the model, the region and the retention policy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a self-hosted LLM secure enough for confidential company data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, when it is engineered properly. Self-hosting removes the biggest exposure, which is sending confidential data to an external API, but you still need network isolation, access control and audit logging around the model. We build those controls in from day one, and platforms we have engineered have passed ISO 27001 audits twice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does private LLM deployment cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our engagements are anchored to senior engineering from £550 a day, with fixed-price packages quoted after a scoping call. Running costs then depend on model size and traffic: a small pilot can run on a single modest GPU, while a busy production platform needs dedicated inference capacity. We size the infrastructure to the workload, not the other way round."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is retrieval-augmented generation (RAG)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "RAG connects a language model to your own content. When someone asks a question, the system retrieves the most relevant passages from your documents, and the model answers using that material, citing where it came from. Because the knowledge lives in an index rather than in the model, updating a document updates the answers. No retraining required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should we use RAG or fine-tuning for our company data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start with RAG for factual company knowledge: it stays current, it can cite sources, and it is far cheaper to update. Fine-tuning earns its keep when you need a model to adopt a specific style, format or narrow task behaviour. The two combine well, but in our experience most business problems are retrieval problems first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can open-source models really match ChatGPT-quality answers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For many business tasks, yes, especially when the model is grounded in your documents through good retrieval. And where a frontier model genuinely is the better fit, we stay provider-agnostic: Claude, GPT or Gemini through private endpoints, or a self-hosted model where data cannot leave your boundary. We test candidate models against your own data before committing."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#cloud">Cloud</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#work">Proof</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="mailto:hello@kamobo.co.uk">Book a call</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/services/">Services</a></p>
+        <h1>Private LLM deployment and RAG platforms on infrastructure you control</h1>
+        <p class="lede">Kamobo is a UK engineering consultancy for private LLM deployment: self-hosted models, retrieval pipelines and secure chat over your own documents, running in your cloud, a private AI cloud, or on your own hardware. We already run this in production, so you get an architecture that works rather than a proof of concept that stalls.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:hello@kamobo.co.uk">Book a scoping call</a>
+          <a class="btn btn-ghost" href="/#services">All services <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>In production</strong><span>RAG platform live for a global education body</span></div>
+          <div><strong>2×</strong><span>ISO 27001 audits passed by platforms we engineered</span></div>
+          <div><strong>18+ yrs</strong><span>Founder-led production engineering</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">What we deliver</p>
+          <h2>Self-hosted LLMs, RAG implementation and secure enterprise AI</h2>
+          <p class="section-sub">Three capabilities, engineered as one platform. Each can also stand alone if you already have the others.</p>
+        </header>
+        <div class="cases">
+          <article class="case">
+            <h3>Self-hosted LLM deployment</h3>
+            <p>We stand up open-source models on vLLM, Ollama or llama.cpp, with GPU infrastructure defined in Terraform. The platform runs in your cloud subscription, a private AI cloud, or on-premise hardware, whichever your security posture demands. Where a frontier model fits better, we deploy Claude, GPT or Gemini through private endpoints instead.</p>
+            <ul class="chips"><li>vLLM</li><li>Ollama</li><li>llama.cpp</li></ul>
+          </article>
+          <article class="case">
+            <h3>RAG implementation, end to end</h3>
+            <p>Ingestion, chunking, embeddings, private vector stores and retrieval tuning, built as one pipeline rather than a stack of demos. We measure answer quality against evaluation sets drawn from your real questions before anything reaches your users, so the platform earns trust instead of assuming it.</p>
+            <ul class="chips"><li>Private vector stores</li><li>Embeddings</li><li>Evaluation</li></ul>
+          </article>
+          <article class="case">
+            <h3>A private ChatGPT alternative for your team</h3>
+            <p>A secure chat interface over your policies, contracts and internal knowledge, with role-based access and full audit logging. Your staff get fast, cited answers; your confidential documents stay inside your boundary and out of public AI tools. Isolated use cases each get their own dedicated vector store.</p>
+            <ul class="chips"><li>Access control</li><li>Audit logging</li><li>UK GDPR</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">How we work</p>
+          <h2>From scoping call to production inference</h2>
+        </header>
+        <div class="principles">
+          <div class="principle"><span class="principle-no">01</span><h3>Scope</h3><p>A scoping call to map your use cases, data sources and security constraints. We agree what success looks like and whether a frontier model or a self-hosted one fits your risk profile.</p></div>
+          <div class="principle"><span class="principle-no">02</span><h3>Design</h3><p>We select the model and its home: your cloud, a private AI cloud, or custom hardware. GPU infrastructure is defined in Terraform, so the whole platform is reproducible and reviewable.</p></div>
+          <div class="principle"><span class="principle-no">03</span><h3>Build and evaluate</h3><p>We build the retrieval pipeline, wire in your document sources, and test retrieval and answer quality against evaluation sets before rollout. Security controls go in from the start, not at the end.</p></div>
+          <div class="principle"><span class="principle-no">04</span><h3>Hand over or stay managed</h3><p>You get documentation, runbooks and a clean handover. If you would rather we keep running it, our LLM Platform Care managed plan starts at £595 a month for monitoring plus a senior engineering day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Proof</p>
+          <h2>Private AI already running in production</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3>Multi-use-case RAG for a global education body</h3><p>A production RAG and LLM platform running in a private AI cloud, serving multiple isolated use cases, each with its own dedicated private vector store. Inference runs on vLLM, Ollama and llama.cpp, on GPU infrastructure defined in Terraform.</p><ul class="chips"><li>vLLM</li><li>Terraform</li></ul></article>
+          <article class="case"><h3>AI agents live for 18,000+ users</h3><p>On a live online platform with 18,000+ registered users and 500+ daily actives, our AI agents triage support, monitor logs and raise code fixes as pull requests, with every change approved by a human before it ships.</p><ul class="chips"><li>AI agents</li><li>Human-in-the-loop</li></ul></article>
+          <article class="case"><h3>Audited security, twice over</h3><p>Platforms we engineered have passed ISO 27001 audits twice. We treat network isolation, secrets handling and audit trails as part of the build, not something bolted on for the certificate.</p><ul class="chips"><li>ISO 27001</li><li>Access control</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Common questions about private LLM deployment</h2>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is a private LLM and how is it different from ChatGPT?</summary><p>A private LLM is a large language model that runs on infrastructure you control: your cloud subscription, a private AI cloud, or your own hardware. Unlike public ChatGPT, your prompts, documents and logs never pass to a third-party provider, and nothing you type is used to train someone else's model. You choose the model, the region and the retention policy.</p></details>
+          <details class="faq-item"><summary>Is a self-hosted LLM secure enough for confidential company data?</summary><p>Yes, when it is engineered properly. Self-hosting removes the biggest exposure, which is sending confidential data to an external API, but you still need network isolation, access control and audit logging around the model. We build those controls in from day one, and platforms we have engineered have passed ISO 27001 audits twice.</p></details>
+          <details class="faq-item"><summary>How much does private LLM deployment cost?</summary><p>Our engagements are anchored to senior engineering from £550 a day, with fixed-price packages quoted after a scoping call. Running costs then depend on model size and traffic: a small pilot can run on a single modest GPU, while a busy production platform needs dedicated inference capacity. We size the infrastructure to the workload, not the other way round.</p></details>
+          <details class="faq-item"><summary>What is retrieval-augmented generation (RAG)?</summary><p>RAG connects a language model to your own content. When someone asks a question, the system retrieves the most relevant passages from your documents, and the model answers using that material, citing where it came from. Because the knowledge lives in an index rather than in the model, updating a document updates the answers. No retraining required.</p></details>
+          <details class="faq-item"><summary>Should we use RAG or fine-tuning for our company data?</summary><p>Start with RAG for factual company knowledge: it stays current, it can cite sources, and it is far cheaper to update. Fine-tuning earns its keep when you need a model to adopt a specific style, format or narrow task behaviour. The two combine well, but in our experience most business problems are retrieval problems first.</p></details>
+          <details class="faq-item"><summary>Can open-source models really match ChatGPT-quality answers?</summary><p>For many business tasks, yes, especially when the model is grounded in your documents through good retrieval. And where a frontier model genuinely is the better fit, we stay provider-agnostic: Claude, GPT or Gemini through private endpoints, or a self-hosted model where data cannot leave your boundary. We test candidate models against your own data before committing.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Related</p>
+          <h2>Related services</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3><a href="/services/ai-agent-development/">AI Agent Development</a></h3><p>Agents that act on your systems, with a human approving every change before it ships.</p></article>
+          <article class="case"><h3><a href="/services/azure-data-engineering/">Azure Data Engineering</a></h3><p>The data platforms and pipelines that make retrieval accurate in the first place.</p></article>
+          <article class="case"><h3><a href="/services/terraform-azure-landing-zones/">Terraform &amp; Azure Landing Zones</a></h3><p>The secure, codified cloud foundations your private AI platform runs on.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2>Run AI on your own terms</h2>
+        <p>Tell us about the documents you want to put to work and the constraints you operate under. We will come back with a straight view on model choice, infrastructure and cost.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+          <a class="btn btn-ghost btn-lg" href="/">Back to kamobo.co.uk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.svg" alt="Kamobo" width="150" height="40" />
+        <p>Software, APIs &amp; cloud — with AI embedded.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#about">About</a>
+        <a href="mailto:hello@kamobo.co.uk">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> Kamobo Ltd. All rights reserved.</span>
+      <span>Built in the UK.</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

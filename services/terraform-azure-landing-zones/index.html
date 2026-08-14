@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Azure Landing Zone Consultancy | Kamobo</title>
+  <meta name="description" content="UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day." />
+  <meta name="theme-color" content="#0A0F1C" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/services/terraform-azure-landing-zones/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Azure Landing Zone Consultancy | Kamobo" />
+  <meta property="og:description" content="UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day." />
+  <meta property="og:url" content="https://kamobo.co.uk/services/terraform-azure-landing-zones/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamobo.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://kamobo.co.uk/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Terraform & Azure Landing Zones", "item": "https://kamobo.co.uk/services/terraform-azure-landing-zones/" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Terraform & Azure Landing Zones",
+        "serviceType": "Azure landing zone and Terraform consultancy",
+        "description": "UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day.",
+        "provider": {
+          "@type": ["Organization", "ProfessionalService"],
+          "name": "Kamobo Ltd",
+          "url": "https://kamobo.co.uk/",
+          "email": "hello@kamobo.co.uk",
+          "logo": "https://kamobo.co.uk/assets/logo.svg",
+          "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+        },
+        "areaServed": [{ "@type": "Country", "name": "United Kingdom" }, "Remote worldwide"],
+        "url": "https://kamobo.co.uk/services/terraform-azure-landing-zones/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is an Azure landing zone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An Azure landing zone is the governed foundation you deploy before any workloads: management groups, subscriptions, networking, identity, policy and monitoring, arranged so new applications land in a secure, consistent environment. Microsoft's Cloud Adoption Framework defines the reference design; we implement it in Terraform and right-size it to your organisation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should we use Terraform or Bicep for Azure landing zones?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's accelerators support both. Bicep suits Azure-only teams already invested in ARM templates. We recommend Terraform when you want one language across clouds and SaaS providers, a mature module ecosystem, and explicit state that makes drift visible. We build in Terraform on Azure Verified Modules because it also covers the rest of your stack, from DNS to GitHub."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build an Azure landing zone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A right-sized build for a small estate takes days of engineering plus a few design workshops. A full platform build with pipelines, a policy baseline and subscription vending typically runs several weeks. The biggest variables are network topology and identity decisions, which is why we start with a short scoping call before quoting a timeline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does an Azure landing zone cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There are two costs: the build and the Azure run-rate. Our engagements are day-rate anchored senior engineering from £550 per day, with fixed prices quoted after a scoping call. The platform run-rate covers things like firewalls, logging and Defender for Cloud, and we size it deliberately so a small estate is not paying enterprise prices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do smaller organisations need a full enterprise landing zone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The enterprise reference architecture exists for large estates. A smaller organisation usually needs a subset: production separated from non-production, role-based access, a policy baseline, budgets and centralised logging. We right-size the design so you get the governance without the overhead, and because it is all code, growing into more later is straightforward."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is subscription vending?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subscription vending automates how new Azure subscriptions are requested, created and governed. Instead of hand-building each one, a pipeline stamps out subscriptions with networking, policy, budgets and access already applied. It is how platform teams hand application teams a compliant landing zone in hours rather than weeks, and we implement it in Terraform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you bring an existing Azure environment under a landing zone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, brownfield work is common. We map what exists, import resources into Terraform state, then introduce management groups, policy and networking incrementally so nothing breaks in flight. Most estates can adopt landing zone governance without a rebuild, though some workloads are worth migrating into fresh, vended subscriptions along the way."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#cloud">Cloud</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#work">Proof</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="mailto:hello@kamobo.co.uk">Book a call</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/services/">Services</a></p>
+        <h1>Azure landing zone consultancy, built in Terraform</h1>
+        <p class="lede">Kamobo is a UK Azure landing zone consultancy that delivers in Terraform. We design CAF-aligned foundations and build them as code: management groups, Azure Policy, hub-spoke networking, identity with PIM, and subscription vending. You end up with a governed platform your own team can run and extend, not a diagram and an invoice.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:hello@kamobo.co.uk">Book a scoping call</a>
+          <a class="btn btn-ghost" href="/#services">All services <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>18+ years</strong><span>of production engineering experience</span></div>
+          <div><strong>2×</strong><span>ISO 27001 audits passed by platforms we engineered</span></div>
+          <div><strong>70%</strong><span>total cost of ownership cut in one migration we led</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">What we deliver</p>
+          <h2>Landing zones built with Terraform and Azure Verified Modules</h2>
+          <p class="section-sub">Everything is code from day one, so every environment after the first is a pull request, not a project.</p>
+        </header>
+        <div class="cases">
+          <article class="case">
+            <h3>CAF-aligned landing zone design and build</h3>
+            <p>We take Microsoft's Cloud Adoption Framework as the reference, then make the decisions that actually shape your platform: management group hierarchy, subscription layout, hub-spoke network topology, private endpoints, Entra ID roles with PIM, and a Defender for Cloud baseline. The output is a working platform deployed from a pipeline, with the design decisions written down.</p>
+            <ul class="chips"><li>Cloud Adoption Framework</li><li>Hub-spoke networking</li><li>Azure Policy</li></ul>
+          </article>
+          <article class="case">
+            <h3>Subscription vending and platform automation</h3>
+            <p>Subscription vending turns "can we have an environment?" from a weeks-long ticket queue into an automated request. We build vending pipelines on Azure Verified Modules that stamp out subscriptions with networking, policy, budgets and access already in place, so application teams onboard in hours and the platform team keeps control.</p>
+            <ul class="chips"><li>Subscription vending</li><li>Azure Verified Modules</li><li>GitHub Actions</li></ul>
+          </article>
+          <article class="case">
+            <h3>Infrastructure as code for existing Azure estates</h3>
+            <p>Already in Azure, but hand-built? We import brownfield estates into Terraform state, refactor them into reusable modules, and wire up plan-and-apply pipelines with review gates. Drift becomes visible, changes become reviewable, and the portal stops being the source of truth.</p>
+            <ul class="chips"><li>Brownfield imports</li><li>Terraform modules</li><li>CI/CD pipelines</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">How we work</p>
+          <h2>Scoping call to handover, with your engineers involved throughout</h2>
+        </header>
+        <div class="principles">
+          <div class="principle"><span class="principle-no">01</span><h3>Scope</h3><p>A short call, then a written view of your estate, the decisions ahead and a fixed price or day-rate estimate. No obligation, and no forty-page proposal.</p></div>
+          <div class="principle"><span class="principle-no">02</span><h3>Design</h3><p>Focused workshops on the areas that matter: subscriptions, network topology, identity, policy and operations. Each decision is recorded with its trade-offs, so the design survives staff changes.</p></div>
+          <div class="principle"><span class="principle-no">03</span><h3>Build</h3><p>We build the platform in Terraform from pipelines, never by hand in the portal, and review the code with your engineers as we go. Policy, vending and monitoring land as code alongside the infrastructure.</p></div>
+          <div class="principle"><span class="principle-no">04</span><h3>Hand over</h3><p>Documentation, runbooks and pairing sessions so your team can operate the platform with confidence. If you would rather we kept running it, our CloudOps managed plan starts at £595 per month.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Proof</p>
+          <h2>Outcomes from production Azure estates</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3>Enterprise foundations, delivered as code</h3><p>Our enterprise work covers Azure landing zones, subscription vending, hub-spoke networks, private endpoints, PIM and Defender for Cloud, all managed as Terraform and deployed from pipelines rather than portals.</p><ul class="chips"><li>Subscription vending</li><li>Private endpoints</li></ul></article>
+          <article class="case"><h3>Security that stands up to audit</h3><p>Platforms we engineered have passed ISO 27001 audits twice. Landing zone governance is a large part of why: policy baselines, least-privilege access with PIM, and infrastructure history you can actually show an auditor.</p><ul class="chips"><li>ISO 27001</li><li>Azure Policy</li></ul></article>
+          <article class="case"><h3>Terraform well beyond the basics</h3><p>We used Terraform to build GPU infrastructure in a private AI cloud for a production LLM platform serving a global education body, with isolated environments and dedicated private vector stores per use case.</p><ul class="chips"><li>GPU infrastructure</li><li>Private AI cloud</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Common questions about Azure landing zone consultancy</h2>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is an Azure landing zone?</summary><p>An Azure landing zone is the governed foundation you deploy before any workloads: management groups, subscriptions, networking, identity, policy and monitoring, arranged so new applications land in a secure, consistent environment. Microsoft's Cloud Adoption Framework defines the reference design; we implement it in Terraform and right-size it to your organisation.</p></details>
+          <details class="faq-item"><summary>Should we use Terraform or Bicep for Azure landing zones?</summary><p>Microsoft's accelerators support both. Bicep suits Azure-only teams already invested in ARM templates. We recommend Terraform when you want one language across clouds and SaaS providers, a mature module ecosystem, and explicit state that makes drift visible. We build in Terraform on Azure Verified Modules because it also covers the rest of your stack, from DNS to GitHub.</p></details>
+          <details class="faq-item"><summary>How long does it take to build an Azure landing zone?</summary><p>A right-sized build for a small estate takes days of engineering plus a few design workshops. A full platform build with pipelines, a policy baseline and subscription vending typically runs several weeks. The biggest variables are network topology and identity decisions, which is why we start with a short scoping call before quoting a timeline.</p></details>
+          <details class="faq-item"><summary>How much does an Azure landing zone cost?</summary><p>There are two costs: the build and the Azure run-rate. Our engagements are day-rate anchored senior engineering from £550 per day, with fixed prices quoted after a scoping call. The platform run-rate covers things like firewalls, logging and Defender for Cloud, and we size it deliberately so a small estate is not paying enterprise prices.</p></details>
+          <details class="faq-item"><summary>Do smaller organisations need a full enterprise landing zone?</summary><p>No. The enterprise reference architecture exists for large estates. A smaller organisation usually needs a subset: production separated from non-production, role-based access, a policy baseline, budgets and centralised logging. We right-size the design so you get the governance without the overhead, and because it is all code, growing into more later is straightforward.</p></details>
+          <details class="faq-item"><summary>What is subscription vending?</summary><p>Subscription vending automates how new Azure subscriptions are requested, created and governed. Instead of hand-building each one, a pipeline stamps out subscriptions with networking, policy, budgets and access already applied. It is how platform teams hand application teams a compliant landing zone in hours rather than weeks, and we implement it in Terraform.</p></details>
+          <details class="faq-item"><summary>Can you bring an existing Azure environment under a landing zone?</summary><p>Yes, brownfield work is common. We map what exists, import resources into Terraform state, then introduce management groups, policy and networking incrementally so nothing breaks in flight. Most estates can adopt landing zone governance without a rebuild, though some workloads are worth migrating into fresh, vended subscriptions along the way.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Related</p>
+          <h2>Related services</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3><a href="/services/devops-cicd-gitops/">DevOps, CI/CD &amp; GitOps</a></h3><p>Pipelines, GitOps workflows and release automation for the platforms your landing zone hosts.</p></article>
+          <article class="case"><h3><a href="/services/azure-cost-optimization/">Azure Cost Optimization</a></h3><p>Audits that have found £400k+ a year of combined Azure savings across client estates.</p></article>
+          <article class="case"><h3><a href="/services/azure-data-engineering/">Azure Data Engineering</a></h3><p>Synapse, Databricks and Data Factory platforms with self-hosted integration runtimes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2>Ready for an Azure foundation your team can own?</h2>
+        <p>Tell us where your estate is today, whether that is an empty tenant or five years of portal-built history. We will come back with a straight view of scope, approach and price.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+          <a class="btn btn-ghost btn-lg" href="/">Back to kamobo.co.uk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.svg" alt="Kamobo" width="150" height="40" />
+        <p>Software, APIs &amp; cloud — with AI embedded.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#about">About</a>
+        <a href="mailto:hello@kamobo.co.uk">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> Kamobo Ltd. All rights reserved.</span>
+      <span>Built in the UK.</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

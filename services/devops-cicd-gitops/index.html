@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps Consultancy UK: CI/CD &amp; GitOps | Kamobo</title>
+  <meta name="description" content="DevOps consultancy in the UK: we build and repair CI/CD pipelines with GitHub Actions, Azure DevOps, Argo CD and Terraform. Founder-led, from £550/day." />
+  <meta name="theme-color" content="#0A0F1C" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/services/devops-cicd-gitops/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DevOps Consultancy UK: CI/CD &amp; GitOps | Kamobo" />
+  <meta property="og:description" content="DevOps consultancy in the UK: we build and repair CI/CD pipelines with GitHub Actions, Azure DevOps, Argo CD and Terraform. Founder-led, from £550/day." />
+  <meta property="og:url" content="https://kamobo.co.uk/services/devops-cicd-gitops/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamobo.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://kamobo.co.uk/services/" },
+          { "@type": "ListItem", "position": 3, "name": "DevOps, CI/CD & GitOps", "item": "https://kamobo.co.uk/services/devops-cicd-gitops/" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "DevOps, CI/CD & GitOps",
+        "serviceType": "DevOps consulting",
+        "description": "DevOps consultancy in the UK: we build and repair CI/CD pipelines with GitHub Actions, Azure DevOps, Argo CD and Terraform. Founder-led, from £550/day.",
+        "provider": {
+          "@type": ["Organization", "ProfessionalService"],
+          "name": "Kamobo Ltd",
+          "url": "https://kamobo.co.uk/",
+          "email": "hello@kamobo.co.uk",
+          "logo": "https://kamobo.co.uk/assets/logo.svg",
+          "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+        },
+        "areaServed": [{ "@type": "Country", "name": "United Kingdom" }, "Remote worldwide"],
+        "url": "https://kamobo.co.uk/services/devops-cicd-gitops/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What does a DevOps consultant actually do?", "acceptedAnswer": { "@type": "Answer", "text": "We look at how your code gets from a developer's laptop to production, then remove the friction: manual deployments, slow builds, flaky tests, missing environments. In practice that means building or repairing CI/CD pipelines, introducing infrastructure as code, and adding the monitoring that tells you a release worked. We do the engineering ourselves rather than leaving you a slide deck." } },
+          { "@type": "Question", "name": "How much does DevOps consulting cost in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Our senior engineering starts from £550 per day, and we quote fixed prices for well-defined work after a scoping call. A pipeline audit with quick wins is typically a few days. A full CI/CD or GitOps build depends on how many services and environments you run, so we put a written quote in front of you before any work starts." } },
+          { "@type": "Question", "name": "What is GitOps and do we need it?", "acceptedAnswer": { "@type": "Answer", "text": "GitOps makes a Git repository the single source of truth for what runs in your clusters. An agent such as Argo CD or Flux continuously pulls changes and corrects drift, so production always matches what is in Git. It suits Kubernetes teams, especially with multiple clusters or strict audit requirements. If you deploy to VMs or managed services, a well-built conventional pipeline is often simpler, and we will say so." } },
+          { "@type": "Question", "name": "How long does it take to set up a CI/CD pipeline?", "acceptedAnswer": { "@type": "Answer", "text": "A dependable build, test and deploy pipeline for a single application usually takes days rather than months. Multi-service platforms with several environments, database migrations and compliance gates take longer, typically a few weeks. We stage the work so a working pipeline lands early and improvements follow incrementally." } },
+          { "@type": "Question", "name": "Should we use GitHub Actions or Azure DevOps?", "acceptedAnswer": { "@type": "Answer", "text": "Both are capable, and we use both daily. GitHub Actions is the natural fit when your code already lives on GitHub and you want its large marketplace of reusable actions. Azure DevOps remains strong for enterprise scenarios: fine-grained release approvals, Azure Artifacts feeds and teams already working in Azure Boards. We recommend based on your codebase and constraints, not our preference." } },
+          { "@type": "Question", "name": "Can you improve our existing pipeline rather than rebuild it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is usually the right call. We audit the current pipeline end to end and measure where time and failures concentrate, then fix the worst offenders first: caching, parallel jobs, flaky test triage and artefact reuse. A rebuild only makes sense when the platform underneath it is being replaced." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#cloud">Cloud</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#work">Proof</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="mailto:hello@kamobo.co.uk">Book a call</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/services/">Services</a></p>
+        <h1>A UK DevOps consultancy for CI/CD pipelines and GitOps</h1>
+        <p class="lede">Kamobo is a UK DevOps consultancy that designs, builds and repairs the path from commit to production. We work hands-on with GitHub Actions, Azure DevOps, Argo CD, Flux and Terraform, for teams in the UK and remote worldwide. Founder-led, with 18+ years of production engineering behind every engagement.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:hello@kamobo.co.uk">Book a scoping call</a>
+          <a class="btn btn-ghost" href="/#services">All services <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>18+ yrs</strong><span>production engineering experience</span></div>
+          <div><strong>2×</strong><span>ISO 27001 audits passed by platforms we engineered</span></div>
+          <div><strong>70%</strong><span>total cost of ownership cut by a migration we led</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">What we deliver</p>
+          <h2>CI/CD consulting, GitOps and deployment automation</h2>
+          <p class="section-sub">Whether you are starting from manual deployments or scaling an estate of Kubernetes clusters, the work falls into three lanes.</p>
+        </header>
+        <div class="cases">
+          <article class="case">
+            <h3>CI/CD pipeline design and build</h3>
+            <p>We build pipelines that carry a change from commit to production without a human copying files: build, test, scan, package, release. Caching, parallel jobs and environment promotion are set up from day one, so builds stay fast as the codebase grows.</p>
+            <ul class="chips"><li>GitHub Actions</li><li>Azure Pipelines</li><li>GitLab CI</li></ul>
+          </article>
+          <article class="case">
+            <h3>GitOps for Kubernetes</h3>
+            <p>Pull-based deployments with Argo CD or Flux, so clusters always match what is in Git. We design the repository structure, promotion workflow and drift detection, and wire in secrets management that stands up to an audit.</p>
+            <ul class="chips"><li>Argo CD</li><li>Flux</li><li>Helm</li></ul>
+          </article>
+          <article class="case">
+            <h3>Pipeline rescue and release engineering</h3>
+            <p>Already have a pipeline that hurts? We audit it end to end, then attack what costs you most: slow builds, flaky tests, manual release steps and rollbacks nobody trusts. Small measured changes first, with before-and-after numbers.</p>
+            <ul class="chips"><li>Docker</li><li>Kubernetes</li><li>Terraform</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">How we work</p>
+          <h2>From pipeline audit to automated releases</h2>
+        </header>
+        <div class="principles">
+          <div class="principle"><span class="principle-no">01</span><h3>Scoping call</h3><p>A short call plus read access to your repositories and pipelines. You get a written plan with effort and price, not a sales deck.</p></div>
+          <div class="principle"><span class="principle-no">02</span><h3>Audit and quick wins</h3><p>We map the route from commit to production and measure where the time goes. The highest-value fixes ship first: caching, parallelism, test triage.</p></div>
+          <div class="principle"><span class="principle-no">03</span><h3>Build with your team</h3><p>We implement in your repositories through pull requests your engineers review, so the knowledge stays in your team rather than in our heads.</p></div>
+          <div class="principle"><span class="principle-no">04</span><h3>Handover or stay on</h3><p>Every engagement closes with documentation and runbooks. If you want cover afterwards, our CloudOps managed plan starts at £595 per month for monitoring plus one senior engineering day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Proof</p>
+          <h2>Pipelines and platforms we run in production</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3>AI agents that ship through CI</h3><p>On a live online platform with 18,000+ registered users and 500+ daily actives, our AI agents monitor logs, triage support and raise code fixes as pull requests. Humans approve every change, and every change goes through the pipeline.</p><ul class="chips"><li>Pull requests</li><li>CI/CD</li></ul></article>
+          <article class="case"><h3>GPU infrastructure defined in Terraform</h3><p>The production RAG platform we built for a global education body runs in a private AI cloud. All of its GPU infrastructure is declared in Terraform, with isolated use cases and dedicated private vector stores per workload.</p><ul class="chips"><li>Terraform</li><li>vLLM</li></ul></article>
+          <article class="case"><h3>Enterprise Azure, delivered as code</h3><p>Azure landing zones, subscription vending, hub-spoke networks, private endpoints, PIM and Defender for Cloud, built for enterprise clients. Platforms we engineered have passed ISO 27001 audits twice.</p><ul class="chips"><li>Azure</li><li>Terraform</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Common questions about DevOps consultancy in the UK</h2>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What does a DevOps consultant actually do?</summary><p>We look at how your code gets from a developer's laptop to production, then remove the friction: manual deployments, slow builds, flaky tests, missing environments. In practice that means building or repairing CI/CD pipelines, introducing infrastructure as code, and adding the monitoring that tells you a release worked. We do the engineering ourselves rather than leaving you a slide deck.</p></details>
+          <details class="faq-item"><summary>How much does DevOps consulting cost in the UK?</summary><p>Our senior engineering starts from £550 per day, and we quote fixed prices for well-defined work after a scoping call. A pipeline audit with quick wins is typically a few days. A full CI/CD or GitOps build depends on how many services and environments you run, so we put a written quote in front of you before any work starts.</p></details>
+          <details class="faq-item"><summary>What is GitOps and do we need it?</summary><p>GitOps makes a Git repository the single source of truth for what runs in your clusters. An agent such as Argo CD or Flux continuously pulls changes and corrects drift, so production always matches what is in Git. It suits Kubernetes teams, especially with multiple clusters or strict audit requirements. If you deploy to VMs or managed services, a well-built conventional pipeline is often simpler, and we will say so.</p></details>
+          <details class="faq-item"><summary>How long does it take to set up a CI/CD pipeline?</summary><p>A dependable build, test and deploy pipeline for a single application usually takes days rather than months. Multi-service platforms with several environments, database migrations and compliance gates take longer, typically a few weeks. We stage the work so a working pipeline lands early and improvements follow incrementally.</p></details>
+          <details class="faq-item"><summary>Should we use GitHub Actions or Azure DevOps?</summary><p>Both are capable, and we use both daily. GitHub Actions is the natural fit when your code already lives on GitHub and you want its large marketplace of reusable actions. Azure DevOps remains strong for enterprise scenarios: fine-grained release approvals, Azure Artifacts feeds and teams already working in Azure Boards. We recommend based on your codebase and constraints, not our preference.</p></details>
+          <details class="faq-item"><summary>Can you improve our existing pipeline rather than rebuild it?</summary><p>Yes, and it is usually the right call. We audit the current pipeline end to end and measure where time and failures concentrate, then fix the worst offenders first: caching, parallel jobs, flaky test triage and artefact reuse. A rebuild only makes sense when the platform underneath it is being replaced.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Related</p>
+          <h2>Related services</h2>
+        </header>
+        <div class="cases">
+          <article class="case"><h3><a href="/services/terraform-azure-landing-zones/">Terraform &amp; Azure Landing Zones</a></h3><p>Pipelines need solid ground. We design enterprise Azure landing zones, subscription vending and hub-spoke networks, all defined in Terraform.</p></article>
+          <article class="case"><h3><a href="/services/application-performance-troubleshooting/">Application Performance &amp; Root-Cause</a></h3><p>When releases land but the platform misbehaves, we reverse-engineer the whole stack to find the real cause and fix it.</p></article>
+          <article class="case"><h3><a href="/services/azure-cost-optimization/">Azure Cost Optimization</a></h3><p>Delivery and spend are linked. We audit Azure estates and have found £400k+ a year of combined savings across two clients.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2>Make your releases boring</h2>
+        <p>Email a rough picture of your stack and where releases hurt. We will suggest a sensible starting point, sized honestly, and quote it fixed or by the day.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+          <a class="btn btn-ghost btn-lg" href="/">Back to kamobo.co.uk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.svg" alt="Kamobo" width="150" height="40" />
+        <p>Software, APIs &amp; cloud — with AI embedded.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#services">Services</a>
+        <a href="/#ai">AI</a>
+        <a href="/#managed">Managed</a>
+        <a href="/#products">Products</a>
+        <a href="/#about">About</a>
+        <a href="mailto:hello@kamobo.co.uk">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> Kamobo Ltd. All rights reserved.</span>
+      <span>Built in the UK.</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
