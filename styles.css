@@ -301,7 +301,7 @@ img, svg { display: block; max-width: 100%; }
   .product-visual { order: -1; }
   .about-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav, .header-inner > .btn-primary { display: none; }
   .nav-toggle {
     display: inline-flex; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px;
