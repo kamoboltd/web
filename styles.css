@@ -162,6 +162,15 @@ img, svg { display: block; max-width: 100%; }
   border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: rotate(40deg);
 }
 
+/* ===== Stat row (Agentic AI) ===== */
+.stat-row { display: flex; flex-wrap: wrap; gap: 24px 56px; margin: 0 0 44px; }
+.stat-row div { display: flex; flex-direction: column; }
+.stat-row strong {
+  font-family: var(--font-head); font-size: clamp(28px, 4vw, 40px); font-weight: 700; line-height: 1.1;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat-row span { font-size: 14px; color: var(--muted-2); margin-top: 4px; max-width: 220px; }
+
 /* ===== Cloud tiering ===== */
 .cloud-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .cloud-card {
