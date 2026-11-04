@@ -55,7 +55,37 @@ whenever either file changes:
     python scripts/fingerprint.py
 
 That rewrites `styles.css?v=` and `main.js?v=` across every HTML file from a SHA-1 of the
-asset's own bytes, so the query only changes when the asset does.
+asset's own bytes, so the query only changes when the asset does. It covers every page and exits
+non-zero if a page has no stylesheet link, which is how a generated page that lost its
+`<head>` would get caught.
+
+Run `scripts/protect-email.py` first, then `scripts/fingerprint.py`:
+
+    python scripts/protect-email.py && python scripts/fingerprint.py
+
+### Why the contact links carry HTML entities
+
+Scrape Shield's **Email Address Obfuscation** is on for this zone. It rewrites every
+`href="mailto:..."` to `/cdn-cgi/l/email-protection` and replaces the visible address with
+`[email protected]`, which is what the contact page's own `<h2>` rendered as. Because every
+call to action on this site is a `mailto:`, the booking path only worked when Cloudflare's
+decode script ran.
+
+The documented `<!--email_off-->` opt-out **does not work here**: the comment is stripped
+from the response without being honoured. Measured against the live zone instead, the one
+form that survives is an entity-encoded scheme plus an entity-encoded `@`:
+
+    href="&#109;ailto:hello&#64;kamobo.co.uk"     survives
+    href="mailto:hello&#64;kamobo.co.uk"          rewritten
+    text  hello&#64;kamobo.co.uk                  survives
+    text  hello@kamobo.co.uk                      rewritten
+
+The HTML parser resolves character references in attribute values and text before anything
+uses them, so the links work natively with JavaScript off. `protect-email.py` applies this,
+skips `<script>` blocks so the JSON-LD stays valid JSON, and is idempotent.
+
+The cleaner fix is to turn Email Address Obfuscation off under **Scrape Shield** in the
+Cloudflare dashboard, after which the script is a harmless no-op.
 
 ### If the site 404s or Cloudflare returns a 1016
 
