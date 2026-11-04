@@ -16,5 +16,5 @@
     <circle cx="20" cy="33" r="4" fill="#07130E"/>
   </g>
   <!-- Wordmark -->
-  <text x="66" y="41" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-size="30" font-weight="600" letter-spacing="-0.5" fill="#E9F1EE">kamobo</text>
+  <text x="66" y="41" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-size="30" font-weight="600" letter-spacing="-0.5" fill="#0C1F2C">kamobo</text>
 </svg>
