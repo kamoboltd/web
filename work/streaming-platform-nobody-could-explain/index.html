@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A streaming platform nobody left in the building could explain | Kamobo</title>
+  <meta name="description" content="Reverse-engineering an undocumented video streaming platform, load testing it to find the real bottleneck, and re-platforming it for a 70% lower cost of ownership." />
+  <meta name="theme-color" content="#FBFAF8" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/work/streaming-platform-nobody-could-explain/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A streaming platform nobody left in the building could explain | Kamobo" />
+  <meta property="og:description" content="Reverse-engineering an undocumented video streaming platform, load testing it to find the real bottleneck, and re-platforming it for a 70% lower cost of ownership." />
+  <meta property="og:url" content="https://kamobo.co.uk/work/streaming-platform-nobody-could-explain/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/retainers/">Retainers</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="availability">Available now</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/work/">Work</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <article class="study">
+          <h1>A streaming platform nobody left in the building could explain</h1>
+          <p class="study-sub">Taking over, diagnosing and re-platforming a system we did not build.</p>
+          <div class="study-grid">
+            <div>
+              <div class="study-metrics">
+                <div><strong>70%</strong><span>lower total cost of ownership over three years</span></div>
+                <div><strong>Hours to minutes</strong><span>CI build times after pipeline work</span></div>
+              </div>
+              <h4>The problem</h4>
+              <p>A self-hosted video streaming platform, built by people who had moved on, with no current architecture documentation and no reliable account of how it was deployed. It was slow under load and nobody could say which part was the bottleneck.</p>
+              <h4>What we did</h4>
+              <p>Reverse-engineered the microservice architecture and the build and deploy process from scratch, then audited the infrastructure for real capacity rather than assumed capacity. Load tested with K6 to find where it actually broke, which turned out to be mis-tuned NGINX, an under-spec'd RabbitMQ and badly sized components in both directions. Restructured the services to remove the bottlenecks, replaced an inherited Puppet codebase with Ansible playbooks, and moved the platform from on-premise to autoscaling Azure defined in Terraform.</p>
+              <h4>Where it landed</h4>
+              <p>A platform that scales with demand, a 70% reduction in total cost of ownership measured over three years, and CI pipelines that finish in minutes rather than hours.</p>
+              <div class="takeaways">
+                <h4>What to take from this</h4>
+                <ul>
+                  <li>Load test before you re-architect. Over-provisioned components hide the real limit as effectively as under-provisioned ones.</li>
+                  <li>"It needs more servers" is usually wrong. On this platform the binding constraint was configuration, not capacity.</li>
+                  <li>Inheriting a system is a research job first and an engineering job second. Budget for the reading.</li>
+                  <li>Lifting a badly understood system into the cloud unchanged just moves the bill. Fix the bottlenecks first, then move it.</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="fact">
+              <dl>
+                <div><dt>Sector</dt><dd>Media and video streaming</dd></div>
+                <div><dt>Starting point</dt><dd>On-premise, undocumented</dd></div>
+                <div><dt>Engagement</dt><dd>Diagnosis, then re-platform</dd></div>
+                <div><dt>Named</dt><dd>No</dd></div>
+              </dl>
+            </aside>
+          </div>
+          <div class="study-used">
+            <p class="trust-label">Services used</p>
+            <ul class="ticks">
+              <li><a href="/services/application-performance-troubleshooting/">Performance and root-cause work</a></li>
+              <li><a href="/services/terraform-azure-landing-zones/">Azure landing zones and Terraform</a></li>
+              <li><a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a></li>
+            </ul>
+          </div>
+        </article>
+        <p class="meta" style="margin-top:48px"><a href="/work/" style="color:var(--clay);border-bottom:1px solid currentColor">All case studies</a></p>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2><a href="mailto:hello@kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">hello@kamobo.co.uk</a></h2>
+        <p>Tell us what is actually going wrong. One email, a couple of paragraphs.</p>
+        <p>We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.</p>
+        <p class="cta-sub">No sales sequence. A reply from the person who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello@kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

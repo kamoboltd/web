@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=d7ef2d81" />
+  <link rel="stylesheet" href="styles.css?v=006a5fba" />
 
   <script type="application/ld+json">
   {
@@ -61,13 +61,13 @@
         <img src="assets/logo.svg" alt="Kamobo" width="180" height="48" />
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#review">Azure Review</a>
-        <a href="#how">Ways to work</a>
-        <a href="#services">Services</a>
-        <a href="#proof">Proof</a>
-        <a href="#retainers">Retainers</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/retainers/">Retainers</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
       </nav>
       <p class="availability">Available now</p>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -210,7 +210,7 @@
 
         <p class="engage-note"><strong>On the day rate.</strong> £850 buys one senior engineer, not a firm. There is no sales team, no delivery pyramid and no margin on anyone else's time, which is why the number sits below what a consultancy of the same seniority quotes. Longer committed engagements are priced below it again.</p>
 
-        <p class="engage-note">Cost optimisation work starts with a <strong>free initial assessment</strong>: if we cannot find savings worth more than our fee, we will say so and there is nothing to pay. <a href="#contact">Ask about your case</a>.</p>
+        <p class="engage-note">Cost optimisation work starts with a <strong>free initial assessment</strong>: if we cannot find savings worth more than our fee, we will say so and there is nothing to pay. <a href="/pricing/">All of it on one page</a>.</p>
       </div>
     </section>
 
@@ -223,41 +223,6 @@
           <p class="section-sub">Three days, a fixed price, and a written answer to the question you cannot currently answer: what is actually wrong with this estate, what is it costing, and what would I fix first.</p>
         </header>
 
-        <article class="panel">
-          <dl class="spec">
-            <div><dt>Price</dt><dd>£2,500</dd></div>
-            <div><dt>Duration</dt><dd>3 working days</dd></div>
-            <div><dt>Access</dt><dd>Read-only</dd></div>
-            <div><dt>Output</dt><dd>Written findings</dd></div>
-          </dl>
-
-          <p>Most people who call us already suspect something: the bill is climbing, the deployments are fragile, the security score is stuck, or the person who built it has gone. What they do not have is evidence. Three days of read-only access is usually enough to turn a suspicion into a ranked list with numbers against it.</p>
-
-          <h3>What you get</h3>
-          <ul class="ticks">
-            <li>A full review of the estate: architecture, networking, identity and access, policy and governance</li>
-            <li>Cost analysis with the specific savings available and what each one is worth a year</li>
-            <li>Security and resilience findings, ranked by what would actually hurt</li>
-            <li>A prioritised list of fixes, each sized in days, so you can choose what to do and who does it</li>
-            <li>A walkthrough call to argue with the findings before they are final</li>
-          </ul>
-
-          <h3>What is not included</h3>
-          <ul class="crosses">
-            <li>Implementing the fixes. That is a separate piece of work, scoped from the findings</li>
-            <li>Changes of any kind during the review. Access is read-only and stays that way</li>
-            <li>Procurement advice, licence resale or anything we would earn a margin on</li>
-          </ul>
-
-          <p><strong>The fee comes off the build.</strong> If you decide to have us do the work and we start within 30 days, the £2,500 is credited in full against it. If you take the report to your own team or another supplier instead, that is a perfectly good outcome and the report is yours either way.</p>
-
-          <p>Before any of it, a <strong>free 45-minute call</strong> to work out whether a review is even the right thing. Sometimes it obviously is not, and we will say so.</p>
-
-          <div class="product-links">
-            <a class="btn btn-accent" href="mailto:hello@kamobo.co.uk?subject=Azure%20Review">Book the 45-minute call</a>
-            <span class="product-note">Three days of a senior engineer, at the day rate below.</span>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -362,114 +327,6 @@
           <p class="section-sub">Clients are described rather than named, because most of this sits under an NDA. The numbers are real and we will walk you through any of them on a call.</p>
         </header>
 
-        <article class="study reveal">
-          <h3>An Azure bill that had quietly grown by six figures</h3>
-          <p class="study-sub">Cloud cost reduction for a global accountancy training organisation.</p>
-          <div class="study-grid">
-            <div>
-              <div class="study-metrics">
-                <div><strong>£150,000</strong><span>a year removed from the Azure bill</span></div>
-                <div><strong>Hundreds</strong><span>of orphaned resources deleted</span></div>
-              </div>
-              <h4>The problem</h4>
-              <p>Spend had grown faster than anyone could explain. Nobody owned the bill end to end, several third parties had built into the estate over the years, and the finance question ("why is this going up?") had no technical answer.</p>
-              <h4>What we did</h4>
-              <p>Started with people rather than dashboards: interviewed the third parties and the internal team to find out what was actually in use and what nobody would miss. Then moved virtual machines onto reserved instances where the usage pattern justified it, applied savings plans to app services, and removed hundreds of orphaned resources that were still being paid for.</p>
-              <h4>Where it landed</h4>
-              <p>A recurring saving of £150,000 a year, and a cost picture the team could keep current themselves.</p>
-              <div class="takeaways">
-                <h4>What to take from this</h4>
-                <ul>
-                  <li>Most cloud overspend is not inefficiency, it is abandoned work nobody has permission to delete.</li>
-                  <li>Interviews find more savings than tooling does, because the tooling cannot tell you what is no longer needed.</li>
-                  <li>Reserved instances only pay off where the usage pattern is genuinely stable. Buy them for the wrong workload and you have just prepaid for waste.</li>
-                  <li>A saving that nobody can maintain comes back within a year. Leave the team the workbook.</li>
-                </ul>
-              </div>
-            </div>
-            <aside class="fact">
-              <dl>
-                <div><dt>Sector</dt><dd>Professional education, global</dd></div>
-                <div><dt>Platform</dt><dd>Microsoft Azure</dd></div>
-                <div><dt>Engagement</dt><dd>Cost optimisation</dd></div>
-                <div><dt>Named</dt><dd>No. Most of our work sits under NDA</dd></div>
-              </dl>
-            </aside>
-          </div>
-        </article>
-
-        <article class="study">
-          <h3>A streaming platform nobody left in the building could explain</h3>
-          <p class="study-sub">Taking over, diagnosing and re-platforming a system we did not build.</p>
-          <div class="study-grid">
-            <div>
-              <div class="study-metrics">
-                <div><strong>70%</strong><span>lower total cost of ownership over three years</span></div>
-                <div><strong>Hours to minutes</strong><span>CI build times after pipeline work</span></div>
-              </div>
-              <h4>The problem</h4>
-              <p>A self-hosted video streaming platform, built by people who had moved on, with no current architecture documentation and no reliable account of how it was deployed. It was slow under load and nobody could say which part was the bottleneck.</p>
-              <h4>What we did</h4>
-              <p>Reverse-engineered the microservice architecture and the build and deploy process from scratch, then audited the infrastructure for real capacity rather than assumed capacity. Load tested with K6 to find where it actually broke, which turned out to be mis-tuned NGINX, an under-spec'd RabbitMQ and badly sized components in both directions. Restructured the services to remove the bottlenecks, replaced an inherited Puppet codebase with Ansible playbooks, and moved the platform from on-premise to autoscaling Azure defined in Terraform.</p>
-              <h4>Where it landed</h4>
-              <p>A platform that scales with demand, a 70% reduction in total cost of ownership measured over three years, and CI pipelines that finish in minutes rather than hours.</p>
-              <div class="takeaways">
-                <h4>What to take from this</h4>
-                <ul>
-                  <li>Load test before you re-architect. Over-provisioned components hide the real limit as effectively as under-provisioned ones.</li>
-                  <li>"It needs more servers" is usually wrong. On this platform the binding constraint was configuration, not capacity.</li>
-                  <li>Inheriting a system is a research job first and an engineering job second. Budget for the reading.</li>
-                  <li>Lifting a badly understood system into the cloud unchanged just moves the bill. Fix the bottlenecks first, then move it.</li>
-                </ul>
-              </div>
-            </div>
-            <aside class="fact">
-              <dl>
-                <div><dt>Sector</dt><dd>Media and video streaming</dd></div>
-                <div><dt>Starting point</dt><dd>On-premise, undocumented</dd></div>
-                <div><dt>Engagement</dt><dd>Diagnosis, then re-platform</dd></div>
-                <div><dt>Named</dt><dd>No</dd></div>
-              </dl>
-            </aside>
-          </div>
-        </article>
-
-        <article class="study">
-          <h3>A private AI platform for documents that cannot leave the building</h3>
-          <p class="study-sub">Self-hosted inference and RAG for a global professional education body.</p>
-          <div class="study-grid">
-            <div>
-              <div class="study-metrics">
-                <div><strong>Zero</strong><span>third-party inference APIs in the data path</span></div>
-                <div><strong>One per use case</strong><span>isolated platform and private vector store</span></div>
-              </div>
-              <h4>The problem</h4>
-              <p>Real demand for retrieval over internal documents, and an absolute constraint that those documents could not be sent to a third-party model API. Several separate use cases, each with its own sensitivity, which could not be allowed to see each other's data.</p>
-              <h4>What we did</h4>
-              <p>Built GPU-accelerated Azure infrastructure defined in Terraform and Ansible, running self-hosted inference on vLLM, Ollama and llama.cpp. Added a document ingestion pipeline, vector storage on Postgres with pgvector plus Chroma and LanceDB, Redis for caching and RabbitMQ for message handling, behind a clustered NGINX reverse proxy. Built the API layer and a React chat front end with single sign-on and a configuration page. Every use case runs on its own isolated platform with its own dedicated private vector store, so data never crosses between them. Zero trust and least privilege throughout, containerised, automated with GitHub Actions, observable through Grafana.</p>
-              <h4>Where it landed</h4>
-              <p>In production, serving several use cases, with scale handled by adding nodes rather than rebuilding.</p>
-              <div class="takeaways">
-                <h4>What to take from this</h4>
-                <ul>
-                  <li>"We cannot use the API models" is a platform problem, not a reason to abandon the use case.</li>
-                  <li>Isolation per use case costs more than one shared index and is usually the only answer that survives a security review.</li>
-                  <li>Self-hosted inference is an infrastructure project wearing an AI hat. Most of the work is GPU capacity, networking and identity.</li>
-                  <li>Put the configuration in a page someone else can operate, or you become the dependency.</li>
-                </ul>
-              </div>
-            </div>
-            <aside class="fact">
-              <dl>
-                <div><dt>Sector</dt><dd>Professional education, global</dd></div>
-                <div><dt>Constraint</dt><dd>No data to third-party APIs</dd></div>
-                <div><dt>Engagement</dt><dd>Design, build, operate</dd></div>
-                <div><dt>Named</dt><dd>No</dd></div>
-              </dl>
-            </aside>
-          </div>
-        </article>
-
 
         <div class="stack">
           <p class="stack-label">What we reach for</p>
@@ -521,146 +378,7 @@
           </article>
         </div>
 
-        <div class="qualify">
-          <h3>You should talk to us if</h3>
-          <ul class="ticks">
-            <li>You want a named engineer who stays on the work, not a team that rotates</li>
-            <li>You have inherited something and nobody left can explain how it works</li>
-            <li>Your cloud bill is growing and the answer keeps being "it is complicated"</li>
-            <li>You want to own the Terraform afterwards rather than rent it from a supplier</li>
-            <li>You need AI in the business but the data cannot leave your tenancy</li>
-            <li>You want someone who will tell you when two days would do instead of two months</li>
-          </ul>
-        </div>
-
-        <p class="products-more">If what you need is on the right-hand list above, say so and we will tell you who to ask instead. <a href="#contact">Either way, it is a short conversation</a>.</p>
-      </div>
-    </section>
-
-    <!-- ===== Retainers ===== -->
-    <section class="section" id="retainers">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Someone senior who already knows your estate</h2>
-          <p class="section-sub">A retainer buys you a set number of senior days each month and a standing claim on them. Monitoring and routine watching are handled by our own agents, so your budget pays for improvements rather than for someone staring at a dashboard.</p>
-        </header>
-
-        <div class="cases">
-          <article class="case">
-            <h3>CloudOps</h3>
-            <p>Terraform estates kept honest: drift detection, provider and module upgrades raised as reviewable pull requests, security posture and cost guardrails.</p>
-            <ul class="chips"><li>Drift detection</li><li>Upgrades</li><li>Guardrails</li></ul>
-          </article>
-          <article class="case">
-            <h3>FinOps as a service</h3>
-            <p>Continuous cost governance: monthly spend reviews, commitment management, anomaly alerts and cost workbooks that stay current.</p>
-            <ul class="chips"><li>Monthly review</li><li>Commitments</li><li>Alerts</li></ul>
-          </article>
-          <article class="case">
-            <h3>DataOps</h3>
-            <p>Pipelines that keep flowing: failure triage, schema-drift fixes, performance tuning and a monthly platform health report.</p>
-            <ul class="chips"><li>Triage</li><li>Schema drift</li><li>Reporting</li></ul>
-          </article>
-          <article class="case">
-            <h3>AgentOps</h3>
-            <p>For the agents we build: observability, prompt and model updates as the frontier moves, guardrail audits and incident response.</p>
-            <ul class="chips"><li>Monitoring</li><li>Model updates</li><li>Guardrails</li></ul>
-          </article>
-          <article class="case">
-            <h3>LLM platform care</h3>
-            <p>Private LLM and RAG estates kept sharp: model refreshes, re-indexing, security patching and throughput tuning.</p>
-            <ul class="chips"><li>Re-indexing</li><li>Patching</li><li>Tuning</li></ul>
-          </article>
-          <article class="case">
-            <h3>Application care</h3>
-            <p>Applications we build, kept shipping: support, dependency and security updates, small features and uptime monitoring.</p>
-            <ul class="chips"><li>Support</li><li>Updates</li><li>Uptime</li></ul>
-          </article>
-        </div>
-
-        <p class="products-more">Plans run from <strong>£595 a month</strong> (monitoring plus one senior day) to <strong>£3,450 a month</strong> (six days plus a quarterly roadmap session). Three-month minimum, then thirty days' notice. <a href="#contact">Ask which tier fits</a>.</p>
-      </div>
-    </section>
-
-    <!-- ===== How we work ===== -->
-    <section class="section section-alt" id="approach">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Four things you can hold us to</h2>
-        </header>
-        <div class="principles">
-          <div class="principle">
-            <span class="principle-no">01</span>
-            <h3>You get the senior person</h3>
-            <p>The engineer who scopes your work is the engineer who does it. Nothing is sold by one person and delivered by another you have never met.</p>
-          </div>
-          <div class="principle">
-            <span class="principle-no">02</span>
-            <h3>Everything as code, everything yours</h3>
-            <p>Infrastructure, pipelines and configuration live in your version control, documented. If you stop working with us tomorrow, your team can still run it.</p>
-          </div>
-          <div class="principle">
-            <span class="principle-no">03</span>
-            <h3>People approve, agents propose</h3>
-            <p>Every AI system we ship has guardrails, an audit trail and a human on the merge button. We will not put something in your estate that acts without being asked.</p>
-          </div>
-          <div class="principle">
-            <span class="principle-no">04</span>
-            <h3>We tell you when it is not worth it</h3>
-            <p>If two days would fix what you were going to spend two months on, we will say so. If we are the wrong people, we will say that too.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Who you work with ===== -->
-    <section class="section" id="who">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>The person who scopes it is the person who builds it</h2>
-        </header>
-        <div class="principal">
-          <div>
-            <p class="about-lead">Kamobo is led by James Dettmer, and James does the work.</p>
-            <p>Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that time has been spent inside other organisations' estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money.</p>
-            <p>Where a piece of work genuinely needs more than one pair of hands, we bring in associates we have delivered with before, and we name them before they start. What we do not do is sell you a senior engineer and staff the work with somebody else.</p>
-            <p>He also builds and runs Kamobo's own software, which is the honest test of any advice we give: GrassrootsDNA is a multi-tenant SaaS that real clubs depend on, and the AI agents we build for clients are the same ones that keep our own platforms running.</p>
-          </div>
-          <aside class="principal-card">
-            <dl>
-              <div><dt>Based</dt><dd>Hertfordshire, UK</dd></div>
-              <div><dt>Working</dt><dd>Remote, UK and worldwide</dd></div>
-              <div><dt>Experience</dt><dd>18+ years in production</dd></div>
-              <div><dt>Certifications</dt><dd>Nutanix NCP, VMware VSP4 and VSTP4, Cisco CCNA</dd></div>
-              <div><dt>Clearance</dt><dd>None held</dd></div>
-              <div><dt>Contracts</dt><dd>Comfortable under NDA</dd></div>
-            </dl>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div>
-          <h2>Kamobo Ltd</h2>
-          <p class="about-lead">A UK consultancy for cloud, data and AI work, with eighteen years of production engineering behind every engagement.</p>
-          <p>We have spent most of that time inside other people's estates: a FTSE 100 property and logistics business, a European energy supplier, a UK financial services firm, a global professional education body, a 250-staff law firm. Usually brought in when something needed building properly, or when something built badly had started to hurt.</p>
-          <p>We also build and run our own software, which keeps us honest. GrassrootsDNA is a multi-tenant SaaS that real clubs depend on, and the AI agents we sell are the same ones that keep our own platforms running. We are recommending things we live with, not things we read about.</p>
-          <p>Work is UK and remote worldwide. We are comfortable under NDA, and most of what we do never gets talked about publicly.</p>
-        </div>
-        <aside class="about-facts">
-          <dl>
-            <div><dt>Company</dt><dd>Kamobo Ltd, United Kingdom</dd></div>
-            <div><dt>Experience</dt><dd>18+ years, founder-led</dd></div>
-            <div><dt>Focus</dt><dd>Azure, data platforms, AI</dd></div>
-            <div><dt>Engagements</dt><dd>Daily, fixed price or retained</dd></div>
-            <div><dt>Day rate</dt><dd>£850, less on longer commitments</dd></div>
-            <div><dt>Availability</dt><dd>Taking on new work now</dd></div>
-            <div><dt>Contact</dt><dd>hello@kamobo.co.uk</dd></div>
-          </dl>
-        </aside>
+        <p class="products-more">If what you need is on the right-hand list above, say so and we will tell you who to ask instead. <a href="/how-we-work/">How we work, in four things you can hold us to</a>.</p>
       </div>
     </section>
 
@@ -677,25 +395,54 @@
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.svg" alt="Kamobo" width="150" height="40" />
-        <p>Cloud, data and AI consultancy. By the day, the project or the month.</p>
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#how">Ways to work</a>
-        <a href="/services/">Services</a>
-        <a href="#proof">Proof</a>
-        <a href="#retainers">Retainers</a>
-        <a href="#about">About</a>
-        <a href="mailto:hello@kamobo.co.uk">Contact</a>
-      </nav>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
     </div>
     <div class="wrap footer-bottom">
-      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number 16579058. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
       <span>hello@kamobo.co.uk</span>
     </div>
   </footer>
+
+  <script src="/main.js?v=a37c46f1" defer></script>
+</body>
+</html>
 
   <script src="main.js?v=a37c46f1" defer></script>
 </body>

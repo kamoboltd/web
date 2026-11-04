@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A private AI platform for documents that cannot leave the building | Kamobo</title>
+  <meta name="description" content="Self-hosted vLLM and Ollama inference on GPU infrastructure in Terraform, with every use case isolated in its own private vector store." />
+  <meta name="theme-color" content="#FBFAF8" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/work/private-ai-platform-zero-trust/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A private AI platform for documents that cannot leave the building | Kamobo" />
+  <meta property="og:description" content="Self-hosted vLLM and Ollama inference on GPU infrastructure in Terraform, with every use case isolated in its own private vector store." />
+  <meta property="og:url" content="https://kamobo.co.uk/work/private-ai-platform-zero-trust/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/retainers/">Retainers</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="availability">Available now</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/work/">Work</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <article class="study">
+          <h1>A private AI platform for documents that cannot leave the building</h1>
+          <p class="study-sub">Self-hosted inference and RAG for a global professional education body.</p>
+          <div class="study-grid">
+            <div>
+              <div class="study-metrics">
+                <div><strong>Zero</strong><span>third-party inference APIs in the data path</span></div>
+                <div><strong>One per use case</strong><span>isolated platform and private vector store</span></div>
+              </div>
+              <h4>The problem</h4>
+              <p>Real demand for retrieval over internal documents, and an absolute constraint that those documents could not be sent to a third-party model API. Several separate use cases, each with its own sensitivity, which could not be allowed to see each other's data.</p>
+              <h4>What we did</h4>
+              <p>Built GPU-accelerated Azure infrastructure defined in Terraform and Ansible, running self-hosted inference on vLLM, Ollama and llama.cpp. Added a document ingestion pipeline, vector storage on Postgres with pgvector plus Chroma and LanceDB, Redis for caching and RabbitMQ for message handling, behind a clustered NGINX reverse proxy. Built the API layer and a React chat front end with single sign-on and a configuration page. Every use case runs on its own isolated platform with its own dedicated private vector store, so data never crosses between them. Zero trust and least privilege throughout, containerised, automated with GitHub Actions, observable through Grafana.</p>
+              <h4>Where it landed</h4>
+              <p>In production, serving several use cases, with scale handled by adding nodes rather than rebuilding.</p>
+              <div class="takeaways">
+                <h4>What to take from this</h4>
+                <ul>
+                  <li>"We cannot use the API models" is a platform problem, not a reason to abandon the use case.</li>
+                  <li>Isolation per use case costs more than one shared index and is usually the only answer that survives a security review.</li>
+                  <li>Self-hosted inference is an infrastructure project wearing an AI hat. Most of the work is GPU capacity, networking and identity.</li>
+                  <li>Put the configuration in a page someone else can operate, or you become the dependency.</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="fact">
+              <dl>
+                <div><dt>Sector</dt><dd>Professional education, global</dd></div>
+                <div><dt>Constraint</dt><dd>No data to third-party APIs</dd></div>
+                <div><dt>Engagement</dt><dd>Design, build, operate</dd></div>
+                <div><dt>Named</dt><dd>No</dd></div>
+              </dl>
+            </aside>
+          </div>
+          <div class="study-used">
+            <p class="trust-label">Services used</p>
+            <ul class="ticks">
+              <li><a href="/services/private-llm-rag/">Private LLM and RAG platforms</a></li>
+              <li><a href="/services/ai-agent-development/">AI agents in production</a></li>
+              <li><a href="/services/terraform-azure-landing-zones/">Azure landing zones and Terraform</a></li>
+            </ul>
+          </div>
+        </article>
+        <p class="meta" style="margin-top:48px"><a href="/work/" style="color:var(--clay);border-bottom:1px solid currentColor">All case studies</a></p>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2><a href="mailto:hello@kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">hello@kamobo.co.uk</a></h2>
+        <p>Tell us what is actually going wrong. One email, a couple of paragraphs.</p>
+        <p>We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.</p>
+        <p class="cta-sub">No sales sequence. A reply from the person who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello@kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
