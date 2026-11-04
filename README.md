@@ -59,6 +59,25 @@ asset's own bytes, so the query only changes when the asset does. It covers ever
 non-zero if a page has no stylesheet link, which is how a generated page that lost its
 `<head>` would get caught.
 
+### Booking links
+
+Every "Book a call" button carries a bare `data-book` attribute and nothing else does, so
+all 32 of them repoint in one command:
+
+    python scripts/set-booking-url.py https://cal.com/<handle>/<event>
+    python scripts/set-booking-url.py --mailto     # revert to email
+    python scripts/set-booking-url.py --status     # what they point at now
+
+Then re-run the two scripts below, in that order. A real URL also gets
+`target="_blank" rel="noopener"`; a `mailto:` deliberately does not, or the browser leaves
+a blank tab behind next to the mail client.
+
+**Link out, do not embed.** An embedded booking widget loads third-party script and sets
+cookies, which would make `/privacy/` wrong: it currently states that the site sets no
+cookies and runs no analytics, and names Cloudflare, DigitalOcean and Google Fonts as the
+only third parties. A plain link keeps that true. If an embed is ever added, the privacy
+notice has to be updated in the same change.
+
 Run `scripts/protect-email.py` first, then `scripts/fingerprint.py`:
 
     python scripts/protect-email.py && python scripts/fingerprint.py
