@@ -279,7 +279,17 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--muted-2); margin: 0 0 8px;
 }
 .spec dd { margin: 0; font-family: var(--font-head); font-size: 20px; font-weight: 500; letter-spacing: -0.01em; color: var(--ink); }
-@media (max-width: 760px) { .spec { grid-template-columns: repeat(2, 1fr); } }
+/* 1fr tracks will not shrink below their content, and the email address is a
+   single unbreakable token, so without min-width:0 and a break opportunity the
+   two columns resolve wider than the container and the page scrolls sideways.
+   overflow-wrap:anywhere rather than break-word, because only anywhere feeds
+   back into the intrinsic size the grid uses to lay the tracks out. */
+@media (max-width: 760px) {
+  .spec { grid-template-columns: repeat(2, 1fr); }
+  .spec div { min-width: 0; padding-right: 14px; }
+  .spec div:nth-child(2n) { border-right: 0; }
+  .spec dd { overflow-wrap: anywhere; }
+}
 
 /* ===== Engagement tiers ===== */
 .engage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
