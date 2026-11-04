@@ -613,6 +613,15 @@ strong { font-weight: 600; color: var(--ink); }
 .hero-meta div { padding: 22px 20px 22px 0; gap: 7px; align-items: flex-start; }
 .hero-meta strong { font-size: clamp(22px, 2.1vw, 30px); line-height: 1.05; white-space: nowrap; }
 .hero-meta span { font-size: 10.5px; max-width: 26ch; }
+/* The rule at the top of this file is overridden above, so the small-screen
+   case has to be restated here. 1fr tracks default to min-width:auto, so a
+   nowrap value stops the track shrinking and the row runs off the page. */
+@media (max-width: 860px) {
+  .hero-meta { grid-template-columns: repeat(2, 1fr); }
+  .hero-meta div { min-width: 0; padding-right: 16px; }
+  .hero-meta div:nth-child(2n) { border-right: 0; }
+  .hero-meta strong { white-space: normal; }
+}
 
 /* The nine services, scannable in five seconds */
 .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
