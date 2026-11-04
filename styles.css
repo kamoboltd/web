@@ -557,3 +557,41 @@ strong { font-weight: 600; color: var(--ink); }
   .site-header.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
   .site-header.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 }
+
+
+/* ===== Insights ===== */
+.article { max-width: 68ch; }
+.article-meta {
+  display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: baseline;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted-2); margin: 0 0 32px; padding-bottom: 22px; border-bottom: 1px solid var(--line);
+}
+.article-meta .who { color: var(--ink); }
+.standfirst {
+  font-family: var(--font-head); font-size: 28px; line-height: 1.3; letter-spacing: -0.022em;
+  font-weight: 400; color: var(--ink); margin: 0 0 40px; max-width: 32ch;
+}
+.article h2 {
+  font-size: 28px; line-height: 1.15; letter-spacing: -0.022em; font-weight: 500;
+  margin: 44px 0 14px;
+}
+.article p { margin: 0 0 18px; color: var(--text); }
+.article p + ul, .article p + ol { margin: -4px 0 22px; padding-left: 20px; }
+.article li { margin-bottom: 8px; }
+.article blockquote {
+  margin: 28px 0; padding-left: 22px; border-left: 2px solid var(--clay);
+  font-size: 20px; line-height: 1.45; letter-spacing: -0.01em; color: var(--ink);
+}
+.article code {
+  font-family: var(--font-mono); font-size: 0.88em;
+  background: var(--paper-2); padding: 2px 5px; border-radius: var(--radius-sm);
+}
+.author-box {
+  display: grid; grid-template-columns: 1fr; gap: 10px;
+  border-top: 1px solid var(--ink); margin-top: 56px; padding-top: 24px; max-width: 68ch;
+}
+.author-box h3 { font-size: 20px; letter-spacing: -0.01em; font-weight: 600; }
+.author-box p { color: var(--muted); margin: 0; font-size: 15px; }
+.author-box .meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-2); }
+.topics { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 32px 0 0; padding: 0; list-style: none; }
+.topics li a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--clay); }

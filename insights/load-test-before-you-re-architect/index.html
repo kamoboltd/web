@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Load test before you re-architect | Kamobo</title>
+  <meta name="description" content="Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which." />
+  <meta name="theme-color" content="#FBFAF8" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/insights/load-test-before-you-re-architect/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Load test before you re-architect | Kamobo" />
+  <meta property="og:description" content="Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which." />
+  <meta property="og:url" content="https://kamobo.co.uk/insights/load-test-before-you-re-architect/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Load test before you re-architect",
+   "datePublished":"2026-11-04","author":{"@type":"Person","name":"James Dettmer"},
+   "publisher":{"@type":"Organization","name":"Kamobo Ltd","url":"https://kamobo.co.uk/"},
+   "mainEntityOfPage":"https://kamobo.co.uk/insights/load-test-before-you-re-architect/"}
+  </script>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/insights/">Insights</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="availability">Available now</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/insights/">Insights</a> &nbsp;&middot;&nbsp; Performance</p>
+        <h1>Load test before you re-architect</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="article">
+          <p class="article-meta"><span class="who">James Dettmer, Principal</span> <span>4 November 2026</span> <span>2 min read</span></p>
+          <p class="standfirst">Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.</p>
+<p>We were asked to take over a self-hosted video streaming platform. It had been built by people who had moved on. There was no current architecture documentation and no reliable account of how it was deployed. It was slow under load and nobody could say which part was the bottleneck.</p>
+
+<p>The instinct in that situation, and the thing the budget is usually already pointed at, is to re-architect. Break up the monolith, add nodes, move to managed services, buy bigger instances. All of which may eventually be right, and none of which you can justify yet.</p>
+
+<h2>What the load testing found</h2>
+
+<p>We ran extensive load testing with K6 against the real system, looking for where it actually broke rather than where we assumed it would. The causes were:</p>
+
+<ul>
+<li>NGINX mis-tuned, so the ingress gave up well before the services behind it did</li>
+<li>RabbitMQ under-spec'd, so message handling became the ceiling under concurrency</li>
+<li>Redis in need of tuning</li>
+<li>Components provisioned badly in <em>both</em> directions, some well over what they needed and some well under</li>
+</ul>
+
+<p>That last point is the one worth sitting with. Over-provisioning is usually discussed as a cost problem, and it is. It is also a diagnostic problem, because a component with far more headroom than it needs will never show up in your metrics as a constraint, and it will mask whatever sits behind it. You end up tuning the thing that is visibly struggling while the actual limit is somewhere quieter.</p>
+
+<h2>"It needs more servers" is usually wrong</h2>
+
+<p>On this platform the binding constraint was configuration, not capacity. More servers would have cost more and moved the ceiling very little, because the ceiling was a worker count and a connection limit, not a shortage of compute.</p>
+
+<p>This is the common case rather than the exception. Systems that are slow under load are far more often badly configured than genuinely out of resource, and configuration is cheaper to fix than architecture is to change.</p>
+
+<h2>Then, and only then, move it</h2>
+
+<p>Once the bottlenecks were out, the platform was restructured to remove them properly and moved from on-premise to autoscaling Azure defined in Terraform. That produced a 70% reduction in total cost of ownership measured over three years.</p>
+
+<p>Note the order. Had we lifted the platform into the cloud first, which is what the original brief pointed at, we would have paid cloud prices for the same mis-tuned NGINX and the same under-spec'd queue, and then autoscaled the symptoms. Lifting a badly understood system into the cloud unchanged does not fix it. It just moves the bill and gives you a more expensive version of the same problem.</p>
+
+<h2>What this costs</h2>
+
+<p>Load testing an unfamiliar system is a few days, not a few weeks, and it is almost always cheaper than the architecture change it either justifies or prevents. If it justifies the change, you now have evidence to take to whoever is funding it. If it prevents one, you have saved considerably more than the test cost.</p>
+        </div>
+
+        <div class="article" style="margin-top:52px">
+          <p class="trust-label">Questions this usually raises</p>
+          <div class="faq-list" style="margin-top:14px">
+            <details class="faq-item"><summary>What do you need access to in order to load test?</summary><p>A representative environment and permission to push it until it breaks. Production is possible with care and out of hours, but a sized-alike environment is better, because the interesting part is finding the limit rather than respecting it.</p></details>
+            <details class="faq-item"><summary>How is this different from an APM tool?</summary><p>Application performance monitoring tells you what is happening at current load. Load testing tells you what happens at loads you have not reached yet, which is the question people are usually actually asking.</p></details>
+          </div>
+        </div>
+
+        <div class="author-box">
+          <p class="meta">Written by</p>
+          <h3>James Dettmer</h3>
+          <p>Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations&rsquo; estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo&rsquo;s own software, which is the honest test of any advice here.</p>
+          <p class="meta"><a href="/about/">More about Kamobo</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@kamobo.co.uk?subject=Your%20post%20on%20kamobo.co.uk">Disagree? Say so</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:0">
+          <h2>Also worth reading</h2>
+        </div>
+        <div class="rows" style="margin-top:36px">
+          <article class="row">
+            <p class="row-no">01</p>
+            <h3><a href="/insights/interviews-find-more-savings-than-tooling/">Interviews find more Azure savings than tooling does</a></h3>
+            <div class="row-body">
+              <p>The cost tools tell you what is running. They cannot tell you what nobody would miss, and that is where the money is.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">02</p>
+            <h3><a href="/insights/reserved-instances-only-pay-off-when-usage-is-stable/">Reserved instances only pay off for workloads that are genuinely stable</a></h3>
+            <div class="row-body">
+              <p>A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">03</p>
+            <h3><a href="/insights/isolate-the-vector-store-per-use-case/">Give every AI use case its own vector store</a></h3>
+            <div class="row-body">
+              <p>One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2><a href="mailto:hello@kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">hello@kamobo.co.uk</a></h2>
+        <p>Tell us what is actually going wrong. One email, a couple of paragraphs.</p>
+        <p>We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.</p>
+        <p class="cta-sub">No sales sequence. A reply from the person who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+          <a href="/insights/">Insights</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello@kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

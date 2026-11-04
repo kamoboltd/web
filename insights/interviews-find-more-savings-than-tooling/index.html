@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interviews find more Azure savings than tooling does | Kamobo</title>
+  <meta name="description" content="The cost tools tell you what is running. They cannot tell you what nobody would miss, and that is where the money is." />
+  <meta name="theme-color" content="#FBFAF8" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Interviews find more Azure savings than tooling does | Kamobo" />
+  <meta property="og:description" content="The cost tools tell you what is running. They cannot tell you what nobody would miss, and that is where the money is." />
+  <meta property="og:url" content="https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Interviews find more Azure savings than tooling does",
+   "datePublished":"2026-11-04","author":{"@type":"Person","name":"James Dettmer"},
+   "publisher":{"@type":"Organization","name":"Kamobo Ltd","url":"https://kamobo.co.uk/"},
+   "mainEntityOfPage":"https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/"}
+  </script>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/insights/">Insights</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="availability">Available now</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/insights/">Insights</a> &nbsp;&middot;&nbsp; Cost</p>
+        <h1>Interviews find more Azure savings than tooling does</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="article">
+          <p class="article-meta"><span class="who">James Dettmer, Principal</span> <span>4 November 2026</span> <span>3 min read</span></p>
+          <p class="standfirst">The cost tools tell you what is running. They cannot tell you what nobody would miss, and that is where the money is.</p>
+<p>The first thing most people do about a cloud bill that has got out of hand is open a cost analysis blade and sort by spend. It is the obvious move and it is not wrong, but on its own it finds a fraction of what is there.</p>
+
+<p>On one engagement with a global accountancy training organisation we removed £150,000 a year from an Azure bill. A meaningful part of that came from resources the tooling was perfectly happy with. They were running. They were healthy. They were the right size for what they were doing. The problem was that nobody needed them doing it.</p>
+
+<h2>What the tools can and cannot see</h2>
+
+<p>Azure Cost Management, Advisor and the various third-party FinOps products are good at a specific class of question. Is this virtual machine oversized for its observed load. Is this disk unattached. Is this reservation underused. Would a savings plan be cheaper than pay-as-you-go for this consumption pattern. Those are real savings and you should take all of them.</p>
+
+<p>What no tool can answer is whether the thing should exist. A resource group spun up for a proof of concept that concluded two years ago looks exactly like a resource group doing valuable work. An integration runtime feeding a report nobody opens looks exactly like one feeding a report the board reads every Monday. The telemetry is identical. The difference is organisational, and it lives in people's heads.</p>
+
+<h2>So we ask</h2>
+
+<p>On that engagement the method was unglamorous. We interviewed the internal team and we interviewed the third parties who had built into the estate over the years, which on a long-lived environment is usually several firms who have each left something behind. The questions were simple and the same each time.</p>
+
+<ul>
+<li>What did you build here, and is it still being used</li>
+<li>Who asked for it, and are they still here</li>
+<li>If this disappeared on Friday, who would ring you</li>
+<li>What are you afraid to turn off, and why</li>
+</ul>
+
+<p>That last one is the most productive question in cloud cost work. Fear of turning something off is almost never about the thing itself. It is about not knowing what depends on it. Once you can answer that, large amounts of spend become obviously removable, and the answer is usually a half-hour conversation rather than a month of dependency mapping.</p>
+
+<p>Hundreds of orphaned resources came out of that estate. Not because a tool flagged them, but because somebody said "oh, that was for the migration, we finished that in 2023".</p>
+
+<h2>Do the tooling work too, in the right order</h2>
+
+<p>None of this is an argument against the technical work. On the same engagement we moved virtual machines onto reserved instances where the usage pattern justified it, and applied savings plans to app services. Those are mechanical, repeatable and worth real money.</p>
+
+<p>But do them second. Commitment-based discounts on a resource you are about to delete are not a saving, they are a prepayment for waste with a one-year or three-year lock-in attached. The order matters: find out what should not exist, remove it, and only then commit to a discount on what is left.</p>
+
+<h2>The part that decides whether it lasts</h2>
+
+<p>A saving that nobody can maintain comes back. The team needs to be able to see the cost picture themselves, in a form they will actually open, or you have bought them twelve months and a repeat of the same engagement.</p>
+
+<p>At a UK financial services firm we built more than fifteen Azure Workbooks for exactly this, alongside identifying around £250,000 a year of savings. The workbooks were not the deliverable anyone asked for and they are the reason the work held.</p>
+        </div>
+
+        <div class="article" style="margin-top:52px">
+          <p class="trust-label">Questions this usually raises</p>
+          <div class="faq-list" style="margin-top:14px">
+            <details class="faq-item"><summary>How long does an interview-led review take?</summary><p>Three days of read-only access is usually enough to get a ranked list with numbers against it. The interviews are a few hours in total; the time goes on verifying what people tell you against what the estate actually shows.</p></details>
+            <details class="faq-item"><summary>What if the people who built it have left?</summary><p>That is common and it changes the method rather than defeating it. You move from interviews to artefacts: deployment pipelines, infrastructure as code if it exists, resource tags, activity logs and naming conventions. It is slower and it is still faster than guessing.</p></details>
+          </div>
+        </div>
+
+        <div class="author-box">
+          <p class="meta">Written by</p>
+          <h3>James Dettmer</h3>
+          <p>Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations&rsquo; estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo&rsquo;s own software, which is the honest test of any advice here.</p>
+          <p class="meta"><a href="/about/">More about Kamobo</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@kamobo.co.uk?subject=Your%20post%20on%20kamobo.co.uk">Disagree? Say so</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:0">
+          <h2>Also worth reading</h2>
+        </div>
+        <div class="rows" style="margin-top:36px">
+          <article class="row">
+            <p class="row-no">01</p>
+            <h3><a href="/insights/reserved-instances-only-pay-off-when-usage-is-stable/">Reserved instances only pay off for workloads that are genuinely stable</a></h3>
+            <div class="row-body">
+              <p>A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">02</p>
+            <h3><a href="/insights/load-test-before-you-re-architect/">Load test before you re-architect</a></h3>
+            <div class="row-body">
+              <p>Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">03</p>
+            <h3><a href="/insights/isolate-the-vector-store-per-use-case/">Give every AI use case its own vector store</a></h3>
+            <div class="row-body">
+              <p>One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2><a href="mailto:hello@kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">hello@kamobo.co.uk</a></h2>
+        <p>Tell us what is actually going wrong. One email, a couple of paragraphs.</p>
+        <p>We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.</p>
+        <p class="cta-sub">No sales sequence. A reply from the person who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+          <a href="/insights/">Insights</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello@kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

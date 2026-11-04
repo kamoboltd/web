@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agents should raise pull requests, not push code | Kamobo</title>
+  <meta name="description" content="The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate." />
+  <meta name="theme-color" content="#FBFAF8" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/insights/agents-that-raise-pull-requests/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Agents should raise pull requests, not push code | Kamobo" />
+  <meta property="og:description" content="The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate." />
+  <meta property="og:url" content="https://kamobo.co.uk/insights/agents-that-raise-pull-requests/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Agents should raise pull requests, not push code",
+   "datePublished":"2026-11-04","author":{"@type":"Person","name":"James Dettmer"},
+   "publisher":{"@type":"Organization","name":"Kamobo Ltd","url":"https://kamobo.co.uk/"},
+   "mainEntityOfPage":"https://kamobo.co.uk/insights/agents-that-raise-pull-requests/"}
+  </script>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/insights/">Insights</a>
+        <a href="/azure-review/">Azure Review</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="availability">Available now</p>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/insights/">Insights</a> &nbsp;&middot;&nbsp; AI</p>
+        <h1>Agents should raise pull requests, not push code</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="article">
+          <p class="article-meta"><span class="who">James Dettmer, Principal</span> <span>4 November 2026</span> <span>3 min read</span></p>
+          <p class="standfirst">The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate.</p>
+<p>We build and operate a suite of autonomous AI agents running unattended in production on a live online platform with more than 18,000 registered users and over 500 daily actives. They answer user support queries, monitor server logs and surface incidents, and review code and raise fixes.</p>
+
+<p>They raise those fixes as pull requests. A human approves every merge. No agent pushes code directly, and that is not a transitional safety measure we intend to remove later.</p>
+
+<h2>Why the gate is the design, not a restriction on it</h2>
+
+<p>An agent that can open a pull request can do almost everything useful an agent can do in a codebase. It can read the repository, reproduce a bug, write a fix, write a test, explain its reasoning and put the whole thing somewhere a person can look at it.</p>
+
+<p>What it cannot do is be wrong at three in the morning without anyone noticing. That is the entire difference, and it costs you the time it takes someone to read a diff.</p>
+
+<p>It also changes the conversation with whoever has to approve the system. "An AI will change our production code" is a hard sell in most organisations and an impossible one in some. "An AI will do the legwork and raise a pull request like any other contributor" is a conversation about code review, which every engineering team already knows how to have.</p>
+
+<h2>What it takes to run unattended</h2>
+
+<p>The agents are built on the Anthropic Claude SDK and Claude CLI, with BullMQ for task queuing, retries and priorities, and Postgres with pgvector as the knowledge store. The parts that matter for reliability are the unglamorous ones:</p>
+
+<ul>
+<li>Error handling, because an agent that fails silently is worse than no agent</li>
+<li>Retries with priorities, so a transient API failure does not drop a support query</li>
+<li>Logging throughout, so you can reconstruct what it did and why</li>
+<li>Approval gates at every point where an action is consequential</li>
+</ul>
+
+<p>Most of the engineering in a production agent is queueing, state and observability. The model call is a small part of it.</p>
+
+<h2>Where the gate belongs for other kinds of agent</h2>
+
+<p>Support agents can answer and resolve a great deal autonomously, because the blast radius of a wrong answer is a confused user and an escalation. The gate belongs at actions that change account state or cost money.</p>
+
+<p>Operations agents can watch logs, diagnose and write up an incident continuously. The gate belongs at remediation, and it should be a different gate depending on whether the remediation is restarting a worker or changing a configuration.</p>
+
+<p>We also built an enterprise agent inside Microsoft Teams on the same stack, which is the right shape when the people who need it already live in Teams and will not adopt another interface.</p>
+
+<h2>A test worth applying</h2>
+
+<p>Before you ship an agent, ask what it would cost if it were confidently wrong ten times in a row overnight. If the answer is survivable, it can run unattended. If it is not, there is a gate missing, and finding it is cheaper now than after.</p>
+        </div>
+
+        <div class="article" style="margin-top:52px">
+          <p class="trust-label">Questions this usually raises</p>
+          <div class="faq-list" style="margin-top:14px">
+            <details class="faq-item"><summary>Does the approval gate not remove most of the value?</summary><p>It removes the part of the value that nobody responsible will accept anyway. Reproducing a bug, writing a fix and preparing a reviewable change is most of the work; approving a good diff takes a couple of minutes.</p></details>
+            <details class="faq-item"><summary>What stops the agent raising dozens of poor pull requests?</summary><p>Priorities and queueing, mainly. The agent works a queue rather than reacting to everything, and anything it cannot do well goes to a human as a write-up instead of as a change.</p></details>
+          </div>
+        </div>
+
+        <div class="author-box">
+          <p class="meta">Written by</p>
+          <h3>James Dettmer</h3>
+          <p>Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations&rsquo; estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo&rsquo;s own software, which is the honest test of any advice here.</p>
+          <p class="meta"><a href="/about/">More about Kamobo</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@kamobo.co.uk?subject=Your%20post%20on%20kamobo.co.uk">Disagree? Say so</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:0">
+          <h2>Also worth reading</h2>
+        </div>
+        <div class="rows" style="margin-top:36px">
+          <article class="row">
+            <p class="row-no">01</p>
+            <h3><a href="/insights/interviews-find-more-savings-than-tooling/">Interviews find more Azure savings than tooling does</a></h3>
+            <div class="row-body">
+              <p>The cost tools tell you what is running. They cannot tell you what nobody would miss, and that is where the money is.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">02</p>
+            <h3><a href="/insights/reserved-instances-only-pay-off-when-usage-is-stable/">Reserved instances only pay off for workloads that are genuinely stable</a></h3>
+            <div class="row-body">
+              <p>A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">03</p>
+            <h3><a href="/insights/load-test-before-you-re-architect/">Load test before you re-architect</a></h3>
+            <div class="row-body">
+              <p>Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2><a href="mailto:hello@kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">hello@kamobo.co.uk</a></h2>
+        <p>Tell us what is actually going wrong. One email, a couple of paragraphs.</p>
+        <p>We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.</p>
+        <p class="cta-sub">No sales sequence. A reply from the person who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">Services</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Work</p>
+          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
+          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+          <a href="/work/">All case studies</a>
+          <a href="/insights/">Insights</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">How we work</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@kamobo.co.uk">hello@kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello@kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

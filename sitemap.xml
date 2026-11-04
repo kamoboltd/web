@@ -5,6 +5,13 @@
   <url><loc>https://kamobo.co.uk/contact/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kamobo.co.uk/how-we-work/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kamobo.co.uk/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/agents-that-raise-pull-requests/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/isolate-the-vector-store-per-use-case/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/load-test-before-you-re-architect/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/reserved-instances-only-pay-off-when-usage-is-stable/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kamobo.co.uk/insights/taking-over-a-system-nobody-can-explain/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kamobo.co.uk/pricing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kamobo.co.uk/privacy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kamobo.co.uk/retainers/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
