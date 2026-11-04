@@ -447,7 +447,17 @@ strong { font-weight: 600; color: var(--ink); }
 .cta h2 a { border-bottom: 2px solid rgba(251,250,248,0.28); transition: border-color .18s ease; }
 .cta h2 a:hover { border-bottom-color: var(--paper); }
 .cta p { color: rgba(251, 250, 248, 0.62); font-size: 16px; margin: 0 0 14px; max-width: 44ch; }
-.cta-actions { display: none; }
+/* Was display:none, which hid the only call to action on every service page. */
+.cta-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 36px 0 0; }
+.cta .btn-primary, .cta .btn-accent {
+  background: var(--paper); color: var(--ink); border-color: var(--paper);
+}
+.cta .btn-primary:hover, .cta .btn-accent:hover {
+  background: var(--clay); color: var(--paper); border-color: var(--clay);
+}
+.cta .btn-ghost { background: transparent; border-color: rgba(251,250,248,0.32); color: var(--paper); }
+.cta .btn-ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.cta-actions + .cta-sub { margin-top: 28px; }
 .cta-sub {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
   color: rgba(251,250,248,0.42); margin: 36px 0 0;
