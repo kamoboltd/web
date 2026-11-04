@@ -41,6 +41,22 @@ Pushing to `main` redeploys: `.github/workflows/deploy.yml` installs doctl and c
 `DIGITALOCEAN_ACCESS_TOKEN`. App Platform's generic-git source does not auto-deploy on
 push by itself, which is why the Actions trigger exists.
 
+### Cache busting is not optional here
+
+Cloudflare serves `styles.css` and `main.js` with `max-age=14400` (4 hours in the
+browser) and `s-maxage=86400` (24 hours at the edge), while the HTML is only cached for
+10 seconds. Deploy a CSS change without changing its URL and visitors get **new HTML with
+the old stylesheet** for up to a day, which renders as an unstyled page. This happened on
+4 November 2026 and was live until it was caught.
+
+So both assets carry a content hash in the query string, and it must be regenerated
+whenever either file changes:
+
+    python scripts/fingerprint.py
+
+That rewrites `styles.css?v=` and `main.js?v=` across every HTML file from a SHA-1 of the
+asset's own bytes, so the query only changes when the asset does.
+
 ### If the site 404s or Cloudflare returns a 1016
 
 That happened between early September and 4 November 2026. The cause was **not** a deleted
