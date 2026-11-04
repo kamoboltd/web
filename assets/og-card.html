@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kamobo social card source</title>
+<!--
+  Source for assets/og-card.png.
+
+  TO REGENERATE: open this file in a browser at a 1200x630 viewport and save a
+  screenshot over assets/og-card.png. In Chrome: DevTools, device toolbar,
+  responsive, set 1200x630, then the three-dot menu on the device bar and
+  "Capture screenshot".
+
+  It lives in the repo so the card is regenerated whenever the positioning
+  changes, instead of quietly becoming the stale artefact the previous dark
+  one became: that card outlived two repositionings and was still being served
+  to every share on 4 Nov 2026.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #fff; }
+  .card { width: 1200px; height: 630px; }
+  .card {
+    font-family: "Inter", system-ui, sans-serif;
+    background:
+      radial-gradient(760px 420px at 88% -12%, rgba(15,158,126,0.16), transparent 62%),
+      linear-gradient(180deg, #FBFDFC 0%, #FFFFFF 70%);
+    color: #16303F;
+    padding: 64px 72px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  body::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(#DFE8EE 1px, transparent 1px), linear-gradient(90deg, #DFE8EE 1px, transparent 1px);
+    background-size: 60px 60px;
+    -webkit-mask-image: radial-gradient(700px 360px at 85% 6%, #000, transparent 72%);
+    mask-image: radial-gradient(700px 360px at 85% 6%, #000, transparent 72%);
+    opacity: .5;
+  }
+  .top, .mid, .bot { position: relative; z-index: 1; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .mark { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #34E0B4, #4ADE80); position: relative; flex: none; }
+  .mark svg { position: absolute; inset: 0; }
+  .word { font-family: "Space Grotesk", sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; color: #0C1F2C; }
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 62px; font-weight: 600; line-height: 1.08; letter-spacing: -0.035em;
+    color: #0C1F2C; max-width: 940px;
+  }
+  h1 em { font-style: normal; color: #0F9E7E; }
+  .sub { font-size: 21px; color: #4C6475; margin-top: 20px; max-width: 760px; line-height: 1.5; }
+  .bot { display: flex; align-items: flex-end; justify-content: space-between; }
+  .models { display: flex; gap: 14px; }
+  .model {
+    font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 500;
+    color: #0A7259; background: #E6F5F1; border: 1px solid rgba(15,158,126,0.22);
+    border-radius: 6px; padding: 10px 14px;
+  }
+  .domain { font-family: "JetBrains Mono", monospace; font-size: 17px; color: #6D8595; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <div class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g stroke="#07130E" stroke-width="4" stroke-linecap="round" fill="none">
+            <line x1="20" y1="15" x2="20" y2="41"/>
+            <path d="M20 28 L32 16"/>
+            <path d="M20 26 L33 40"/>
+          </g>
+          <circle cx="20" cy="28" r="3.6" fill="#07130E"/>
+        </svg>
+      </span>
+      <span class="word">kamobo</span>
+    </div>
+  </div>
+
+  <div class="mid">
+    <h1>Senior cloud, data and AI engineering. <em>By the day, the project, or the month.</em></h1>
+    <p class="sub">A UK consultancy that builds and fixes the Azure platforms, data pipelines and AI systems businesses run on.</p>
+  </div>
+
+  <div class="bot">
+    <div class="models">
+      <span class="model">&pound;850 / day</span>
+      <span class="model">Fixed price</span>
+      <span class="model">From &pound;595 / month</span>
+    </div>
+    <span class="domain">kamobo.co.uk</span>
+  </div>
+</div>
+</body>
+</html>
