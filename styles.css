@@ -149,34 +149,28 @@ strong { color: var(--ink); font-weight: 650; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
 .btn-ghost:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
 
-/* ===== Hero ============================================================== */
+/* ===== Hero ==============================================================
+   One focal point. This was two columns, headline against a fully detailed
+   offer card, and neither won: the eye bounced. Impeccable's rule is "group
+   related ideas and vary the layout to match the content", and "keep related
+   items close and separate groups with more space". So the hero carries the
+   headline alone, the proof band sits tight beneath it as part of the same
+   group, and the offer gets a band of its own further down.
+   Measure follows Butterick: 45 to 90 characters, 120 to 145% line spacing.
+   ========================================================================= */
 
-.hero { padding: 76px 0 0; border-bottom: 1px solid var(--line); }
-.hero-inner { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(0,0.92fr); gap: 56px; align-items: center; }
-.hero h1 { margin-bottom: 18px; }
-.hero .lede { margin-bottom: 28px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-figure { position: relative; }
+.hero { padding: 92px 0 0; }
+.hero-single { max-width: 980px; }
+.hero h1 { max-width: 21ch; margin-bottom: 20px; }
+.hero .lede { max-width: 58ch; margin-bottom: 32px; }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.quiet-link { font-size: 15.5px; color: var(--muted); }
+.quiet-link:hover { color: var(--accent); }
 
-/* The hero's second column. It used to hold a topology diagram that depicted
-   nothing real, so it carries the entry offer instead. */
-.hero-offer { background: var(--wash); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 30px; }
-.hero-offer h2 { font-size: 23px; margin-bottom: 10px; }
-.hero-offer > p { font-size: 15.5px; margin-bottom: 18px; }
-.offer-spec { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 16px;
-              padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.offer-spec div { min-width: 0; }
-.offer-spec dt { font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-                 color: var(--muted); margin-bottom: 4px; }
-.offer-spec dd { margin: 0; font-size: 16px; font-weight: 650; color: var(--ink); }
-.offer-note { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
-
-.hero-meta {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line); margin-top: 60px;
-}
-.hero-meta div { padding: 26px 22px 30px 0; min-width: 0; border-right: 1px solid var(--line); }
-/* Without this the figures sit hard against the cell divider to their left. */
+/* Tight to the hero: same group, so little space between them. */
+.proof-band { padding: 56px 0 72px; }
+.hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+.hero-meta div { padding: 26px 22px 0 0; min-width: 0; border-right: 1px solid var(--line); }
 .hero-meta div + div { padding-left: 26px; }
 .hero-meta div:last-child { border-right: 0; }
 .hero-meta strong {
@@ -190,6 +184,18 @@ strong { color: var(--ink); font-weight: 650; }
 .service-hero .section-sub, .service-hero .lede { max-width: 64ch; margin-top: 16px; }
 .service-hero .study-sub { font-size: 18px; max-width: 64ch; margin: 14px 0 0; }
 .service-hero .kicker a { color: var(--accent); }
+
+/* ===== The entry offer, as a band ======================================== */
+
+.offer-band { background: var(--wash); border-block: 1px solid var(--line); }
+.offer-inner { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 20px 56px; align-items: start; }
+.offer-lede h2 { font-size: 26px; margin-bottom: 12px; }
+.offer-lede p { max-width: 58ch; margin: 0; }
+.offer-spec { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 28px; margin: 0; }
+.offer-spec div { min-width: 0; border-top: 1px solid var(--line-strong); padding-top: 12px; }
+.offer-spec dt { font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+.offer-spec dd { margin: 0; font-size: 17px; font-weight: 650; color: var(--ink); }
+.offer-inner > .btn { grid-column: 2; justify-self: start; }
 
 /* ===== Cards and grids =================================================== */
 
@@ -343,18 +349,12 @@ strong { color: var(--ink); font-weight: 650; }
 .engage-for { font-size: 14.5px; color: var(--muted); margin-top: auto; padding-top: 16px; }
 .engage-note, .products-more, .product-note { font-size: 14.5px; color: var(--muted); margin-top: 16px; }
 
-.clients { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-           padding: 30px 0 34px; overflow: hidden; }
-/* padding-bottom on the wrap, not margin on the label: a margin collapses out
-   of the wrap and leaves the label sitting directly on the logos. */
+.clients { border-block: 1px solid var(--line); padding: 30px 0 34px; }
 .clients .wrap { padding-bottom: 26px; }
 .clients .trust-label { margin-bottom: 0; }
-.marquee { overflow: hidden; }
-.marquee-track { display: flex; width: max-content; animation: slide 46s linear infinite; }
-.marquee-list { display: flex; align-items: center; gap: 56px; list-style: none; margin: 0; padding: 0 28px 0 0; }
-.marquee-list img { height: 26px; width: auto; opacity: 0.5; filter: grayscale(1); }
-@keyframes slide { to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+.logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+            gap: 26px 34px; list-style: none; margin: 0; padding: 0; }
+.logo-row img { height: 24px; width: auto; opacity: 0.6; filter: grayscale(1); }
 
 .panel { background: var(--wash); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 32px; }
 .qualify { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }

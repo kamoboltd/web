@@ -106,18 +106,26 @@ STATS = [
 # real: generic boxes labelled ingress / compute / data / cache. A client learned
 # nothing from it, so it was decoration. Replaced with the offer most engagements
 # actually start from, which is a conversion asset rather than an illustration.
-FIGURE = '''        <aside class="hero-offer" aria-label="Where most engagements start">
+# The entry offer, as a band of its own rather than a box nested in the hero.
+# Impeccable: "Replace nested containers with spacing, type, and dividers." In
+# the hero it competed with the headline for the eye; here it has its own turn.
+OFFER = '''
+    <section class="section offer-band">
+      <div class="wrap offer-inner">
+        <div class="offer-lede">
           <p class="trust-label">Where most engagements start</p>
           <h2>The Azure Review</h2>
-          <p>A read-only assessment of your Azure estate: what it costs, what it is running, where the risk sits, and what we would fix first. You get written findings and a priced plan.</p>
-          <dl class="offer-spec">
-            <div><dt>Price</dt><dd>&pound;2,500</dd></div>
-            <div><dt>Duration</dt><dd>3 working days</dd></div>
-            <div><dt>Access</dt><dd>Read-only</dd></div>
-          </dl>
-          <p class="offer-note">If you go on to have us do the work and we start within 30 days, the fee is credited in full against it.</p>
-          <a class="btn btn-ghost" href="/azure-review/">What the review covers</a>
-        </aside>
+          <p>A read-only assessment of your Azure estate: what it costs, what it is running, where the risk sits, and what we would fix first. You get written findings and a priced plan. If you go on to have us do the work and we start within 30 days, the fee is credited in full against it.</p>
+        </div>
+        <dl class="offer-spec">
+          <div><dt>Price</dt><dd>&pound;2,500</dd></div>
+          <div><dt>Duration</dt><dd>3 working days</dd></div>
+          <div><dt>Access</dt><dd>Read-only</dd></div>
+          <div><dt>Output</dt><dd>Written findings</dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="/azure-review/">What the review covers</a>
+      </div>
+    </section>
 '''
 
 
@@ -130,36 +138,25 @@ CLIENT_LOGOS = [
 
 
 def clients():
-    """A logo band. Every firm in the reference class carries one, and it is the
-    strongest trust signal on the site. The list is duplicated because the
-    marquee translates by -50%.
+    """A static logo row.
 
-    Deliberately NOT loading="lazy". The track is animated, so images get
-    carried past the viewport faster than the lazy-load observer fires and
-    several never loaded at all, which showed up as gaps in the band. All ten
-    files together are about 70KB, so eager loading costs nothing worth having.
+    This was an auto-scrolling marquee. Impeccable's anti-slop list names that
+    pattern directly ("Stop the motion, or give users pause and browse
+    controls") and the wider rule is "keep static status still; animate only
+    real activity". A logo wall is static status.
     """
-    def row(hidden):
-        return "\n".join(
-            '            <li><img src="/assets/logos/%s" alt="%s" height="26" /></li>'
-            % (f, "" if hidden else n) for f, n in CLIENT_LOGOS)
-    return '''
+    return """
     <section class="clients" aria-label="Organisations we have worked with">
       <div class="wrap">
         <p class="trust-label">Organisations we have worked with</p>
-      </div>
-      <div class="marquee">
-        <div class="marquee-track">
-          <ul class="marquee-list">
+        <ul class="logo-row">
 %s
-          </ul>
-          <ul class="marquee-list" aria-hidden="true">
-%s
-          </ul>
-        </div>
+        </ul>
       </div>
     </section>
-''' % (row(False), row(True))
+""" % "\n".join(
+        '          <li><img src="/assets/logos/%s" alt="%s" height="24" /></li>'
+        % (f, n) for f, n in CLIENT_LOGOS)
 
 
 def head(title, desc, canonical):
@@ -318,24 +315,25 @@ def homepage():
         for t, d in SECTORS[:6])
 
     body = '''    <section class="hero">
+      <div class="wrap hero-single">
+        <p class="kicker">UK technology consultancy</p>
+        <h1>Azure, data and AI platforms, engineered to run in production.</h1>
+        <p class="lede">Kamobo designs, builds and recovers the cloud platforms, data pipelines and AI systems that businesses depend on. Every engagement is led hands-on by the engineer doing the work, not handed to a delivery team you have not met.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" data-book href="%s">Book a call</a>
+          <a class="quiet-link" href="/work/">or see the work first</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-band">
       <div class="wrap">
-        <div class="hero-inner">
-          <div>
-            <p class="kicker">UK technology consultancy</p>
-            <h1>Azure, data and AI platforms, engineered to run in production.</h1>
-            <p class="lede">Kamobo designs, builds and recovers the cloud platforms, data pipelines and AI systems that businesses depend on. Every engagement is led hands-on by the engineer doing the work, not handed to a delivery team you have not met.</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary btn-lg" data-book href="%s">Book a call</a>
-              <a class="btn btn-ghost btn-lg" href="/work/">See the work</a>
-            </div>
-          </div>
-%s        </div>
         <div class="hero-meta">
 %s
         </div>
       </div>
     </section>
-%s
+%s%s
     <section class="section">
       <div class="wrap">
         <div class="section-head">
@@ -362,7 +360,7 @@ def homepage():
       </div>
     </section>
 
-''' % (BOOK, FIGURE, stats, clients(), svc, proof)
+''' % (BOOK, stats, clients(), OFFER, svc, proof)
 
     return page("/", "Kamobo | Azure, data and AI consultancy, UK",
                 "Kamobo is a UK technology consultancy. We design, build and recover Azure "
