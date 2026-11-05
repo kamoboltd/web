@@ -160,6 +160,19 @@ strong { color: var(--ink); font-weight: 650; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-figure { position: relative; }
 
+/* The hero's second column. It used to hold a topology diagram that depicted
+   nothing real, so it carries the entry offer instead. */
+.hero-offer { background: var(--wash); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 30px; }
+.hero-offer h2 { font-size: 23px; margin-bottom: 10px; }
+.hero-offer > p { font-size: 15.5px; margin-bottom: 18px; }
+.offer-spec { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 16px;
+              padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.offer-spec div { min-width: 0; }
+.offer-spec dt { font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+                 color: var(--muted); margin-bottom: 4px; }
+.offer-spec dd { margin: 0; font-size: 16px; font-weight: 650; color: var(--ink); }
+.offer-note { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+
 .hero-meta {
   display: grid; grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line); margin-top: 60px;
@@ -394,7 +407,7 @@ strong { color: var(--ink); font-weight: 650; }
 
 @media (max-width: 1040px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-figure { display: none; }
+  .hero-figure, .hero-offer { display: none; }
   .footer-sitemap { grid-template-columns: repeat(3, 1fr); }
   .cases, .svc, .proof, .engage-grid, .cloud-grid, .services-grid, .sectors { grid-template-columns: repeat(2, 1fr); }
   .principal, .about-grid { grid-template-columns: 1fr; gap: 32px; }

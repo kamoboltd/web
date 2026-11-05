@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=fbf363d6" />
+  <link rel="stylesheet" href="/styles.css?v=da629269" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,6 +43,8 @@
   </header>
 
   <main id="main">
+
+
 
 
     <section class="section service-hero">
@@ -127,7 +129,7 @@
         <div class="faq-list">
           <details class="faq-item"><summary>What is a private LLM and how is it different from ChatGPT?</summary><p>A private LLM is a large language model that runs on infrastructure you control: your cloud subscription, a private AI cloud, or your own hardware. Unlike public ChatGPT, your prompts, documents and logs never pass to a third-party provider, and nothing you type is used to train someone else's model. You choose the model, the region and the retention policy.</p></details>
           <details class="faq-item"><summary>Is a self-hosted LLM secure enough for confidential company data?</summary><p>Yes, when it is engineered properly. Self-hosting removes the biggest exposure, which is sending confidential data to an external API, but you still need network isolation, access control and audit logging around the model. We build those controls in from day one, and platforms we have engineered have passed ISO 27001 audits twice.</p></details>
-          <details class="faq-item"><summary>How much does private LLM deployment cost?</summary><p>Our engagements are anchored to senior engineering from £550 a day, with fixed-price packages quoted after a scoping call. Running costs then depend on model size and traffic: a small pilot can run on a single modest GPU, while a busy production platform needs dedicated inference capacity. We size the infrastructure to the workload, not the other way round.</p></details>
+          <details class="faq-item"><summary>How much does private LLM deployment cost?</summary><p>Our engagements are anchored to senior engineering from £850 a day, with fixed-price packages quoted after a scoping call. Running costs then depend on model size and traffic: a small pilot can run on a single modest GPU, while a busy production platform needs dedicated inference capacity. We size the infrastructure to the workload, not the other way round.</p></details>
           <details class="faq-item"><summary>What is retrieval-augmented generation (RAG)?</summary><p>RAG connects a language model to your own content. When someone asks a question, the system retrieves the most relevant passages from your documents, and the model answers using that material, citing where it came from. Because the knowledge lives in an index rather than in the model, updating a document updates the answers. No retraining required.</p></details>
           <details class="faq-item"><summary>Should we use RAG or fine-tuning for our company data?</summary><p>Start with RAG for factual company knowledge: it stays current, it can cite sources, and it is far cheaper to update. Fine-tuning earns its keep when you need a model to adopt a specific style, format or narrow task behaviour. The two combine well, but in our experience most business problems are retrieval problems first.</p></details>
           <details class="faq-item"><summary>Can open-source models really match ChatGPT-quality answers?</summary><p>For many business tasks, yes, especially when the model is grounded in your documents through good retrieval. And where a frontier model genuinely is the better fit, we stay provider-agnostic: Claude, GPT or Gemini through private endpoints, or a self-hosted model where data cannot leave your boundary. We test candidate models against your own data before committing.</p></details>

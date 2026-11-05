@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A private AI platform for documents that cannot leave the building | Kamobo</title>
+  <title>A private AI platform, zero trust | Kamobo</title>
   <meta name="description" content="Self-hosted vLLM and Ollama inference on GPU infrastructure in Terraform, with every use case isolated in its own private vector store." />
   <meta name="theme-color" content="#0C1F2C" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://kamobo.co.uk/work/private-ai-platform-zero-trust/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="A private AI platform for documents that cannot leave the building | Kamobo" />
+  <meta property="og:title" content="A private AI platform, zero trust | Kamobo" />
   <meta property="og:description" content="Self-hosted vLLM and Ollama inference on GPU infrastructure in Terraform, with every use case isolated in its own private vector store." />
   <meta property="og:url" content="https://kamobo.co.uk/work/private-ai-platform-zero-trust/" />
   <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=fbf363d6" />
+  <link rel="stylesheet" href="/styles.css?v=da629269" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -45,6 +45,8 @@
   <main id="main">
 
 
+
+
     <section class="section service-hero">
       <div class="wrap">
         <p class="kicker"><a href="/work/">Work</a></p>
@@ -61,14 +63,14 @@
                 <div><strong>Zero</strong><span>third-party inference APIs in the data path</span></div>
                 <div><strong>One per use case</strong><span>isolated platform and private vector store</span></div>
               </div>
-              <h4>The problem</h4>
+              <h2>The problem</h2>
               <p>Real demand for retrieval over internal documents, and an absolute constraint that those documents could not be sent to a third-party model API. Several separate use cases, each with its own sensitivity, which could not be allowed to see each other's data.</p>
-              <h4>What we did</h4>
+              <h2>What we did</h2>
               <p>Built GPU-accelerated Azure infrastructure defined in Terraform and Ansible, running self-hosted inference on vLLM, Ollama and llama.cpp. Added a document ingestion pipeline, vector storage on Postgres with pgvector plus Chroma and LanceDB, Redis for caching and RabbitMQ for message handling, behind a clustered NGINX reverse proxy. Built the API layer and a React chat front end with single sign-on and a configuration page. Every use case runs on its own isolated platform with its own dedicated private vector store, so data never crosses between them. Zero trust and least privilege throughout, containerised, automated with GitHub Actions, observable through Grafana.</p>
-              <h4>Where it landed</h4>
+              <h2>Where it landed</h2>
               <p>In production, serving several use cases, with scale handled by adding nodes rather than rebuilding.</p>
               <div class="takeaways">
-                <h4>What to take from this</h4>
+                <h2>What to take from this</h2>
                 <ul>
                   <li>"We cannot use the API models" is a platform problem, not a reason to abandon the use case.</li>
                   <li>Isolation per use case costs more than one shared index and is usually the only answer that survives a security review.</li>

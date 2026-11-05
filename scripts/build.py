@@ -99,39 +99,22 @@ STATS = [
     ("18,000+", "users on an AI platform we build and operate"),
 ]
 
-# Abstract mark for the hero. No stock photography is licensed, so the visual
-# language is a topology diagram, which is at least what the work actually is.
-FIGURE = '''        <div class="hero-figure" aria-hidden="true">
-          <svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" width="440" height="340">
-            <defs>
-              <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M20 0 L0 0 0 20" fill="none" stroke="#DFE5E9" stroke-width="1"/>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="440" height="340" fill="url(#g)" rx="4"/>
-            <g stroke="#C4CFD6" stroke-width="1.5" fill="none">
-              <path d="M90 170 L210 80"/><path d="M90 170 L210 170"/><path d="M90 170 L210 260"/>
-              <path d="M210 80 L340 125"/><path d="M210 170 L340 125"/>
-              <path d="M210 170 L340 215"/><path d="M210 260 L340 215"/>
-            </g>
-            <g>
-              <rect x="56" y="146" width="68" height="48" rx="4" fill="#0C1F2C"/>
-              <rect x="180" y="56" width="62" height="48" rx="4" fill="#FFFFFF" stroke="#C4CFD6" stroke-width="1.5"/>
-              <rect x="180" y="146" width="62" height="48" rx="4" fill="#0E7A5F"/>
-              <rect x="180" y="236" width="62" height="48" rx="4" fill="#FFFFFF" stroke="#C4CFD6" stroke-width="1.5"/>
-              <rect x="310" y="101" width="62" height="48" rx="4" fill="#FFFFFF" stroke="#C4CFD6" stroke-width="1.5"/>
-              <rect x="310" y="191" width="62" height="48" rx="4" fill="#FFFFFF" stroke="#C4CFD6" stroke-width="1.5"/>
-            </g>
-            <g fill="#647682" font-family="Inter,sans-serif" font-size="10.5" font-weight="600">
-              <text x="72" y="174" fill="#FFFFFF">ingress</text>
-              <text x="193" y="84">compute</text>
-              <text x="196" y="174" fill="#FFFFFF">data</text>
-              <text x="199" y="264">cache</text>
-              <text x="325" y="129">store</text>
-              <text x="321" y="219">models</text>
-            </g>
-          </svg>
-        </div>
+# The hero's second column. This was a topology diagram, which depicted nothing
+# real: generic boxes labelled ingress / compute / data / cache. A client learned
+# nothing from it, so it was decoration. Replaced with the offer most engagements
+# actually start from, which is a conversion asset rather than an illustration.
+FIGURE = '''        <aside class="hero-offer" aria-label="Where most engagements start">
+          <p class="trust-label">Where most engagements start</p>
+          <h2>The Azure Review</h2>
+          <p>A read-only assessment of your Azure estate: what it costs, what it is running, where the risk sits, and what we would fix first. You get written findings and a priced plan.</p>
+          <dl class="offer-spec">
+            <div><dt>Price</dt><dd>&pound;2,500</dd></div>
+            <div><dt>Duration</dt><dd>3 working days</dd></div>
+            <div><dt>Access</dt><dd>Read-only</dd></div>
+          </dl>
+          <p class="offer-note">If you go on to have us do the work and we start within 30 days, the fee is credited in full against it.</p>
+          <a class="btn btn-ghost" href="/azure-review/">What the review covers</a>
+        </aside>
 '''
 
 
@@ -388,7 +371,7 @@ def homepage():
           <article class="engage-card">
             <h3>Retained capacity</h3>
             <p>A standing allocation each month for the work that cannot be scoped in advance: break-fix, reviews, access and governance, and the questions that never become tickets.</p>
-            <p class="engage-for">Monthly plans. Cancel with a month's notice.</p>
+            <p class="engage-for">From &pound;595 a month. Three-month minimum, then thirty days' notice.</p>
           </article>
         </div>
         <p class="engage-note">Kamobo Ltd is a UK limited company, registered number 16579058. We carry our own insurance, sign your NDA and work to your change process.</p>
@@ -417,9 +400,11 @@ def homepage():
 # ---------------------------------------------------------------- sectors
 
 def sectors_page():
+    # h2, not h3: these are the page's first content level, and jumping h1 -> h3
+    # is the outline defect promote_headings() exists to stop.
     items = "\n".join(
         '''          <article class="case">
-            <h3>%s</h3>
+            <h2>%s</h2>
             <p>%s</p>
           </article>''' % (t, d) for t, d in SECTORS)
     body = '''    <section class="section service-hero">
@@ -485,6 +470,42 @@ def sectors_page():
 
 # ---------------------------------------------------------------- re-house
 
+HEADING = re.compile(r"<(/?)h([1-4])\b")
+
+
+def promote_headings(body):
+    """Lift a page's first content heading level to h2.
+
+    Eleven pages jumped straight from h1 to h3, and three case studies from h1
+    to h4, because their section headings were styled rather than structured.
+    That is a real accessibility and search defect, and screen readers and
+    search engines both read the outline. Everything before the first h2 is
+    shifted up by the same delta, so relative nesting is preserved.
+    """
+    opens = [int(m.group(2)) for m in HEADING.finditer(body) if not m.group(1)]
+    before = []
+    for lv in opens:
+        if lv == 2:
+            break
+        if lv > 1:
+            before.append(lv)
+    if not before:
+        return body
+    delta = min(before) - 2
+    if delta <= 0:
+        return body
+    out, idx, seen_h2 = [], 0, False
+    for m in HEADING.finditer(body):
+        lv, closing = int(m.group(2)), m.group(1)
+        if lv == 2 and not closing:
+            seen_h2 = True
+        out.append(body[idx:m.start()])
+        out.append("<%sh%d" % (closing, max(2, lv - delta) if (not seen_h2 and lv > 1) else lv))
+        idx = m.end()
+    out.append(body[idx:])
+    return "".join(out)
+
+
 TITLE = re.compile(r"<title>(.*?)</title>", re.S)
 DESC = re.compile(r'<meta name="description" content="(.*?)"', re.S)
 CANON = re.compile(r'<link rel="canonical" href="https://kamobo\.co\.uk(.*?)"', re.S)
@@ -504,6 +525,7 @@ def rehouse():
             skipped.append(rel)
             continue
         body = OLD_CTA.sub("\n", mm.group(1))          # the shared CTA is re-added by page()
+        body = promote_headings(body)
         canonical = mc.group(1) if mc else rel
         active = next((h for h, _t in NAV if h == rel), "")
         page(rel, mt.group(1), md.group(1), body, active)
