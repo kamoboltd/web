@@ -37,32 +37,35 @@ NAV = [
 
 SERVICES = [
     ("azure-cost-optimization", "Cloud cost reduction",
-     "Find the spend that is doing nothing, and stop it recurring."),
+     "Find what you are paying for and no longer use, and stop it coming back."),
     ("azure-data-engineering", "Azure data platforms",
-     "Synapse, Data Factory and Databricks, built to run efficiently."),
+     "Reporting and analytics pipelines that run reliably and cost what they should."),
     ("private-llm-rag", "Private LLM and RAG",
-     "Self-hosted inference for documents that cannot leave the estate."),
+     "AI across your own documents, without any of it leaving your tenant."),
     ("ai-agent-development", "AI agents in production",
-     "Agents that run unattended, with approval gates and logging."),
+     "Software that handles the repetitive work, with a person approving anything that matters."),
     ("terraform-azure-landing-zones", "Landing zones and Terraform",
-     "Subscription vending, hub-spoke, private endpoints, policy and RBAC."),
+     "A clean, governed Azure foundation so teams can build without creating risk."),
     ("application-performance-troubleshooting", "Performance and root-cause",
-     "Load testing and forensics on systems nobody left can explain."),
+     "Work out why it is slow or failing, and prove it, before anyone pays for a rebuild."),
     ("devops-cicd-gitops", "DevOps, CI/CD and GitOps",
-     "Pipelines that take minutes instead of hours, across five toolchains."),
+     "Ship changes in minutes rather than hours, without the release-day drama."),
     ("api-development", "APIs and integration",
-     "Service layers, hybrid connectivity and integration that holds up."),
+     "Get your systems talking to each other reliably, including the awkward old ones."),
     ("saas-software-development", "Software and SaaS",
-     "Multi-tenant products, built and operated end to end."),
+     "Build and run the product itself, from the database to the billing."),
 ]
 
 STUDIES = [
     ("azure-bill-six-figures", "&pound;150,000 a year",
-     "removed from one Azure bill, by interviewing the people who knew where the spend went."),
-    ("streaming-platform-nobody-could-explain", "70% lower",
-     "total cost of ownership over three years, on a streaming platform nobody could explain."),
-    ("private-ai-platform-zero-trust", "Zero",
-     "third-party inference calls, on a private AI platform for documents that cannot leave."),
+     "taken off an Azure bill and kept off, after a full audit of what the estate was "
+     "actually running and paying for."),
+    ("streaming-platform-nobody-could-explain", "70% cheaper",
+     "to run over three years, on a platform we took over, diagnosed and rebuilt without "
+     "taking it offline."),
+    ("private-ai-platform-zero-trust", "Nothing leaves",
+     "your own tenant. AI across confidential documents that cannot legally be sent to a "
+     "public AI service."),
 ]
 
 # Descriptors here are the anonymised ones permitted by the facts pack. Nothing
@@ -129,10 +132,16 @@ CLIENT_LOGOS = [
 def clients():
     """A logo band. Every firm in the reference class carries one, and it is the
     strongest trust signal on the site. The list is duplicated because the
-    marquee translates by -50%."""
+    marquee translates by -50%.
+
+    Deliberately NOT loading="lazy". The track is animated, so images get
+    carried past the viewport faster than the lazy-load observer fires and
+    several never loaded at all, which showed up as gaps in the band. All ten
+    files together are about 70KB, so eager loading costs nothing worth having.
+    """
     def row(hidden):
         return "\n".join(
-            '            <li><img src="/assets/logos/%s" alt="%s" loading="lazy" /></li>'
+            '            <li><img src="/assets/logos/%s" alt="%s" height="26" /></li>'
             % (f, "" if hidden else n) for f, n in CLIENT_LOGOS)
     return '''
     <section class="clients" aria-label="Organisations we have worked with">
@@ -341,7 +350,7 @@ def homepage():
       <div class="wrap">
         <div class="section-head">
           <p class="kicker">Our work</p>
-          <h2>Outcomes, with the number first</h2>
+          <h2>What these engagements were worth</h2>
           <p class="section-sub">Three engagements written up in full, including what was tried that did not work.</p>
         </div>
         <div class="proof">

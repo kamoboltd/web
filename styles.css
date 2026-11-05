@@ -178,6 +178,8 @@ strong { color: var(--ink); font-weight: 650; }
   border-top: 1px solid var(--line); margin-top: 60px;
 }
 .hero-meta div { padding: 26px 22px 30px 0; min-width: 0; border-right: 1px solid var(--line); }
+/* Without this the figures sit hard against the cell divider to their left. */
+.hero-meta div + div { padding-left: 26px; }
 .hero-meta div:last-child { border-right: 0; }
 .hero-meta strong {
   display: block; font-size: 29px; line-height: 1.1; font-weight: 700;
@@ -275,6 +277,14 @@ strong { color: var(--ink); font-weight: 650; }
 .fact { font-size: 15.5px; }
 .study-used { font-size: 13.5px; color: var(--muted); margin-top: 16px; }
 
+/* Side column on a case study: label over value, not a raw indented <dl>. */
+.facts { margin: 0; }
+.facts > div { padding: 13px 0; border-top: 1px solid var(--line); }
+.facts > div:first-child { border-top: 0; padding-top: 0; }
+.facts dt { font-size: 11.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+            color: var(--muted); margin-bottom: 4px; }
+.facts dd { margin: 0; font-size: 15.5px; font-weight: 650; color: var(--ink); }
+
 /* ===== Long-form article ================================================= */
 
 .article { max-width: 72ch; }
@@ -335,7 +345,11 @@ strong { color: var(--ink); font-weight: 650; }
 .engage-note, .products-more, .product-note { font-size: 14.5px; color: var(--muted); margin-top: 16px; }
 
 .clients { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-           padding: 28px 0; overflow: hidden; }
+           padding: 30px 0 34px; overflow: hidden; }
+/* padding-bottom on the wrap, not margin on the label: a margin collapses out
+   of the wrap and leaves the label sitting directly on the logos. */
+.clients .wrap { padding-bottom: 26px; }
+.clients .trust-label { margin-bottom: 0; }
 .marquee { overflow: hidden; }
 .marquee-track { display: flex; width: max-content; animation: slide 46s linear infinite; }
 .marquee-list { display: flex; align-items: center; gap: 56px; list-style: none; margin: 0; padding: 0 28px 0 0; }
@@ -429,6 +443,7 @@ strong { color: var(--ink); font-weight: 650; }
   .hero { padding: 48px 0 0; }
   .hero-meta { grid-template-columns: repeat(2, 1fr); margin-top: 44px; }
   .hero-meta div:nth-child(2n) { border-right: 0; }
+  .hero-meta div:nth-child(2n+1) { padding-left: 0; }
   .hero-meta strong { font-size: 25px; }
   .principles, .qualify, .study-grid { grid-template-columns: 1fr; }
   .row { grid-template-columns: 40px 1fr; gap: 16px; }
