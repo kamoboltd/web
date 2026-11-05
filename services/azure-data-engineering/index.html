@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=b32390e4" />
+  <link rel="stylesheet" href="/styles.css?v=4a5ef3fe" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -123,6 +123,7 @@
           <h2>Common questions about Azure data platforms</h2>
         </header>
         <div class="faq-list">
+            <details class="faq-item"><summary>Is Azure Synapse Link for Dataverse being retired?</summary><p>Not the service, but its Delta Lake (Parquet) export is: closed to new customers from 15 October 2026 and removed in December 2027. We have moved a production Dataverse estate to Fabric Link and can do it again. <a href="/insights/synapse-link-to-fabric-link-dataverse/">What is being retired, and how to choose between Fabric Link and Synapse Link CSV</a>.</p></details>
           <details class="faq-item"><summary>What does an Azure data engineering consultancy actually do?</summary><p>We design and build the infrastructure that moves, stores and serves your data on Azure: ingestion pipelines in Data Factory, warehouses and lakehouses in Synapse, Databricks or Microsoft Fabric, and the networking, security and CI/CD around them. The result is data your analysts and applications can rely on, engineered as a platform rather than a pile of one-off scripts.</p></details>
           <details class="faq-item"><summary>Should we choose Azure Synapse, Databricks or Microsoft Fabric?</summary><p>It depends on your workloads and your team. Synapse remains solid for SQL-centric warehousing, Databricks leads for heavy Spark, streaming and machine learning, and Fabric suits teams that want a unified, capacity-billed platform close to Power BI. We resell none of them, so our recommendation is based on your data volumes, skills and budget, not a partner margin.</p></details>
           <details class="faq-item"><summary>How long does it take to build a data platform on Azure?</summary><p>A first production increment usually takes weeks, not years. We stand up the platform foundations and one high-value pipeline first, then extend source by source. A focused ingestion-and-warehouse build is often reporting on real data within the first few weeks; a full enterprise estate is a phased programme that we scope stage by stage.</p></details>

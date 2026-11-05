@@ -388,9 +388,9 @@ def page(path, title, desc, body, active="", closer=None):
 
 INSIGHT_ROW = re.compile(
     r'<h[23]><a href="/insights/([a-z0-9-]+)/">(.*?)</a></h[23]>\s*<div class="row-body">\s*<p>(.*?)</p>', re.S)
-HOME_INSIGHTS = ["interviews-find-more-savings-than-tooling",
-                 "load-test-before-you-re-architect",
-                 "taking-over-a-system-nobody-can-explain"]
+HOME_INSIGHTS = ["synapse-link-to-fabric-link-dataverse",
+                 "interviews-find-more-savings-than-tooling",
+                 "load-test-before-you-re-architect"]
 
 
 def insight_rows():
@@ -432,9 +432,8 @@ def homepage():
       <div class="wrap">
         <div class="hero-inner">
           <div>
-            <p class="kicker">UK Azure and DevOps consultancy</p>
-            <h1>Azure platforms, built to keep running.</h1>
-            <p class="lede">Kamobo designs, builds and recovers cloud platforms, data pipelines and AI systems: as code, in your own tenant, and handed over in a state your team can run. Every engagement is led hands-on by the engineer doing the work.</p>
+            <h1>UK-based Azure consultancy.<span class="h1-sub">Platform engineering, AI and data platforms.</span></h1>
+            <p class="lede">We design, build and recover the Azure estates businesses run on: as code, in your own tenant, and handed over in a state your team can run. Every engagement is led hands-on by the engineer doing the work.</p>
             <div class="hero-cta">
               <a class="btn btn-primary btn-lg" %s>Book a call</a>
               <a class="quiet-link" href="/work/">See the work</a>
@@ -492,10 +491,9 @@ def homepage():
 
 ''' % (BOOK_ATTRS, FIGURE, stats, clients(), practices, OFFER, proof, insight_rows())
 
-    return page("/", "Kamobo | Azure and DevOps consultancy, UK",
-                "Kamobo is a UK Azure and DevOps consultancy. We design, build and recover cloud "
-                "platforms, data pipelines and AI systems as code, led hands-on by the engineer "
-                "doing the work.", body)
+    return page("/", "Kamobo | UK Azure consultancy for platforms, AI and data",
+                "Kamobo is a UK-based Azure consultancy for platform engineering, AI and data "
+                "platforms, built as code and led hands-on by the engineer doing the work.", body)
 
 
 # ---------------------------------------------------------------- sectors

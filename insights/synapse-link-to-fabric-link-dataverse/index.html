@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synapse Link to Fabric Link for Dataverse | Kamobo</title>
+  <meta name="description" content="The Delta export in Synapse Link for Dataverse is deprecated. What is being retired, when, and how to move to Fabric Link without breaking reports." />
+  <meta name="theme-color" content="#0C1F2C" />
+  <link rel="icon" href="/assets/favicon.svg?v=4aed5fe3" type="image/svg+xml" />
+  <link rel="canonical" href="https://kamobo.co.uk/insights/synapse-link-to-fabric-link-dataverse/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Synapse Link to Fabric Link for Dataverse | Kamobo" />
+  <meta property="og:description" content="The Delta export in Synapse Link for Dataverse is deprecated. What is being retired, when, and how to move to Fabric Link without breaking reports." />
+  <meta property="og:url" content="https://kamobo.co.uk/insights/synapse-link-to-fabric-link-dataverse/" />
+  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:site_name" content="Kamobo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=4a5ef3fe" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Kamobo home">
+        <img src="/assets/logo.svg?v=72bbeb99" alt="Kamobo" width="150" height="36" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">What we do</a>
+        <a href="/sectors/">Sectors</a>
+        <a href="/work/">Our work</a>
+        <a href="/insights/">Insights</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="header-cta"><a class="btn btn-primary btn-sm" data-book href="https://cal.com/kamobo/30min" target="_blank" rel="noopener">Book a call</a></div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/insights/">Insights</a> &nbsp;&middot;&nbsp; Data</p>
+        <h1>The Delta export in Synapse Link is going. Here is where to move.</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="article">
+          <p class="article-meta"><span class="who">James Dettmer, Principal</span> <span>5 November 2026</span> <span>5 min read</span></p>
+          <p class="standfirst">Azure Synapse Link for Dataverse is not being switched off. Its Delta Lake export option is: closed to new customers since 15 October 2026, and gone for everyone in December 2027. We have already moved a production Dataverse estate from Synapse Link to Fabric Link. This is how we decide which way to go, and how to make the move without breaking what reads the data.</p>
+<p>&ldquo;Synapse Link is deprecated&rdquo; is going round as a single sentence, and it is wrong in a way that matters. Read it as a whole-service retirement and you rush a migration you may not need. Dismiss it as noise and you find out in late 2027 that your reports have stopped refreshing. The accurate picture is four separate changes with four separate dates.</p>
+
+<h2>What is actually being retired</h2>
+
+<ul>
+<li><strong>The Delta Lake (Parquet) export in Azure Synapse Link.</strong> Deprecated. Not available to new customers from 15 October 2026. Existing customers have to move to CSV output in Synapse Link, or to Link to Microsoft Fabric, by December 2027, when the option stops.</li>
+<li><strong>Export to Data Lake</strong>, the older finance and operations add-in installed through Lifecycle Services. Retired in November 2024 and stopping permanently on 30 November 2026, with no extensions. If anything still depends on it, that is the urgent one.</li>
+<li><strong>The Synapse Spark 3.4 runtime.</strong> The Delta export only works because a Spark pool in your own Synapse workspace converts the files. Spark 3.4 went out of support on 31 March 2026 and its jobs are being disabled in phases. A Delta link still running on a 3.4 pool is already on unsupported ground.</li>
+<li><strong>Not retiring: Azure Synapse Link itself.</strong> CSV export to your own storage account stays supported. Microsoft says it wants customers to be able to export data &ldquo;well into the future&rdquo;.</li>
+</ul>
+
+<h2>Two ways out, and they are not the same thing</h2>
+
+<p>Synapse Link with CSV output keeps the shape you have now: your storage account, your network rules, your managed identities, your pipelines. Choose it when the data has to land in a lake you control, or when what reads it is not Microsoft&rsquo;s.</p>
+
+<p>Link to Fabric is a different model. Dataverse keeps a Delta Parquet replica of the selected tables in its own managed storage, in the same region as the environment, and Fabric reads it through shortcuts in a lakehouse. Nothing is copied into a storage account of yours, there is no pipeline to run, and the data stays inside the Dataverse governance boundary. Choose it when the consumers are Power BI and Fabric.</p>
+
+<p>If Delta was the reason you chose the Delta option in the first place, Fabric Link is now the only Microsoft route that gives you Delta directly from Dataverse without running a Spark pool of your own.</p>
+
+<h2>The cost moves rather than disappears</h2>
+
+<p>Fabric Link removes the storage account, the Spark pool hours spent converting files to Delta and, if nothing else uses it, the Synapse workspace. What it adds is Dataverse database storage. The replica counts against the environment&rsquo;s database capacity, and it shows up in the Power Platform admin center as extra files named after each table with an &ldquo;-Analytics&rdquo; suffix. Database capacity is the dearest of Dataverse&rsquo;s three storage types.</p>
+
+<p>So check headroom before you link, not after. Only the tables you select consume storage, and the wizard selects every change-tracked table by default, so clear the ones nothing reports on. A handful of system tables are always included and cannot be removed.</p>
+
+<h2>What changes for whatever reads the data</h2>
+
+<p>Creating the link is a wizard. The work is downstream, and most of it sits in four places.</p>
+
+<ul>
+<li><strong>Serverless SQL.</strong> Fabric links using low-latency sync write Delta with deletion vectors, which Synapse serverless SQL pools cannot read in every scenario. Views and reports that query through serverless SQL need to move to the Fabric SQL analytics endpoint. Keeping them means adding a notebook that rewrites the tables without deletion vectors, with the delay and scheduling that brings.</li>
+<li><strong>Empty strings.</strong> Low-latency sync keeps an empty string as an empty string; Microsoft notes that earlier Fabric links converted them to NULL. Check any filter or measure that relies on NULL to mean blank, because a change here fails silently.</li>
+<li><strong>Choice metadata.</strong> Under low-latency sync the OptionsetMetadata and GlobalOptionsetMetadata tables have no createdonpartition column. Queries that name it need changing.</li>
+<li><strong>Coverage.</strong> Only tables with change tracking enabled can be linked. Anything you were getting some other way needs change tracking switched on, or a different route.</li>
+</ul>
+
+<h2>The sequence that keeps it boring</h2>
+
+<ol>
+<li><strong>List every consumer first.</strong> Each report, semantic model, pipeline, notebook and serverless SQL view that reads the Synapse Link output. That list, not the data volume, is the size of the job.</li>
+<li><strong>Check Dataverse database capacity</strong>, and decide the table list before linking rather than accepting the default.</li>
+<li><strong>Run both links side by side.</strong> Create the Fabric link while Synapse Link carries on, and reconcile row counts table by table before anything is repointed.</li>
+<li><strong>Repoint consumers one at a time</strong>, starting with the ones that hurt least if they break.</li>
+<li><strong>Know the unlink rule before you build on it.</strong> Unlinking deletes the lakehouse the link created, and it will not complete while any pipeline, copy job or semantic model still references it. Plan for that before reporting is layered on top.</li>
+<li><strong>Retire last.</strong> Delete the Synapse Link profile, the Spark pool and the storage account only once nothing reads them.</li>
+</ol>
+
+<h2>Which way to go</h2>
+
+<ul>
+<li><strong>Still on Export to Data Lake:</strong> move now. It stops on 30 November 2026.</li>
+<li><strong>On Synapse Link Delta, read by Power BI or Fabric:</strong> Fabric Link.</li>
+<li><strong>On Synapse Link Delta, read by tools outside Microsoft, or required in your own lake:</strong> Synapse Link with CSV output, and plan for the format change downstream.</li>
+<li><strong>On Synapse Link CSV:</strong> no deadline. Move when Fabric becomes your platform, not before.</li>
+</ul>
+
+<p>December 2027 sounds like plenty of time. It is, until you count what reads the data. Creating the link is the short part; repointing a reporting estate that nobody has inventoried is not. We have made this move on a production estate and can run it again, and the consumer inventory is the place to start.</p>
+
+<h2>Sources</h2>
+
+<p>Checked against Microsoft Learn on 5 November 2026.</p>
+
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-delta-lake">Export Dataverse data in Delta Lake format</a>: the deprecation notice and both dates.</li>
+<li><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-transition-faq">Transitioning to Fabric link and Azure Synapse Link</a>: Export to Data Lake stopping on 30 November 2026, and Synapse Link remaining supported.</li>
+<li><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/fabric-link-faq">Microsoft Fabric Link for Dataverse FAQ</a>: low-latency sync, deletion vectors, empty strings, table selection and unlinking.</li>
+<li><a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-view-in-fabric">Link your Dataverse environment to Microsoft Fabric</a>: the replica in Dataverse storage and how it appears in the admin center.</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-34-runtime">Azure Synapse Runtime for Apache Spark 3.4</a>: end of support on 31 March 2026.</li>
+</ul>
+        </div>
+
+        <div class="article" style="margin-top:52px">
+          <p class="trust-label">Questions this usually raises</p>
+          <div class="faq-list" style="margin-top:14px">
+            <details class="faq-item"><summary>Is Azure Synapse Link for Dataverse being retired?</summary><p>No. The service stays, with CSV export to your own storage account. What is going is its Delta Lake (Parquet) export option: closed to new customers from 15 October 2026 and removed in December 2027.</p></details>
+            <details class="faq-item"><summary>Does Fabric Link cost more than Synapse Link?</summary><p>It moves the cost rather than removing it. You stop paying for the storage account and the Spark pool that converts files to Delta, and start consuming Dataverse database capacity for the replica, plus Fabric capacity to use it. Which comes out cheaper depends on how many tables you link and how much database capacity you have spare, and the Power Platform admin center shows you the second before you commit.</p></details>
+            <details class="faq-item"><summary>Can we keep our Synapse serverless SQL views?</summary><p>Not reliably on low-latency sync, because the Delta tables it writes use deletion vectors. Microsoft&rsquo;s guidance is to move those queries to the Fabric SQL analytics endpoint, or to rewrite the tables with a notebook, which adds delay.</p></details>
+            <details class="faq-item"><summary>How long does a migration take?</summary><p>Creating the link is the short part. The time goes on repointing whatever reads the old output, so the honest estimate comes from a list of consumers rather than from the size of the data. We can produce that list before you commit to anything.</p></details>
+          </div>
+        </div>
+
+        <div class="author-box">
+          <p class="meta">Written by</p>
+          <h3>James Dettmer</h3>
+          <p>Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years data and AI platforms on top of them. Most of that spent inside other organisations&rsquo; estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money.</p>
+          <p class="meta"><a href="/about/">More about Kamobo</a> &nbsp;&middot;&nbsp; <a href="&#109;ailto:hello&#64;kamobo.co.uk?subject=Your%20post%20on%20kamobo.co.uk">Disagree? Say so</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:0">
+          <h2>Also worth reading</h2>
+        </div>
+        <div class="rows" style="margin-top:36px">
+          <article class="row">
+            <p class="row-no">01</p>
+            <h3><a href="/insights/taking-over-a-system-nobody-can-explain/">Taking over a system nobody can explain</a></h3>
+            <div class="row-body">
+              <p>Inheriting a platform is a research job first and an engineering job second. Budget for the reading.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">02</p>
+            <h3><a href="/insights/interviews-find-more-savings-than-tooling/">Cost tools cannot tell you what nobody needs</a></h3>
+            <div class="row-body">
+              <p>An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+          <article class="row">
+            <p class="row-no">03</p>
+            <h3><a href="/insights/isolate-the-vector-store-per-use-case/">Give every AI use case its own vector store</a></h3>
+            <div class="row-body">
+              <p>One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.</p>
+              <p class="meta">James Dettmer &middot; 4 November 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <h2>Tell us what is actually going wrong.</h2>
+        <p>One email, a couple of paragraphs. We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people for it we will say so, and point you at who is.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" data-book href="https://cal.com/kamobo/30min" target="_blank" rel="noopener">Book a call</a>
+          <a class="btn btn-ghost btn-lg" href="&#109;ailto:hello&#64;kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">Email instead</a>
+        </div>
+        <p class="cta-sub">No sales sequence. A reply from the engineer who would do the work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-sitemap">
+      <div>
+        <p class="trust-label">What we do</p>
+          <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
+          <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
+          <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
+          <a href="/services/api-development/">APIs and integration</a>
+          <a href="/services/saas-software-development/">Software and SaaS</a>
+      </div>
+      <div>
+        <p class="trust-label">Our work</p>
+          <a href="/work/azure-bill-six-figures/">Cloud cost recovery</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">Platform forensics</a>
+          <a href="/work/private-ai-platform-zero-trust/">Private AI platform</a>
+          <a href="/work/">All case studies</a>
+          <a href="/sectors/">Sectors</a>
+      </div>
+      <div>
+        <p class="trust-label">How we work</p>
+          <a href="/azure-review/">The Azure Review</a>
+          <a href="/retainers/">Retainers</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/how-we-work/">Our approach</a>
+          <a href="/insights/">Insights</a>
+      </div>
+      <div>
+        <p class="trust-label">Company</p>
+          <a href="/about/">About Kamobo</a>
+          <a href="/contact/">Contact</a>
+          <a href="&#109;ailto:hello&#64;kamobo.co.uk">hello&#64;kamobo.co.uk</a>
+      </div>
+      <div>
+        <p class="trust-label">Legal</p>
+          <a href="/privacy/">Privacy notice</a>
+          <a href="/privacy/#cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Kamobo Ltd. Registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/16579058">16579058</a>. Registered office: 124-128 City Road, London EC1V 2NX.</span>
+      <span>hello&#64;kamobo.co.uk</span>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=a37c46f1" defer></script>
+</body>
+</html>
