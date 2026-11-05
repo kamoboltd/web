@@ -301,7 +301,7 @@ def homepage():
             <p class="lede">Kamobo designs, builds and recovers the cloud platforms, data pipelines and AI systems that businesses depend on. Every engagement is led hands-on by the engineer doing the work, not handed to a delivery team you have not met.</p>
             <div class="hero-cta">
               <a class="btn btn-primary btn-lg" data-book href="%s">Book a call</a>
-              <a class="btn btn-ghost btn-lg" href="/azure-review/">Start with an Azure Review</a>
+              <a class="btn btn-ghost btn-lg" href="/work/">See the work</a>
             </div>
           </div>
 %s        </div>
