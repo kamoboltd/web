@@ -349,19 +349,6 @@ def homepage():
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="kicker">Who we work with</p>
-          <h2>Regulated and operationally complex estates</h2>
-          <p class="section-sub">Clients are described here without naming them. We will talk about any of this work in detail on a call, under NDA where that is needed.</p>
-        </div>
-        <div class="sectors">
-%s
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="wrap">
         <div class="section-head">
@@ -375,46 +362,7 @@ def homepage():
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="kicker">How we engage</p>
-          <h2>Three ways to start</h2>
-        </div>
-        <div class="engage-grid">
-          <article class="engage-card featured">
-            <span class="engage-badge">Most common</span>
-            <h3>The Azure Review</h3>
-            <p>A fixed-price, read-only assessment of an Azure estate: cost, architecture, security posture and the things nobody has looked at in two years. You get a findings review and a priced plan for anything worth fixing.</p>
-            <p class="engage-for">&pound;2,500 fixed. Two weeks. No access beyond read-only.</p>
-          </article>
-          <article class="engage-card">
-            <h3>Project work</h3>
-            <p>A defined piece of engineering with an outcome we both agree on up front: a landing zone, a data platform, a private LLM deployment, a migration, a performance recovery.</p>
-            <p class="engage-for">From &pound;850 a day, or fixed price where the scope allows it.</p>
-          </article>
-          <article class="engage-card">
-            <h3>Retained capacity</h3>
-            <p>A standing allocation each month for the work that cannot be scoped in advance: break-fix, reviews, access and governance, and the questions that never become tickets.</p>
-            <p class="engage-for">From &pound;595 a month. Three-month minimum, then thirty days' notice.</p>
-          </article>
-        </div>
-        <p class="engage-note">Kamobo Ltd is a UK limited company, registered number 16579058. We carry our own insurance, sign your NDA and work to your change process.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="book">
-          <div>
-            <h2>Not sure which of those it is?</h2>
-            <p>Describe the problem in a couple of paragraphs. We will tell you which one it needs.</p>
-          </div>
-          <a class="btn btn-primary btn-lg" data-book href="%s">Book a call</a>
-        </div>
-      </div>
-    </section>
-''' % (BOOK, FIGURE, stats, clients(), svc, sectors, proof, BOOK)
+''' % (BOOK, FIGURE, stats, clients(), svc, proof)
 
     return page("/", "Kamobo | Azure, data and AI consultancy, UK",
                 "Kamobo is a UK technology consultancy. We design, build and recover Azure "
