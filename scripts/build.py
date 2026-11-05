@@ -274,14 +274,30 @@ CTA = '''
 ''' % (BOOK, MAIL)
 
 
-def page(path, title, desc, body, active=""):
+# The contact page's own hero says the same thing as the global band, word for
+# word, so the band is pure duplication there. It closes with the action only.
+CONTACT_CLOSE = '''
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="cta-actions" style="margin-top:0">
+          <a class="btn btn-primary btn-lg" data-book href="%s">Book a call</a>
+          <a class="btn btn-ghost btn-lg" href="%s">Send an email</a>
+        </div>
+        <p class="meta" style="margin-top:18px">Either way it reaches the same inbox.</p>
+      </div>
+    </section>
+''' % (BOOK, MAIL)
+
+
+def page(path, title, desc, body, active="", closer=None):
     out = os.path.join(ROOT, path.strip("/"), "index.html") if path != "/" \
         else os.path.join(ROOT, "index.html")
     d = os.path.dirname(out)
     if d:
         os.makedirs(d, exist_ok=True)
     html = (head(title, desc, path) + header(active) +
-            '\n  <main id="main">\n' + body + CTA + "  </main>\n" + footer())
+            '\n  <main id="main">\n' + body + (CTA if closer is None else closer) +
+            "  </main>\n" + footer())
     io.open(out, "w", encoding="utf-8", newline="\n").write(html)
     return out
 
@@ -537,7 +553,8 @@ def rehouse():
         body = promote_headings(body)
         canonical = mc.group(1) if mc else rel
         active = next((h for h, _t in NAV if h == rel), "")
-        page(rel, mt.group(1), md.group(1), body, active)
+        page(rel, mt.group(1), md.group(1), body, active,
+             closer=CONTACT_CLOSE if rel == "/contact/" else None)
         done += 1
     return done, skipped
 
