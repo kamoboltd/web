@@ -359,7 +359,7 @@ CTA = '''
 # The contact page's own hero says the same thing as the global band, word for
 # word, so the band is pure duplication there. It closes with the action only.
 CONTACT_CLOSE = '''
-    <section class="section section-alt">
+    <section class="section section-alt contact-close">
       <div class="wrap">
         <div class="cta-actions" style="margin-top:0">
           <a class="btn btn-primary btn-lg" %s>Book a call</a>
@@ -611,6 +611,10 @@ DESC = re.compile(r'<meta name="description" content="(.*?)"', re.S)
 CANON = re.compile(r'<link rel="canonical" href="https://kamobo\.co\.uk(.*?)"', re.S)
 MAIN = re.compile(r'<main id="main">(.*)</main>', re.S)
 OLD_CTA = re.compile(r'\s*<section class="cta"[^>]*>.*?</section>\s*$', re.S)
+# The contact page's closer is re-appended by page(), so it has to come off on
+# the way in as well. For one build it did not, and the page accumulated a
+# fresh copy every time the site was generated.
+OLD_CLOSE = re.compile(r'\s*<section class="section section-alt contact-close">.*?</section>\s*$', re.S)
 
 
 def rehouse():
@@ -625,6 +629,8 @@ def rehouse():
             skipped.append(rel)
             continue
         body = OLD_CTA.sub("\n", mm.group(1))          # the shared CTA is re-added by page()
+        while OLD_CLOSE.search(body):
+            body = OLD_CLOSE.sub("\n", body)
         body = promote_headings(body)
         active = next((h for h, _t in NAV if h == rel), "")
         page(rel, mt.group(1), md.group(1), body, active,

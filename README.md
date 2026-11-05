@@ -59,6 +59,24 @@ asset's own bytes, so the query only changes when the asset does. It covers ever
 non-zero if a page has no stylesheet link, which is how a generated page that lost its
 `<head>` would get caught.
 
+### Client logos
+
+The logo row renders every mark as a uniform silhouette (`filter: grayscale(1) brightness(0)`
+at 50% opacity), because the raw files have wildly different weights: ACCA is solid red,
+LME is a thin roundel, SEGRO is a PNG. Two constraints follow from that filter:
+
+- A mark whose foreground is white (IS2) turns into a blob. It is not in the row.
+- Figma exports wrap the artwork in `<g clip-path="url(#clip0)">` with a white `<rect>`
+  inside the `<clipPath>`. That rect is the clip shape, not a background. Deleting it clips
+  the whole logo to nothing, which is how Glisser vanished for one build. Leave those alone.
+
+### Hero figure
+
+The homepage image is an SVG architecture of the private AI platform described in
+`freelance/proposals/_facts-pack.md`, drawn in `scripts/build.py` (`FIGURE`). Every box on it
+is a component that exists on that platform. If the figure is ever changed, it must still
+depict something real; a generic topology was tried and rightly rejected.
+
 ### Booking links
 
 Every "Book a call" button carries a bare `data-book` attribute and nothing else does, so
