@@ -4,94 +4,74 @@
 <meta charset="utf-8" />
 <title>Kamobo social card source</title>
 <!--
-  Source for assets/og-card.png.
+  Source for assets/og-card.png (1200x630), rebuilt 5 November 2026 for the new
+  brand: flat navy, no gradient, Inter only.
 
-  TO REGENERATE: open this file in a browser at a 1200x630 viewport and save a
-  screenshot over assets/og-card.png. In Chrome: DevTools, device toolbar,
-  responsive, set 1200x630, then the three-dot menu on the device bar and
-  "Capture screenshot".
+  To regenerate: open this file in Chrome, set the window so the card is not
+  scaled, and screenshot the .card element at exactly 1200x630. Or, with a
+  headless browser available:
 
-  It lives in the repo so the card is regenerated whenever the positioning
-  changes, instead of quietly becoming the stale artefact the previous dark
-  one became: that card outlived two repositionings and was still being served
-  to every share on 4 Nov 2026.
+      npx playwright screenshot --viewport-size=1200,630 \
+        assets/og-card.html assets/og-card.png
 -->
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1200px; height: 630px; overflow: hidden; background: #fff; }
-  .card { width: 1200px; height: 630px; }
+  html, body { margin: 0; padding: 0; background: #555; }
   .card {
-    font-family: "Inter", system-ui, sans-serif;
-    background:
-      radial-gradient(760px 420px at 88% -12%, rgba(15,158,126,0.16), transparent 62%),
-      linear-gradient(180deg, #FBFDFC 0%, #FFFFFF 70%);
-    color: #16303F;
-    padding: 64px 72px;
+    width: 1200px; height: 630px; position: relative; overflow: hidden;
+    background: #0C1F2C; color: #fff;
+    font-family: Inter, -apple-system, "Segoe UI", system-ui, sans-serif;
     display: flex; flex-direction: column; justify-content: space-between;
-    position: relative;
+    padding: 72px 80px;
   }
-  body::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image: linear-gradient(#DFE8EE 1px, transparent 1px), linear-gradient(90deg, #DFE8EE 1px, transparent 1px);
-    background-size: 60px 60px;
-    -webkit-mask-image: radial-gradient(700px 360px at 85% 6%, #000, transparent 72%);
-    mask-image: radial-gradient(700px 360px at 85% 6%, #000, transparent 72%);
-    opacity: .5;
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
-  .top, .mid, .bot { position: relative; z-index: 1; }
+  .inner { position: relative; }
   .brand { display: flex; align-items: center; gap: 16px; }
-  .mark { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #34E0B4, #4ADE80); position: relative; flex: none; }
+  .mark { width: 54px; height: 54px; border-radius: 7px; background: rgba(255,255,255,0.1); position: relative; }
   .mark svg { position: absolute; inset: 0; }
-  .word { font-family: "Space Grotesk", sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; color: #0C1F2C; }
-  h1 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 62px; font-weight: 600; line-height: 1.08; letter-spacing: -0.035em;
-    color: #0C1F2C; max-width: 940px;
-  }
-  h1 em { font-style: normal; color: #0F9E7E; }
-  .sub { font-size: 21px; color: #4C6475; margin-top: 20px; max-width: 760px; line-height: 1.5; }
-  .bot { display: flex; align-items: flex-end; justify-content: space-between; }
-  .models { display: flex; gap: 14px; }
-  .model {
-    font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 500;
-    color: #0A7259; background: #E6F5F1; border: 1px solid rgba(15,158,126,0.22);
-    border-radius: 6px; padding: 10px 14px;
-  }
-  .domain { font-family: "JetBrains Mono", monospace; font-size: 17px; color: #6D8595; letter-spacing: 0.02em; }
+  .word { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; }
+  h1 { font-size: 62px; line-height: 1.1; letter-spacing: -1.6px; font-weight: 700; margin: 0 0 22px; max-width: 17ch; }
+  p { font-size: 23px; line-height: 1.5; color: rgba(255,255,255,0.72); margin: 0; max-width: 54ch; }
+  .foot { display: flex; align-items: center; gap: 14px; font-size: 18px; color: rgba(255,255,255,0.56); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #2FB389; }
+  .rule { height: 3px; width: 72px; background: #2FB389; margin: 0 0 30px; border-radius: 2px; }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="top">
-    <div class="brand">
-      <span class="mark">
-        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="#07130E" stroke-width="4" stroke-linecap="round" fill="none">
-            <line x1="20" y1="15" x2="20" y2="41"/>
-            <path d="M20 28 L32 16"/>
-            <path d="M20 26 L33 40"/>
+  <div class="card">
+    <div class="grid"></div>
+    <div class="inner brand">
+      <div class="mark">
+        <svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" fill="none">
+            <line x1="18" y1="16" x2="18" y2="38"/>
+            <path d="M18 27 L34 16"/>
+            <path d="M18 27 L34 38"/>
           </g>
-          <circle cx="20" cy="28" r="3.6" fill="#07130E"/>
+          <circle cx="18" cy="27" r="4" fill="#FFFFFF"/>
+          <circle cx="34" cy="16" r="3.6" fill="#2FB389"/>
+          <circle cx="34" cy="38" r="3.6" fill="#FFFFFF"/>
         </svg>
-      </span>
-      <span class="word">kamobo</span>
+      </div>
+      <span class="word">Kamobo</span>
+    </div>
+    <div class="inner">
+      <div class="rule"></div>
+      <h1>Azure, data and AI platforms, engineered to run in production.</h1>
+      <p>A UK technology consultancy. Led hands-on by the engineer doing the work.</p>
+    </div>
+    <div class="inner foot">
+      <span class="dot"></span>
+      <span>kamobo.co.uk</span>
     </div>
   </div>
-
-  <div class="mid">
-    <h1>Senior cloud, data and AI engineering. <em>By the day, the project, or the month.</em></h1>
-    <p class="sub">A UK consultancy that builds and fixes the Azure platforms, data pipelines and AI systems businesses run on.</p>
-  </div>
-
-  <div class="bot">
-    <div class="models">
-      <span class="model">&pound;850 / day</span>
-      <span class="model">Fixed price</span>
-      <span class="model">From &pound;595 / month</span>
-    </div>
-    <span class="domain">kamobo.co.uk</span>
-  </div>
-</div>
 </body>
 </html>

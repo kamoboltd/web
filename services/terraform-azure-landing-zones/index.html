@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Azure Landing Zone Consultancy | Kamobo</title>
   <meta name="description" content="UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day." />
-  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="theme-color" content="#0C1F2C" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://kamobo.co.uk/services/terraform-azure-landing-zones/" />
-
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Azure Landing Zone Consultancy | Kamobo" />
   <meta property="og:description" content="UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day." />
@@ -16,104 +15,10 @@
   <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
   <meta property="og:site_name" content="Kamobo" />
   <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=fc635618" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamobo.co.uk/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://kamobo.co.uk/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Terraform & Azure Landing Zones", "item": "https://kamobo.co.uk/services/terraform-azure-landing-zones/" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Terraform & Azure Landing Zones",
-        "serviceType": "Azure landing zone and Terraform consultancy",
-        "description": "UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £550/day.",
-        "provider": {
-          "@type": ["Organization", "ProfessionalService"],
-          "name": "Kamobo Ltd",
-          "url": "https://kamobo.co.uk/",
-          "email": "hello@kamobo.co.uk",
-          "logo": "https://kamobo.co.uk/assets/logo.svg",
-          "address": { "@type": "PostalAddress", "addressCountry": "GB" }
-        },
-        "areaServed": [{ "@type": "Country", "name": "United Kingdom" }, "Remote worldwide"],
-        "url": "https://kamobo.co.uk/services/terraform-azure-landing-zones/"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is an Azure landing zone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An Azure landing zone is the governed foundation you deploy before any workloads: management groups, subscriptions, networking, identity, policy and monitoring, arranged so new applications land in a secure, consistent environment. Microsoft's Cloud Adoption Framework defines the reference design; we implement it in Terraform and right-size it to your organisation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Should we use Terraform or Bicep for Azure landing zones?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Microsoft's accelerators support both. Bicep suits Azure-only teams already invested in ARM templates. We recommend Terraform when you want one language across clouds and SaaS providers, a mature module ecosystem, and explicit state that makes drift visible. We build in Terraform on Azure Verified Modules because it also covers the rest of your stack, from DNS to GitHub."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does it take to build an Azure landing zone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A right-sized build for a small estate takes days of engineering plus a few design workshops. A full platform build with pipelines, a policy baseline and subscription vending typically runs several weeks. The biggest variables are network topology and identity decisions, which is why we start with a short scoping call before quoting a timeline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does an Azure landing zone cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "There are two costs: the build and the Azure run-rate. Our engagements are day-rate anchored senior engineering from £550 per day, with fixed prices quoted after a scoping call. The platform run-rate covers things like firewalls, logging and Defender for Cloud, and we size it deliberately so a small estate is not paying enterprise prices."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do smaller organisations need a full enterprise landing zone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. The enterprise reference architecture exists for large estates. A smaller organisation usually needs a subset: production separated from non-production, role-based access, a policy baseline, budgets and centralised logging. We right-size the design so you get the governance without the overhead, and because it is all code, growing into more later is straightforward."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is subscription vending?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Subscription vending automates how new Azure subscriptions are requested, created and governed. Instead of hand-building each one, a pipeline stamps out subscriptions with networking, policy, budgets and access already applied. It is how platform teams hand application teams a compliant landing zone in hours rather than weeks, and we implement it in Terraform."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you bring an existing Azure environment under a landing zone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, brownfield work is common. We map what exists, import resources into Terraform state, then introduce management groups, policy and networking incrementally so nothing breaks in flight. Most estates can adopt landing zone governance without a rebuild, though some workloads are worth migrating into fresh, vended subscriptions along the way."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=fbf363d6" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -121,23 +26,24 @@
   <header class="site-header" id="top">
     <div class="wrap header-inner">
       <a class="brand" href="/" aria-label="Kamobo home">
-        <img src="/assets/logo.svg" alt="Kamobo" width="180" height="48" />
+        <img src="/assets/logo.svg" alt="Kamobo" width="152" height="37" />
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="/services/">Services</a>
-        <a href="/work/">Work</a>
+        <a href="/services/">What we do</a>
+        <a href="/sectors/">Sectors</a>
+        <a href="/work/">Our work</a>
         <a href="/insights/">Insights</a>
-        <a href="/azure-review/">Azure Review</a>
         <a href="/pricing/">Pricing</a>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
       </nav>
-      <a class="btn btn-accent btn-sm" href="&#109;ailto:hello&#64;kamobo.co.uk">Get in touch</a>
+      <p class="availability">Available now</p>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main id="main">
+
     <section class="section service-hero">
       <div class="wrap">
         <p class="kicker"><a href="/services/">Services</a></p>
@@ -245,12 +151,13 @@
 
     <section class="cta" id="contact">
       <div class="wrap cta-inner">
-        <h2>Ready for an Azure foundation your team can own?</h2>
-        <p>Tell us where your estate is today, whether that is an empty tenant or five years of portal-built history. We will come back with a straight view of scope, approach and price.</p>
+        <h2>Tell us what is actually going wrong.</h2>
+        <p>One email, a couple of paragraphs. We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people for it we will say so, and point you at who is.</p>
         <div class="cta-actions">
           <a class="btn btn-primary btn-lg" data-book href="&#109;ailto:hello&#64;kamobo.co.uk?subject=Book%20a%20call&body=Rough%20idea%20of%20the%20problem%3A%0A%0AWhen%20suits%20for%2020%20minutes%3A%0A">Book a call</a>
           <a class="btn btn-ghost btn-lg" href="&#109;ailto:hello&#64;kamobo.co.uk?subject=Enquiry%20via%20kamobo.co.uk">Email instead</a>
         </div>
+        <p class="cta-sub">No sales sequence. A reply from the engineer who would do the work.</p>
       </div>
     </section>
   </main>
@@ -258,35 +165,36 @@
   <footer class="site-footer">
     <div class="wrap footer-sitemap">
       <div>
-        <p class="trust-label">Services</p>
+        <p class="trust-label">What we do</p>
           <a href="/services/azure-cost-optimization/">Cloud cost reduction</a>
-          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
-          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
-          <a href="/services/ai-agent-development/">AI agents in production</a>
-          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
           <a href="/services/azure-data-engineering/">Azure data platforms</a>
+          <a href="/services/private-llm-rag/">Private LLM and RAG</a>
+          <a href="/services/ai-agent-development/">AI agents in production</a>
+          <a href="/services/terraform-azure-landing-zones/">Landing zones and Terraform</a>
+          <a href="/services/application-performance-troubleshooting/">Performance and root-cause</a>
           <a href="/services/devops-cicd-gitops/">DevOps, CI/CD and GitOps</a>
           <a href="/services/api-development/">APIs and integration</a>
           <a href="/services/saas-software-development/">Software and SaaS</a>
       </div>
       <div>
-        <p class="trust-label">Work</p>
-          <a href="/work/azure-bill-six-figures/">An Azure bill</a>
-          <a href="/work/streaming-platform-nobody-could-explain/">A streaming platform</a>
-          <a href="/work/private-ai-platform-zero-trust/">A private AI platform</a>
+        <p class="trust-label">Our work</p>
+          <a href="/work/azure-bill-six-figures/">Cloud cost recovery</a>
+          <a href="/work/streaming-platform-nobody-could-explain/">Platform forensics</a>
+          <a href="/work/private-ai-platform-zero-trust/">Private AI platform</a>
           <a href="/work/">All case studies</a>
-          <a href="/insights/">Insights</a>
+          <a href="/sectors/">Sectors</a>
       </div>
       <div>
         <p class="trust-label">How we work</p>
           <a href="/azure-review/">The Azure Review</a>
           <a href="/retainers/">Retainers</a>
           <a href="/pricing/">Pricing</a>
-          <a href="/how-we-work/">How we work</a>
+          <a href="/how-we-work/">Our approach</a>
+          <a href="/insights/">Insights</a>
       </div>
       <div>
         <p class="trust-label">Company</p>
-          <a href="/about/">About</a>
+          <a href="/about/">About Kamobo</a>
           <a href="/contact/">Contact</a>
           <a href="&#109;ailto:hello&#64;kamobo.co.uk">hello&#64;kamobo.co.uk</a>
       </div>
