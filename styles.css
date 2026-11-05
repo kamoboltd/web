@@ -190,6 +190,8 @@ strong { color: var(--ink); font-weight: 650; }
 .service-hero { padding: 60px 0 44px; background: var(--wash); border-bottom: 1px solid var(--line); }
 .service-hero h1 { max-width: 20ch; }
 .service-hero .section-sub, .service-hero .lede { max-width: 64ch; margin-top: 16px; }
+.service-hero .study-sub { font-size: 18px; max-width: 64ch; margin: 14px 0 0; }
+.service-hero .kicker a { color: var(--accent); }
 
 /* ===== Cards and grids =================================================== */
 
