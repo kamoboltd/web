@@ -135,6 +135,41 @@ FIGURE = '''        <div class="hero-figure" aria-hidden="true">
 '''
 
 
+CLIENT_LOGOS = [
+    ("acca.svg", "ACCA"), ("lme.svg", "London Metal Exchange"), ("segro.png", "SEGRO"),
+    ("guardian.svg", "Guardian Financial Services"), ("sefe.svg", "SEFE Energy"),
+    ("ingeus.svg", "Ingeus"), ("stone-king.svg", "Stone King LLP"), ("zones.svg", "Zones UK"),
+    ("glisser.svg", "Glisser"), ("is2.svg", "IS2"),
+]
+
+
+def clients():
+    """A logo band. Every firm in the reference class carries one, and it is the
+    strongest trust signal on the site. The list is duplicated because the
+    marquee translates by -50%."""
+    def row(hidden):
+        return "\n".join(
+            '            <li><img src="/assets/logos/%s" alt="%s" loading="lazy" /></li>'
+            % (f, "" if hidden else n) for f, n in CLIENT_LOGOS)
+    return '''
+    <section class="clients" aria-label="Organisations we have worked with">
+      <div class="wrap">
+        <p class="trust-label">Organisations we have worked with</p>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <ul class="marquee-list">
+%s
+          </ul>
+          <ul class="marquee-list" aria-hidden="true">
+%s
+          </ul>
+        </div>
+      </div>
+    </section>
+''' % (row(False), row(True))
+
+
 def head(title, desc, canonical):
     return '''<!doctype html>
 <html lang="en">
@@ -292,7 +327,7 @@ def homepage():
         </div>
       </div>
     </section>
-
+%s
     <section class="section">
       <div class="wrap">
         <div class="section-head">
@@ -371,7 +406,7 @@ def homepage():
         </div>
       </div>
     </section>
-''' % (BOOK, FIGURE, stats, svc, sectors, proof, BOOK)
+''' % (BOOK, FIGURE, stats, clients(), svc, sectors, proof, BOOK)
 
     return page("/", "Kamobo | Azure, data and AI consultancy, UK",
                 "Kamobo is a UK technology consultancy. We design, build and recover Azure "
