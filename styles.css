@@ -352,9 +352,14 @@ strong { color: var(--ink); font-weight: 650; }
 .clients { border-block: 1px solid var(--line); padding: 30px 0 34px; }
 .clients .wrap { padding-bottom: 26px; }
 .clients .trust-label { margin-bottom: 0; }
-.logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-            gap: 26px 34px; list-style: none; margin: 0; padding: 0; }
-.logo-row img { height: 24px; width: auto; opacity: 0.6; filter: grayscale(1); }
+/* A grid, not a wrap. Ten logos wrapping left one orphaned on its own row,
+   which reads as an accident rather than a decision. */
+.logo-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px 24px;
+            align-items: center; list-style: none; margin: 0; padding: 0; }
+.logo-row li { display: flex; align-items: center; justify-content: center; }
+.logo-row img { height: 24px; width: auto; max-width: 100%; opacity: 0.6; filter: grayscale(1); }
+@media (max-width: 860px) { .logo-row { grid-template-columns: repeat(3, 1fr); gap: 26px 18px; } }
+@media (max-width: 480px) { .logo-row { grid-template-columns: repeat(2, 1fr); } }
 
 .panel { background: var(--wash); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 32px; }
 .qualify { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
