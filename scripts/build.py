@@ -98,7 +98,7 @@ SECTORS = [
 STATS = [
     ("18+ years", "in cloud, platform and infrastructure engineering"),
     ("&pound;150k", "a year removed from a single Azure bill"),
-    ("70%", "lower total cost of ownership over three years"),
+    ("70%", "cheaper to run, on a platform we rebuilt"),
     ("18,000+", "users on an AI platform we build and operate"),
 ]
 
