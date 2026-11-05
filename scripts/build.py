@@ -631,6 +631,7 @@ def rehouse():
         body = OLD_CTA.sub("\n", mm.group(1))          # the shared CTA is re-added by page()
         while OLD_CLOSE.search(body):
             body = OLD_CLOSE.sub("\n", body)
+        body = body.rstrip() + "\n"                   # or each build adds a blank line
         body = promote_headings(body)
         active = next((h for h, _t in NAV if h == rel), "")
         page(rel, mt.group(1), md.group(1), body, active,
