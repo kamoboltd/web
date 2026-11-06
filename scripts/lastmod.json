@@ -1,0 +1,130 @@
+{
+ "/": {
+  "hash": "415f269683a3e63543284bd73914497e904faa50",
+  "date": "2026-11-06"
+ },
+ "/about/": {
+  "hash": "ad79580999e1fcbb1acfe8556511689b646c6c58",
+  "date": "2026-11-05"
+ },
+ "/azure-review/": {
+  "hash": "f24a41a525ec8fd9e7e9475debf40f3af402925d",
+  "date": "2026-11-05"
+ },
+ "/contact/": {
+  "hash": "3bed0d317fd35361ded19bc58f44dde47cb1af29",
+  "date": "2026-11-05"
+ },
+ "/how-we-work/": {
+  "hash": "07eeaf7b6bd51a06f1e09e54d59b734b2327ef17",
+  "date": "2026-11-05"
+ },
+ "/insights/": {
+  "hash": "85327841e2ab7367c7b8963d907dd5dd02917971",
+  "date": "2026-11-05"
+ },
+ "/insights/agents-that-raise-pull-requests/": {
+  "hash": "4a6b5b56be5b4b3a15ac1899220baa1da96d5d4f",
+  "date": "2026-11-05"
+ },
+ "/insights/interviews-find-more-savings-than-tooling/": {
+  "hash": "56f48500536d38d6642f1fff2950c65e63cf348e",
+  "date": "2026-11-05"
+ },
+ "/insights/isolate-the-vector-store-per-use-case/": {
+  "hash": "bdb01bce6bb860335fb1f88030731426000f3b6b",
+  "date": "2026-11-05"
+ },
+ "/insights/load-test-before-you-re-architect/": {
+  "hash": "47cf5f30f02c644e5f4f5a6a4a1dcfecded8a5e7",
+  "date": "2026-11-05"
+ },
+ "/insights/reserved-instances-only-pay-off-when-usage-is-stable/": {
+  "hash": "6d685590e7423cb7acb8b72dfa131cc4eb144d5c",
+  "date": "2026-11-05"
+ },
+ "/insights/synapse-link-to-fabric-link-dataverse/": {
+  "hash": "c1dcb138948115af75e186770c33285a6f0a7d09",
+  "date": "2026-11-06"
+ },
+ "/insights/taking-over-a-system-nobody-can-explain/": {
+  "hash": "3527ffefb782090cfb08c73070aa663260771a22",
+  "date": "2026-11-05"
+ },
+ "/pricing/": {
+  "hash": "0243836c766a4610332e0aa3a2746fff72c416d0",
+  "date": "2026-11-05"
+ },
+ "/privacy/": {
+  "hash": "09fe5210ad10ace03ff8e5fee59a4b462d37afa7",
+  "date": "2026-11-05"
+ },
+ "/retainers/": {
+  "hash": "b8cb514b45555acaa013f4be791aadcb746f973b",
+  "date": "2026-11-05"
+ },
+ "/sectors/": {
+  "hash": "48d93b459b624bb824dc958b538898d167496b70",
+  "date": "2026-11-05"
+ },
+ "/services/": {
+  "hash": "59747753d5737af7937d43e5207da3ee2f38c4d5",
+  "date": "2026-11-06"
+ },
+ "/services/ai-agent-development/": {
+  "hash": "bba8acd442cc20d0da5cbc7207b6e6aeaedea247",
+  "date": "2026-11-05"
+ },
+ "/services/api-development/": {
+  "hash": "d1f0e7f0330340bdb0011ac1677ddfee35131c9a",
+  "date": "2026-11-05"
+ },
+ "/services/application-performance-troubleshooting/": {
+  "hash": "9ad75e1e2ca38c2ea0830efbd2eb86cb0993b83c",
+  "date": "2026-11-05"
+ },
+ "/services/azure-cost-optimization/": {
+  "hash": "77c1be9bbba6720488a37421ab2d9c6757498452",
+  "date": "2026-11-05"
+ },
+ "/services/azure-data-engineering/": {
+  "hash": "7b29150d14fdc8ac08d21aa0884abf6b98e5c6c5",
+  "date": "2026-11-06"
+ },
+ "/services/devops-cicd-gitops/": {
+  "hash": "b39ff35f07766c7ba29a19edcdd87c448f2d6fee",
+  "date": "2026-11-05"
+ },
+ "/services/private-llm-rag/": {
+  "hash": "65cd4eb5e58e10cc82d6eaf6c7f6f42b9d5ea766",
+  "date": "2026-11-05"
+ },
+ "/services/saas-software-development/": {
+  "hash": "37a98c4d5a854645bedcc9596abf593757ea3109",
+  "date": "2026-11-05"
+ },
+ "/services/synapse-link-to-fabric-migration/": {
+  "hash": "1a1ae83566170e5cab6ad8684cbde76b2cf6ea71",
+  "date": "2026-11-06"
+ },
+ "/services/terraform-azure-landing-zones/": {
+  "hash": "9590f487434b7bf75b483c3df79583e2dbc65689",
+  "date": "2026-11-05"
+ },
+ "/work/": {
+  "hash": "7afcd79a7576c7fbd2a28ccb09ed19cc0e5bc40e",
+  "date": "2026-11-05"
+ },
+ "/work/azure-bill-six-figures/": {
+  "hash": "efbf3c2401282eed2127c76707b31ffc402eb58f",
+  "date": "2026-11-05"
+ },
+ "/work/private-ai-platform-zero-trust/": {
+  "hash": "d7dad28eefa51413e8fcc94668e6a299fbb1480e",
+  "date": "2026-11-05"
+ },
+ "/work/streaming-platform-nobody-could-explain/": {
+  "hash": "220036828b9a484508328db1b0e01c9ccfa98679",
+  "date": "2026-11-05"
+ }
+}

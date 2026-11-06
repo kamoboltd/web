@@ -335,6 +335,18 @@ strong { color: var(--ink); font-weight: 600; }
 .sector p { font-size: 15.5px; margin: 0; color: var(--muted); }
 .hero-single, .proof-band, .hero-offer, .offer-note { display: block; }
 
+/* ===== Comparison tables ================================================
+   Assistants quote tables readily, and buyers scan them. Real <th> scope, so
+   the row and column labels survive into the markup a machine reads. */
+
+.table-wrap { overflow-x: auto; }
+.compare { width: 100%; min-width: 560px; border-collapse: collapse; background: var(--paper); font-size: 15.5px; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.compare thead th { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--navy); }
+.compare tbody th { width: 24%; color: var(--ink); font-weight: 600; }
+.article .compare { margin: 6px 0 26px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
 /* ===== Closing CTA band ================================================== */
 
 .cta { background: var(--navy); color: rgba(255,255,255,0.8); padding: 88px 0; }

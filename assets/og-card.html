@@ -4,25 +4,23 @@
 <meta charset="utf-8" />
 <title>Kamobo social card source</title>
 <!--
-  Source for assets/og-card.png (1200x630), rebuilt 5 November 2026 for the new
-  brand: flat navy, no gradient, Inter only.
+  Source for assets/og-card.png (1200x630), rebuilt 6 November 2026: flat navy,
+  IBM Plex Sans, the homepage headline.
 
-  To regenerate: open this file in Chrome, set the window so the card is not
-  scaled, and screenshot the .card element at exactly 1200x630. Or, with a
-  headless browser available:
+  To regenerate with Edge headless (body margin is 0, so the card fills the shot):
 
-      npx playwright screenshot --viewport-size=1200,630 \
-        assets/og-card.html assets/og-card.png
+      msedge --headless=new --window-size=1200,630 --virtual-time-budget=4000
+        --screenshot=assets/og-card.png assets/og-card.html
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   html, body { margin: 0; padding: 0; background: #555; }
   .card {
     width: 1200px; height: 630px; position: relative; overflow: hidden;
     background: #0C1F2C; color: #fff;
-    font-family: Inter, -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-family: "IBM Plex Sans", -apple-system, "Segoe UI", system-ui, sans-serif;
     display: flex; flex-direction: column; justify-content: space-between;
     padding: 72px 80px;
   }
@@ -42,6 +40,7 @@
   p { font-size: 23px; line-height: 1.5; color: rgba(255,255,255,0.72); margin: 0; max-width: 54ch; }
   .foot { display: flex; align-items: center; gap: 14px; font-size: 18px; color: rgba(255,255,255,0.56); }
   .dot { width: 7px; height: 7px; border-radius: 50%; background: #2FB389; }
+  .sub { display: block; margin-top: 14px; font-size: 38px; font-weight: 500; letter-spacing: -0.8px; color: #34B88F; }
   .rule { height: 3px; width: 72px; background: #2FB389; margin: 0 0 30px; border-radius: 2px; }
 </style>
 </head>
@@ -65,8 +64,8 @@
     </div>
     <div class="inner">
       <div class="rule"></div>
-      <h1>Azure, data and AI platforms, engineered to run in production.</h1>
-      <p>A UK technology consultancy. Led hands-on by the engineer doing the work.</p>
+      <h1>UK-based Azure consultancy.<span class="sub">Platform engineering, AI and data platforms.</span></h1>
+      <p>Built as code, in your own tenant. Led hands-on by the engineer doing the work.</p>
     </div>
     <div class="inner foot">
       <span class="dot"></span>

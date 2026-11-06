@@ -1,0 +1,3085 @@
+# Kamobo: full site text
+
+> Kamobo is a UK-based Azure consultancy for platform engineering, AI and data platforms. It designs, builds and recovers Azure estates as code, in the client's own tenant, and every engagement is led hands-on by the engineer doing the work.
+
+Source: https://kamobo.co.uk. Generated from the live pages on every build.
+
+
+---
+
+URL: https://kamobo.co.uk/
+Title: Kamobo | UK Azure consultancy for platforms, AI and data
+
+# UK-based Azure consultancy. Platform engineering, AI and data platforms.
+
+We design, build and recover the Azure estates businesses run on: as code, in your own tenant, and handed over in a state your team can run. Every engagement is led hands-on by the engineer doing the work.
+
+Book a call
+See the work
+
+The private AI platform we built and run for a global professional education body. Self-hosted inference on GPU Azure, one isolated store per use case, nothing leaving the tenant.
+
+18+ years in cloud, platform and infrastructure engineering
+£150k a year removed from a single Azure bill
+70% cheaper to run, on a platform we rebuilt
+18,000+ users on an AI platform we build and operate
+
+Organisations we have worked with
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+What we do
+
+## Four practice areas, one engineer accountable for each
+
+Most engagements start in one of these and widen once we are in the estate and can see what is actually there.
+
+01
+
+### Azure platforms and DevOps
+
+The governed foundation and the pipeline that ships to it: landing zones in Terraform, CI/CD and GitOps, and the cost discipline that keeps the bill honest.
+
+- Landing zones and Terraform
+
+- DevOps, CI/CD and GitOps
+
+- Cloud cost reduction
+
+02
+
+### Data platforms
+
+Synapse, Data Factory and Databricks estates built as code from dev through to production, with least-privilege networking throughout.
+
+- Azure data platforms
+
+- Synapse Link to Fabric migration
+
+03
+
+### Private AI
+
+Self-hosted models and agents on infrastructure you control, with nothing leaving the tenant and a person approving anything that matters.
+
+- Private LLM and RAG
+
+- AI agents in production
+
+04
+
+### Recovery and software
+
+Taking over systems nobody left can explain, finding the real bottleneck before anyone pays for a rebuild, and building the product itself.
+
+- Performance and root-cause
+
+- APIs and integration
+
+- Software and SaaS
+
+Where most engagements start
+
+## The Azure Review
+
+A read-only assessment of your Azure estate: what it costs, what it is running, where the risk sits, and what we would fix first. You get written findings and a priced plan. If you go on to have us do the work and we start within 30 days, the fee is credited in full against it.
+
+Price
+
+£2,500
+
+Duration
+
+3 working days
+
+Access
+
+Read-only
+
+Output
+
+Written findings
+
+What the review covers
+
+Our work
+
+## What these engagements were worth
+
+All case studies →
+
+£150,000 a year taken off an Azure bill and kept off, after a full audit of what the estate was actually running and paying for. Read the story
+70% cheaper to run over three years, on a streaming platform we took over, diagnosed and rebuilt without taking it offline. Read the story
+Nothing leaves the tenant on a private AI platform for confidential documents that cannot legally be sent to a public AI service. Read the story
+
+Insights
+
+## Things worth writing down
+
+All insights →
+
+01
+
+### The Delta export in Synapse Link is going. Here is where to move.
+
+Azure Synapse Link for Dataverse is not being switched off. Its Delta Lake export option is: closed to new customers since 15 October 2026, and gone for everyone in December 2027. We have already moved a production Dataverse estate from Synapse Link to Fabric Link. This is how we decide which way to go, and how to make the move without breaking what reads the data.
+
+02
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+03
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+---
+
+URL: https://kamobo.co.uk/about/
+Title: About
+
+About
+
+# The person who scopes it is the person who builds it
+
+Kamobo is led by James Dettmer, and James does the work.
+
+Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that time has been spent inside other organisations' estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money.
+
+Where a piece of work genuinely needs more than one pair of hands, we bring in associates we have delivered with before, and we name them before they start. What we do not do is sell you a senior engineer and staff the work with somebody else.
+
+Based
+
+Hertfordshire, UK
+
+Working
+
+Remote, UK and worldwide
+
+Experience
+
+18+ years in production
+
+Certifications
+
+Nutanix NCP, VMware VSP4 and VSTP4, Cisco CCNA
+
+Clearance
+
+None held
+
+Contracts
+
+Comfortable under NDA
+
+## Kamobo Ltd
+
+A UK consultancy for cloud, data and AI work, with eighteen years of production engineering behind every engagement.
+
+We have spent most of that time inside other people's estates: a FTSE 100 property and logistics business, a European energy supplier, a UK financial services firm, a global professional education body, a 250-staff law firm. Usually brought in when something needed building properly, or when something built badly had started to hurt.
+
+We also build and run our own software, which keeps us honest. GrassrootsDNA is a multi-tenant SaaS that real clubs depend on, and the AI agents we sell are the same ones that keep our own platforms running. We are recommending things we live with, not things we read about.
+
+Work is UK and remote worldwide. We are comfortable under NDA, and most of what we do never gets talked about publicly.
+
+Company
+
+Kamobo Ltd, United Kingdom
+
+Experience
+
+18+ years, founder-led
+
+Focus
+
+Azure, data platforms, AI
+
+Engagements
+
+Daily, fixed price or retained
+
+Day rate
+
+£850, less on longer commitments
+
+Availability
+
+Taking on new work now
+
+Contact
+
+hello@kamobo.co.uk
+
+What we reach for
+
+- Microsoft Azure
+- Terraform
+- Ansible
+- Azure DevOps
+- GitHub Actions
+- Kubernetes
+- Docker
+- Entra ID
+- Azure Synapse
+- Databricks
+- Data Factory
+- Anthropic Claude
+- vLLM
+- Ollama
+- PostgreSQL
+- Redis
+- RabbitMQ
+- NGINX
+- Grafana
+- Python
+- Node / TypeScript
+- K6
+
+---
+
+URL: https://kamobo.co.uk/azure-review/
+Title: The Azure Review, £2,500
+
+Start here
+
+# The Azure Review
+
+Three days, a fixed price, and a written answer to the question you cannot currently answer: what is actually wrong with this estate, what is it costing, and what we would fix first.
+
+Price
+
+£2,500
+
+Duration
+
+3 working days
+
+Access
+
+Read-only
+
+Output
+
+Written findings
+
+Most people who call us already suspect something: the bill is climbing, the deployments are fragile, the security score is stuck, or the person who built it has gone. What they do not have is evidence. Three days of read-only access is usually enough to turn a suspicion into a ranked list with numbers against it.
+
+## What you get
+
+- A full review of the estate: architecture, networking, identity and access, policy and governance
+
+- Cost analysis with the specific savings available and what each one is worth a year
+
+- Security and resilience findings, ranked by what would actually hurt
+
+- A prioritised list of fixes, each sized in days, so you can choose what to do and who does it
+
+- A walkthrough call to argue with the findings before they are final
+
+## What is not included
+
+- Implementing the fixes. That is a separate piece of work, scoped from the findings
+
+- Changes of any kind during the review. Access is read-only and stays that way
+
+- Procurement advice, licence resale or anything we would earn a margin on
+
+The fee comes off the build. If you decide to have us do the work and we start within 30 days, the £2,500 is credited in full against it. If you take the report to your own team or another supplier instead, that is a perfectly good outcome and the report is yours either way.
+
+If your question is only about cost , you do not need this. Cost optimisation starts with a free assessment of your billing data, and that is the cheaper place to start. The Azure Review is for when you also want architecture, security and operational risk looked at.
+
+Before any of it, a free 45-minute call to work out whether a review is even the right thing. Sometimes it obviously is not, and we will say so.
+
+Book the 45-minute call
+Three days of a senior engineer, at the day rate below.
+
+---
+
+URL: https://kamobo.co.uk/contact/
+Title: Contact
+
+Contact
+
+# Tell us what is actually going wrong
+
+One email, a couple of paragraphs. We will come back with whether we can help, roughly what it would take and what it would cost. If we are not the right people we will say so and point you at who is.
+
+Email
+
+hello@kamobo.co.uk
+
+Based
+
+Hertfordshire, UK
+
+Working
+
+Remote, UK and worldwide
+
+Availability
+
+Taking on new work now
+
+There is no form on this site and no mailing list. Email goes straight to the engineer who would do the work, and that is who replies. There is no account manager in between.
+
+If it would help to know what we charge before you write, the pricing page has the numbers.
+
+---
+
+URL: https://kamobo.co.uk/how-we-work/
+Title: How we work
+
+How we work
+
+# Four things you can hold us to
+
+01
+
+## You get the senior person
+
+The engineer who scopes your work is the engineer who does it. Nothing is sold by one person and delivered by another you have never met.
+
+02
+
+## Everything as code, everything yours
+
+Infrastructure, pipelines and configuration live in your version control, documented. If you stop working with us tomorrow, your team can still run it.
+
+03
+
+## People approve, agents propose
+
+Every AI system we ship has guardrails, an audit trail and a human on the merge button. We will not put something in your estate that acts without being asked.
+
+04
+
+## We tell you when it is not worth it
+
+If two days would fix what you were going to spend two months on, we will say so. If we are the wrong people, we will say that too.
+
+## Who this suits
+
+The list of what we are not good at lives on the front page , where it can do its job before you have read anything else.
+
+### You should talk to us if
+
+- You want a named engineer who stays on the work, not a team that rotates
+
+- You have inherited something and nobody left can explain how it works
+
+- Your cloud bill is growing and the answer keeps being "it is complicated"
+
+- You want to own the Terraform afterwards rather than rent it from a supplier
+
+- You need AI in the business but the data cannot leave your tenancy
+
+- You want someone who will tell you when two days would do instead of two months
+
+---
+
+URL: https://kamobo.co.uk/insights/
+Title: Insights
+
+Insights
+
+# Things worth writing down
+
+Write-ups from engagements that are already on this site, with the detail the case studies had no room for. Everything here is something we did, not something we read about.
+
+AI (2) · Cost (2) · Data (1) · Method (1) · Performance (1)
+
+01
+
+## The Delta export in Synapse Link is going. Here is where to move.
+
+Azure Synapse Link for Dataverse is not being switched off. Its Delta Lake export option is: closed to new customers since 15 October 2026, and gone for everyone in December 2027. We have already moved a production Dataverse estate from Synapse Link to Fabric Link. This is how we decide which way to go, and how to make the move without breaking what reads the data.
+
+DATA · James Dettmer · 5 November 2026 · 5 min read
+
+02
+
+## Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+COST · James Dettmer · 4 November 2026 · 3 min read
+
+03
+
+## Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+COST · James Dettmer · 4 November 2026 · 2 min read
+
+04
+
+## Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+PERFORMANCE · James Dettmer · 4 November 2026 · 2 min read
+
+05
+
+## Give every AI use case its own vector store
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+AI · James Dettmer · 4 November 2026 · 3 min read
+
+06
+
+## Taking over a system nobody can explain
+
+Inheriting a platform is a research job first and an engineering job second. Budget for the reading.
+
+METHOD · James Dettmer · 4 November 2026 · 2 min read
+
+07
+
+## Agents should raise pull requests, not push code
+
+The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate.
+
+AI · James Dettmer · 4 November 2026 · 3 min read
+
+---
+
+URL: https://kamobo.co.uk/insights/agents-that-raise-pull-requests/
+Title: Agents should raise pull requests, not push code
+
+Insights · AI
+
+# Agents should raise pull requests, not push code
+
+James Dettmer, Principal 4 November 2026 3 min read
+
+The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate.
+
+We build and operate a suite of autonomous AI agents running unattended in production on a live online platform with more than 18,000 registered users and over 500 daily actives. They answer user support queries, monitor server logs and surface incidents, and review code and raise fixes.
+
+They raise those fixes as pull requests. A human approves every merge. No agent pushes code directly, and that is not a transitional safety measure we intend to remove later.
+
+## Why the gate is the design, not a restriction on it
+
+An agent that can open a pull request can do almost everything useful an agent can do in a codebase. It can read the repository, reproduce a bug, write a fix, write a test, explain its reasoning and put the whole thing somewhere a person can look at it.
+
+What it cannot do is be wrong at three in the morning without anyone noticing. That is the entire difference, and it costs you the time it takes someone to read a diff.
+
+It also changes the conversation with whoever has to approve the system. "An AI will change our production code" is a hard sell in most organisations and an impossible one in some. "An AI will do the legwork and raise a pull request like any other contributor" is a conversation about code review, which every engineering team already knows how to have.
+
+## What it takes to run unattended
+
+The agents are built on the Anthropic Claude SDK and Claude CLI, with BullMQ for task queuing, retries and priorities, and Postgres with pgvector as the knowledge store. The parts that matter for reliability are the unglamorous ones:
+
+- Error handling, because an agent that fails silently is worse than no agent
+
+- Retries with priorities, so a transient API failure does not drop a support query
+
+- Logging throughout, so you can reconstruct what it did and why
+
+- Approval gates at every point where an action is consequential
+
+Most of the engineering in a production agent is queueing, state and observability. The model call is a small part of it.
+
+## Where the gate belongs for other kinds of agent
+
+Support agents can answer and resolve a great deal autonomously, because the blast radius of a wrong answer is a confused user and an escalation. The gate belongs at actions that change account state or cost money.
+
+Operations agents can watch logs, diagnose and write up an incident continuously. The gate belongs at remediation, and it should be a different gate depending on whether the remediation is restarting a worker or changing a configuration.
+
+We also built an enterprise agent inside Microsoft Teams on the same stack, which is the right shape when the people who need it already live in Teams and will not adopt another interface.
+
+## A test worth applying
+
+Before you ship an agent, ask what it would cost if it were confidently wrong ten times in a row overnight. If the answer is survivable, it can run unattended. If it is not, there is a gate missing, and finding it is cheaper now than after.
+
+Questions this usually raises
+
+Q: Does the approval gate not remove most of the value?
+
+It removes the part of the value that nobody responsible will accept anyway. Reproducing a bug, writing a fix and preparing a reviewable change is most of the work; approving a good diff takes a couple of minutes.
+
+Q: What stops the agent raising dozens of poor pull requests?
+
+Priorities and queueing, mainly. The agent works a queue rather than reacting to everything, and anything it cannot do well goes to a human as a write-up instead of as a change.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/
+Title: Cost tools cannot tell you what nobody needs
+
+Insights · Cost
+
+# Cost tools cannot tell you what nobody needs
+
+James Dettmer, Principal 4 November 2026 3 min read
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+The first thing most people do about a cloud bill that has got out of hand is open a cost analysis blade and sort by spend. It is the obvious move and it is not wrong, but on its own it finds a fraction of what is there. A proper audit of the estate goes considerably further, and it is where most of the saving comes from. But there is a last tranche that no amount of auditing will surface on its own.
+
+On one engagement with a global accountancy training organisation we removed £150,000 a year from an Azure bill. A meaningful part of that came from resources the tooling was perfectly happy with. They were running. They were healthy. They were the right size for what they were doing. The problem was that nobody needed them doing it.
+
+## What the tools can and cannot see
+
+Azure Cost Management, Advisor and the various third-party FinOps products are good at a specific class of question. Is this virtual machine oversized for its observed load. Is this disk unattached. Is this reservation underused. Would a savings plan be cheaper than pay-as-you-go for this consumption pattern. Those are real savings and you should take all of them.
+
+What no tool can answer is whether the thing should exist. A resource group spun up for a proof of concept that concluded two years ago looks exactly like a resource group doing valuable work. An integration runtime feeding a report nobody opens looks exactly like one feeding a report the board reads every Monday. The telemetry is identical. The difference is organisational, and it lives in people's heads.
+
+## So we ask
+
+On that engagement the method was unglamorous. We interviewed the internal team and we interviewed the third parties who had built into the estate over the years, which on a long-lived environment is usually several firms who have each left something behind. The questions were simple and the same each time.
+
+- What did you build here, and is it still being used
+
+- Who asked for it, and are they still here
+
+- If this disappeared on Friday, who would ring you
+
+- What are you afraid to turn off, and why
+
+That last one is the most productive question in cloud cost work. Fear of turning something off is almost never about the thing itself. It is about not knowing what depends on it. Once you can answer that, large amounts of spend become obviously removable, and the answer is usually a half-hour conversation rather than a month of dependency mapping.
+
+Hundreds of orphaned resources came out of that estate. Not because a tool flagged them, but because somebody said "oh, that was for the migration, we finished that in 2023".
+
+## Do the tooling work too, in the right order
+
+None of this is an argument against the technical work. On the same engagement we moved virtual machines onto reserved instances where the usage pattern justified it, and applied savings plans to app services. Those are mechanical, repeatable and worth real money.
+
+But do them second. Commitment-based discounts on a resource you are about to delete are not a saving, they are a prepayment for waste with a one-year or three-year lock-in attached. The order matters: find out what should not exist, remove it, and only then commit to a discount on what is left.
+
+## The part that decides whether it lasts
+
+A saving that nobody can maintain comes back. The team needs to be able to see the cost picture themselves, in a form they will actually open, or you have bought them twelve months and a repeat of the same engagement.
+
+At a UK financial services firm we built more than fifteen Azure Workbooks for exactly this, alongside identifying around £250,000 a year of savings. The workbooks were not the deliverable anyone asked for and they are the reason the work held.
+
+Questions this usually raises
+
+Q: How long does an interview-led review take?
+
+Three days of read-only access is usually enough to get a ranked list with numbers against it. The interviews are a few hours in total; the time goes on verifying what people tell you against what the estate actually shows.
+
+Q: What if the people who built it have left?
+
+That is common and it changes the method rather than defeating it. You move from interviews to artefacts: deployment pipelines, infrastructure as code if it exists, resource tags, activity logs and naming conventions. It is slower and it is still faster than guessing.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Give every AI use case its own vector store
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/isolate-the-vector-store-per-use-case/
+Title: Give every AI use case its own vector store
+
+Insights · AI
+
+# Give every AI use case its own vector store
+
+James Dettmer, Principal 4 November 2026 3 min read
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+We built a private LLM and retrieval platform for a global professional education body. The hard constraint was absolute: internal documents could not be sent to a third-party model API. That part is well understood, and it is an infrastructure problem rather than an AI one.
+
+The less obvious constraint was the one that shaped the architecture. There were several separate use cases, each with its own sensitivity, and they could not be allowed to see each other's data.
+
+## The cheap design, and why it fails
+
+The straightforward way to build retrieval over a document set is one index, with metadata on each chunk saying which collection it came from, and a filter applied at query time. It is efficient, it is simple to operate, and almost every tutorial you will read describes it.
+
+It also means that the only thing standing between a finance document and an HR query is a WHERE clause. One bug in filter construction, one prompt that manipulates how a query is assembled, one developer debugging with the filter temporarily removed, and data crosses a boundary it was never supposed to cross.
+
+That is a hard thing to defend in a security review and an impossible thing to prove. "The filter is always applied" is a statement about the code as it is today, not about the system.
+
+## What we built instead
+
+Each use case runs on its own isolated platform with its own dedicated private vector store. Not a separate index inside one store. A separate store. Data does not cross between use cases because there is no path along which it could.
+
+Around that sits the rest of it: GPU-accelerated Azure infrastructure defined in Terraform and Ansible, self-hosted inference on vLLM, Ollama and llama.cpp, a document ingestion pipeline, Postgres with pgvector alongside Chroma and LanceDB, Redis for caching, RabbitMQ for message handling, a clustered NGINX reverse proxy, and a React chat front end with single sign-on. Zero trust and least privilege throughout, containerised, automated with GitHub Actions and observable through Grafana.
+
+## The objection, and the answer
+
+The objection is cost, and it is a fair one. Per-use-case isolation means more infrastructure, more to operate and more to pay for.
+
+The answer is that the comparison is not isolation against a shared index. It is isolation against not being allowed to run the use case at all. In a regulated or document-sensitive organisation, the shared-index design frequently does not survive review, and the project dies at the point where it needed sign-off rather than at the point where it needed engineering.
+
+Scale is handled by adding nodes, which is a cost conversation rather than a rebuild.
+
+## The wider point
+
+Self-hosted inference is an infrastructure project wearing an AI hat. Most of the work is GPU capacity, networking, identity and ingestion. The model is the part everybody talks about and the part that takes the least time.
+
+And put the configuration somewhere a person other than you can operate it. We built a configuration page with content safety settings for exactly that reason. If the only way to change a prompt or a safety threshold is to ask the people who built it, you have not delivered a platform, you have delivered a dependency.
+
+Questions this usually raises
+
+Q: Does isolation mean duplicating the documents?
+
+Only where the same document genuinely belongs to more than one use case, which is rarer than people expect. Usually the collections are naturally distinct, and where they overlap it is a deliberate decision rather than an accident of indexing.
+
+Q: Could you not just use separate namespaces?
+
+You can, and it is better than filters. It is still one system with one set of credentials and one blast radius. Whether that is sufficient depends on who has to sign it off, which is why the question belongs in the design conversation rather than the build.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/load-test-before-you-re-architect/
+Title: Load test before you re-architect
+
+Insights · Performance
+
+# Load test before you re-architect
+
+James Dettmer, Principal 4 November 2026 2 min read
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+We were asked to take over a self-hosted video streaming platform. It had been built by people who had moved on. There was no current architecture documentation and no reliable account of how it was deployed. It was slow under load and nobody could say which part was the bottleneck.
+
+The instinct in that situation, and the thing the budget is usually already pointed at, is to re-architect. Break up the monolith, add nodes, move to managed services, buy bigger instances. All of which may eventually be right, and none of which you can justify yet.
+
+## What the load testing found
+
+We ran extensive load testing with K6 against the real system, looking for where it actually broke rather than where we assumed it would. The causes were:
+
+- NGINX mis-tuned, so the ingress gave up well before the services behind it did
+
+- RabbitMQ under-spec'd, so message handling became the ceiling under concurrency
+
+- Redis in need of tuning
+
+- Components provisioned badly in both directions, some well over what they needed and some well under
+
+That last point is the one worth sitting with. Over-provisioning is usually discussed as a cost problem, and it is. It is also a diagnostic problem, because a component with far more headroom than it needs will never show up in your metrics as a constraint, and it will mask whatever sits behind it. You end up tuning the thing that is visibly struggling while the actual limit is somewhere quieter.
+
+## "It needs more servers" is usually wrong
+
+On this platform the binding constraint was configuration, not capacity. More servers would have cost more and moved the ceiling very little, because the ceiling was a worker count and a connection limit, not a shortage of compute.
+
+This is the common case rather than the exception. Systems that are slow under load are far more often badly configured than genuinely out of resource, and configuration is cheaper to fix than architecture is to change.
+
+## Then, and only then, move it
+
+Once the bottlenecks were out, the platform was restructured to remove them properly and moved from on-premise to autoscaling Azure defined in Terraform. That produced a 70% reduction in what it cost to run, measured over three years.
+
+Note the order. Had we lifted the platform into the cloud first, which is what the original brief pointed at, we would have paid cloud prices for the same mis-tuned NGINX and the same under-spec'd queue, and then autoscaled the symptoms. Lifting a badly understood system into the cloud unchanged does not fix it. It just moves the bill and gives you a more expensive version of the same problem.
+
+## What this costs
+
+Load testing an unfamiliar system is a few days, not a few weeks, and it is almost always cheaper than the architecture change it either justifies or prevents. If it justifies the change, you now have evidence to take to whoever is funding it. If it prevents one, you have saved considerably more than the test cost.
+
+Questions this usually raises
+
+Q: What do you need access to in order to load test?
+
+A representative environment and permission to push it until it breaks. Production is possible with care and out of hours, but a sized-alike environment is better, because the interesting part is finding the limit rather than respecting it.
+
+Q: How is this different from an APM tool?
+
+Application performance monitoring tells you what is happening at current load. Load testing tells you what happens at loads you have not reached yet, which is the question people are usually actually asking.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Give every AI use case its own vector store
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/reserved-instances-only-pay-off-when-usage-is-stable/
+Title: When reserved instances actually pay off
+
+Insights · Cost
+
+# Reserved instances only pay off for workloads that are genuinely stable
+
+James Dettmer, Principal 4 November 2026 2 min read
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+Reserved instances and savings plans are the first thing people reach for when a cloud bill needs to come down, because the headline discount is large and the change looks free. You are not altering any architecture. You are not asking anyone to rewrite anything. You click a thing and the bill goes down.
+
+That is true, and it is why the trap is so easy to walk into.
+
+## What you are actually buying
+
+A reservation is a commitment to pay for a specific amount of a specific thing for one or three years whether or not you use it. The discount is the price of that certainty, from the provider's point of view. You are selling them predictability and they are paying you for it.
+
+Which means the only question that matters is whether your usage is genuinely predictable, and over the whole term, not over the fortnight you happened to look at.
+
+## Three patterns that look stable and are not
+
+The workload with a migration behind it. If anything in the estate is mid-move, from on-premise, between regions, or from virtual machines to containers, usage is stable right up until it is zero. Commit after the move, not during.
+
+The environment that mirrors production. Development, UAT and pre-production environments often look like steady consumers because they are left running. They are also the first thing a team turns off when someone asks them to save money, which means your reservation and your cost-cutting initiative are now fighting each other.
+
+The workload somebody is about to delete. This is the one that catches people who do the commitment work before the clear-out. We covered that order of operations separately , and it is worth repeating: find out what should not exist first.
+
+## What stable actually looks like
+
+Domain controllers. Jump boxes. The database behind a line-of-business application that has been running for six years and will be running for six more. Integration runtimes that have a fixed job. The kind of thing where, if you ask the team whether it will still be there in three years, nobody hesitates.
+
+On the engagement where we took £150,000 a year out of a global accountancy training organisation's bill, reservations were part of the answer, but only for the workloads that passed that test. The rest of the saving came from removing resources entirely and from savings plans on app services, which are more flexible and therefore safer where the pattern is less certain.
+
+## A practical rule
+
+Before any commitment, ask who would be surprised if this workload disappeared in eighteen months. If the honest answer is nobody, or if it is a name followed by "but they are leaving", do not commit. Pay the on-demand rate for another quarter and find out.
+
+The cost of being wrong is asymmetric. Paying on-demand for three extra months on something you later reserve costs you a little. Reserving three years of something you delete in six months costs you the whole commitment.
+
+Questions this usually raises
+
+Q: Are savings plans safer than reserved instances?
+
+Generally yes, because they commit you to an hourly spend rather than to a specific resource, so you keep the discount if the shape of the workload changes. They usually discount slightly less, which is the price of that flexibility.
+
+Q: Can you get out of a reservation?
+
+Azure allows exchanges and, within limits, cancellations with a fee, and the rules have tightened over time. Treat it as a commitment you intend to keep rather than one you plan to unwind.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Give every AI use case its own vector store
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/synapse-link-to-fabric-link-dataverse/
+Title: Synapse Link to Fabric Link for Dataverse
+
+Insights · Data
+
+# The Delta export in Synapse Link is going. Here is where to move.
+
+James Dettmer, Principal 5 November 2026 5 min read
+
+Azure Synapse Link for Dataverse is not being switched off. Its Delta Lake export option is: closed to new customers since 15 October 2026, and gone for everyone in December 2027. We have already moved a production Dataverse estate from Synapse Link to Fabric Link. This is how we decide which way to go, and how to make the move without breaking what reads the data.
+
+“Synapse Link is deprecated” is going round as a single sentence, and it is wrong in a way that matters. Read it as a whole-service retirement and you rush a migration you may not need. Dismiss it as noise and you find out in late 2027 that your reports have stopped refreshing. The accurate picture is four separate changes with four separate dates.
+
+## What is actually being retired
+
+- The Delta Lake (Parquet) export in Azure Synapse Link. Deprecated. Not available to new customers from 15 October 2026. Existing customers have to move to CSV output in Synapse Link, or to Link to Microsoft Fabric, by December 2027, when the option stops.
+
+- Export to Data Lake , the older finance and operations add-in installed through Lifecycle Services. Retired in November 2024 and stopping permanently on 30 November 2026, with no extensions. If anything still depends on it, that is the urgent one.
+
+- The Synapse Spark 3.4 runtime. The Delta export only works because a Spark pool in your own Synapse workspace converts the files. Spark 3.4 went out of support on 31 March 2026 and its jobs are being disabled in phases. A Delta link still running on a 3.4 pool is already on unsupported ground.
+
+- Not retiring: Azure Synapse Link itself. CSV export to your own storage account stays supported. Microsoft says it wants customers to be able to export data “well into the future”.
+
+## Two ways out, and they are not the same thing
+
+Synapse Link with CSV output keeps the shape you have now: your storage account, your network rules, your managed identities, your pipelines. Choose it when the data has to land in a lake you control, or when what reads it is not Microsoft’s.
+
+Link to Fabric is a different model. Dataverse keeps a Delta Parquet replica of the selected tables in its own managed storage, in the same region as the environment, and Fabric reads it through shortcuts in a lakehouse. Nothing is copied into a storage account of yours, there is no pipeline to run, and the data stays inside the Dataverse governance boundary. Choose it when the consumers are Power BI and Fabric.
+
+Compared Synapse Link, CSV output Link to Microsoft Fabric
+
+Where the data lives Your own Azure storage account A Dataverse-managed replica, read in Fabric through OneLake shortcuts
+
+Format CSV Delta Parquet
+
+Storage it consumes Your storage account Dataverse database capacity
+
+Network control Your firewall rules and managed identities Inside the Dataverse governance boundary
+
+Choose it when Consumers are outside Microsoft, or the data must sit in your own lake Consumers are Power BI and Fabric
+
+If Delta was the reason you chose the Delta option in the first place, Fabric Link is now the only Microsoft route that gives you Delta directly from Dataverse without running a Spark pool of your own.
+
+## The cost moves rather than disappears
+
+Fabric Link removes the storage account, the Spark pool hours spent converting files to Delta and, if nothing else uses it, the Synapse workspace. What it adds is Dataverse database storage. The replica counts against the environment’s database capacity, and it shows up in the Power Platform admin center as extra files named after each table with an “-Analytics” suffix. Database capacity is the dearest of Dataverse’s three storage types.
+
+So check headroom before you link, not after. Only the tables you select consume storage, and the wizard selects every change-tracked table by default, so clear the ones nothing reports on. A handful of system tables are always included and cannot be removed.
+
+## What changes for whatever reads the data
+
+Creating the link is a wizard. The work is downstream, and most of it sits in four places.
+
+- Serverless SQL. Fabric links using low-latency sync write Delta with deletion vectors, which Synapse serverless SQL pools cannot read in every scenario. Views and reports that query through serverless SQL need to move to the Fabric SQL analytics endpoint. Keeping them means adding a notebook that rewrites the tables without deletion vectors, with the delay and scheduling that brings.
+
+- Empty strings. Low-latency sync keeps an empty string as an empty string; Microsoft notes that earlier Fabric links converted them to NULL. Check any filter or measure that relies on NULL to mean blank, because a change here fails silently.
+
+- Choice metadata. Under low-latency sync the OptionsetMetadata and GlobalOptionsetMetadata tables have no createdonpartition column. Queries that name it need changing.
+
+- Coverage. Only tables with change tracking enabled can be linked. Anything you were getting some other way needs change tracking switched on, or a different route.
+
+## The sequence that keeps it boring
+
+- List every consumer first. Each report, semantic model, pipeline, notebook and serverless SQL view that reads the Synapse Link output. That list, not the data volume, is the size of the job.
+
+- Check Dataverse database capacity , and decide the table list before linking rather than accepting the default.
+
+- Run both links side by side. Create the Fabric link while Synapse Link carries on, and reconcile row counts table by table before anything is repointed.
+
+- Repoint consumers one at a time , starting with the ones that hurt least if they break.
+
+- Know the unlink rule before you build on it. Unlinking deletes the lakehouse the link created, and it will not complete while any pipeline, copy job or semantic model still references it. Plan for that before reporting is layered on top.
+
+- Retire last. Delete the Synapse Link profile, the Spark pool and the storage account only once nothing reads them.
+
+## Which way to go
+
+- Still on Export to Data Lake: move now. It stops on 30 November 2026.
+
+- On Synapse Link Delta, read by Power BI or Fabric: Fabric Link.
+
+- On Synapse Link Delta, read by tools outside Microsoft, or required in your own lake: Synapse Link with CSV output, and plan for the format change downstream.
+
+- On Synapse Link CSV: no deadline. Move when Fabric becomes your platform, not before.
+
+December 2027 sounds like plenty of time. It is, until you count what reads the data. Creating the link is the short part; repointing a reporting estate that nobody has inventoried is not. We have made this move on a production estate and run it as a fixed-scope Synapse Link to Fabric Link migration ; the consumer inventory is the place to start.
+
+## Sources
+
+Checked against Microsoft Learn on 5 November 2026.
+
+- Export Dataverse data in Delta Lake format : the deprecation notice and both dates.
+
+- Transitioning to Fabric link and Azure Synapse Link : Export to Data Lake stopping on 30 November 2026, and Synapse Link remaining supported.
+
+- Microsoft Fabric Link for Dataverse FAQ : low-latency sync, deletion vectors, empty strings, table selection and unlinking.
+
+- Link your Dataverse environment to Microsoft Fabric : the replica in Dataverse storage and how it appears in the admin center.
+
+- Azure Synapse Runtime for Apache Spark 3.4 : end of support on 31 March 2026.
+
+Questions this usually raises
+
+Q: Is Azure Synapse Link for Dataverse being retired?
+
+No. The service stays, with CSV export to your own storage account. What is going is its Delta Lake (Parquet) export option: closed to new customers from 15 October 2026 and removed in December 2027.
+
+Q: Does Fabric Link cost more than Synapse Link?
+
+It moves the cost rather than removing it. You stop paying for the storage account and the Spark pool that converts files to Delta, and start consuming Dataverse database capacity for the replica, plus Fabric capacity to use it. Which comes out cheaper depends on how many tables you link and how much database capacity you have spare, and the Power Platform admin center shows you the second before you commit.
+
+Q: Can we keep our Synapse serverless SQL views?
+
+Not reliably on low-latency sync, because the Delta tables it writes use deletion vectors. Microsoft’s guidance is to move those queries to the Fabric SQL analytics endpoint, or to rewrite the tables with a notebook, which adds delay.
+
+Q: How long does a migration take?
+
+Creating the link is the short part. The time goes on repointing whatever reads the old output, so the honest estimate comes from a list of consumers rather than from the size of the data. We can produce that list before you commit to anything.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years data and AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Taking over a system nobody can explain
+
+Inheriting a platform is a research job first and an engineering job second. Budget for the reading.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Give every AI use case its own vector store
+
+One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/insights/taking-over-a-system-nobody-can-explain/
+Title: Taking over a system nobody can explain
+
+Insights · Method
+
+# Taking over a system nobody can explain
+
+James Dettmer, Principal 4 November 2026 2 min read
+
+Inheriting a platform is a research job first and an engineering job second. Budget for the reading.
+
+A particular kind of call comes in every few months. The system works, mostly. The people who built it have gone. There is some documentation and it is out of date. Something needs to change and nobody is confident enough to change it.
+
+This is its own discipline, and the mistake is to treat it as a normal engineering engagement that happens to have a slow start.
+
+## Read before you touch
+
+On the streaming platform we took over, the first phase produced no commits at all. We reverse-engineered the microservice architecture and, separately, the build and deploy process, because those two things had drifted apart and neither matched the documentation.
+
+The deploy process is usually the more revealing of the two. Architecture diagrams describe intent. Pipelines describe what actually happens, including the manual step somebody added at two in the morning three years ago that is now load-bearing.
+
+## Audit the infrastructure for what it is, not what it says
+
+Next is capacity: what is actually provisioned, against what is actually used. On that platform this turned up components over-provisioned and under-provisioned at the same time, which is the normal state of an estate that has been tuned reactively over years. Each individual decision made sense when it was made. Collectively they make no sense at all.
+
+We did the same on a 250-staff law firm's VMware estate, running an RVtools audit out of hours before proposing anything, then sizing a target cluster from the measurements rather than from the existing specification. Consolidating three VMware environments into one Nutanix AHV cluster plus Azure services was the outcome, but the audit was the thing that made the proposal defensible.
+
+## Standardise before you improve
+
+Inherited estates are rarely uniform. On the streaming platform we reverse-engineered an existing Puppet codebase, upgraded Puppet Server, wrote new modules, and then migrated from Puppet modules to Ansible playbooks, standardising the Linux virtual machines as we went.
+
+That sequence matters. Migrating configuration management while the configuration itself is inconsistent means you encode the inconsistency into the new tool and now have two problems. Get the estate uniform under the tool you have, then change tools.
+
+## What to budget
+
+The research phase is a real line item and it is the one clients most often want to compress. It is also the phase that determines whether everything after it is correct. A few days of reading, measuring and interviewing is cheap against the cost of re-architecting the wrong component.
+
+Our Azure Review exists for this shape of problem: three days, read-only, and a written answer to what is actually wrong with the estate rather than what somebody assumes is wrong.
+
+## Leave it explicable
+
+The last obligation is not to recreate the problem. Infrastructure as code in the client's own repositories, documented, with the reasoning written down and not just the result. If you hand back a system that only you understand, you have moved the dependency rather than removed it.
+
+Questions this usually raises
+
+Q: How long does the research phase take?
+
+Days rather than weeks for a single platform. The variable is not the size of the estate so much as how many people are still available to ask, and how much of the deployment process is automated versus remembered.
+
+Q: Can you do this without touching production?
+
+The research phase, yes, and it should be read-only. The point of separating it from the engineering is that you can commit to the first part before anyone has to agree what the second part is.
+
+Written by
+
+### James Dettmer
+
+Principal at Kamobo Ltd. Eighteen years in infrastructure, cloud and platform engineering: data centre and VMware estates first, then Azure, Terraform and DevOps, and for the last few years AI platforms on top of them. Most of that spent inside other organisations’ estates as the senior engineer brought in when something needed building properly, or when something built badly had started to cost money. He also builds and runs Kamobo’s own software, which is the honest test of any advice here.
+
+More about Kamobo · Disagree? Say so
+
+## Also worth reading
+
+01
+
+### Cost tools cannot tell you what nobody needs
+
+An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+
+James Dettmer · 4 November 2026
+
+02
+
+### Reserved instances only pay off for workloads that are genuinely stable
+
+A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+
+James Dettmer · 4 November 2026
+
+03
+
+### Load test before you re-architect
+
+Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+
+James Dettmer · 4 November 2026
+
+---
+
+URL: https://kamobo.co.uk/pricing/
+Title: Pricing
+
+Pricing
+
+# What it costs, before you ask
+
+Most consultancies make you have a conversation to find out whether you can afford them. Here are the numbers.
+
+## By the day
+
+For the thing that is on fire, or the decision you want a second opinion on before you commit to it.
+
+Price
+
+£850 / day
+
+Minimum
+
+Half a day
+
+Start
+
+Within a week
+
+- Minimum half a day, no retainer needed
+
+- Usually starts within a week
+
+- Written findings you can act on, not a slide deck
+
+- You keep every script, diagram and runbook
+
+Book a day
+
+Most common
+
+## A piece of work
+
+For a defined outcome: a landing zone built, a data pipeline delivered, an AI agent shipped, a platform migrated.
+
+Price
+
+Fixed
+
+Agreed
+
+Before you pay
+
+After
+
+30 days support
+
+- Free scoping call before any money changes hands
+
+- One price, one deadline, no change-request games
+
+- Built as code, documented, handed over properly
+
+- Thirty days of support after go-live, included
+
+Scope a project
+
+## On retainer
+
+For when you need someone senior who already knows your estate, without hiring a full-time platform engineer.
+
+From
+
+£595 / month
+
+Term
+
+3 months
+
+Notice
+
+30 days
+
+- A set number of senior days each month
+
+- Monitoring and a monthly written report
+
+- Priority on anything urgent
+
+- Three-month minimum, then thirty days' notice
+
+See what's included
+
+On the day rate. £850 buys one senior engineer, not a firm. There is no sales team, no delivery pyramid and no margin on anyone else's time, which is why the number sits below what a consultancy of the same seniority quotes. Longer committed engagements are priced below it again.
+
+Cost optimisation work starts with a free initial assessment : if we cannot find savings worth more than our fee, we will say so and there is nothing to pay. That is specific to cost work. A review of the whole estate, covering architecture and security as well as cost, is the £2,500 Azure Review . Ask which one fits .
+
+## The fixed-price way in
+
+If you would rather buy a defined thing than an open-ended engagement, the Azure Review is three days at £2,500, read-only, with the fee credited in full against the build if you go ahead within thirty days.
+
+## Retainers
+
+Plans run from £595 a month for monitoring plus one senior day, to £3,450 a month for six days plus a quarterly roadmap session. Three-month minimum, then thirty days notice. What is included .
+
+---
+
+URL: https://kamobo.co.uk/retainers/
+Title: Retainers
+
+Retained clients
+
+# Someone senior who already knows your estate
+
+A retainer buys you a set number of senior days each month and a standing claim on them. Monitoring and routine watching are handled by our own agents, so your budget pays for improvements rather than for someone staring at a dashboard.
+
+## CloudOps
+
+Terraform estates kept honest: drift detection, provider and module upgrades raised as reviewable pull requests, security posture and cost guardrails.
+
+- Drift detection
+- Upgrades
+- Guardrails
+
+## FinOps as a service
+
+Continuous cost governance: monthly spend reviews, commitment management, anomaly alerts and cost workbooks that stay current.
+
+- Monthly review
+- Commitments
+- Alerts
+
+## DataOps
+
+Pipelines that keep flowing: failure triage, schema-drift fixes, performance tuning and a monthly platform health report.
+
+- Triage
+- Schema drift
+- Reporting
+
+## AgentOps
+
+For the agents we build: observability, prompt and model updates as the frontier moves, guardrail audits and incident response.
+
+- Monitoring
+- Model updates
+- Guardrails
+
+## LLM platform care
+
+Private LLM and RAG estates kept sharp: model refreshes, re-indexing, security patching and throughput tuning.
+
+- Re-indexing
+- Patching
+- Tuning
+
+## Application care
+
+Applications we build, kept shipping: support, dependency and security updates, small features and uptime monitoring.
+
+- Support
+- Updates
+- Uptime
+
+Plans run from £595 a month (monitoring plus one senior day) to £3,450 a month (six days plus a quarterly roadmap session). Three-month minimum, then thirty days' notice. Ask which tier fits .
+
+---
+
+URL: https://kamobo.co.uk/sectors/
+Title: Sectors
+
+Sectors
+
+# Where this work has already been done
+
+Clients are described rather than named. Every engagement below was delivered by the same engineer who would lead yours, and we will go through any of it in detail on a call.
+
+## Financial services
+
+For a UK financial services firm, £250,000 a year of Azure spend identified through zombie-resource removal, VM restructuring and reserved instances, with 15+ Azure Workbooks built for cost and performance visibility.
+
+## Energy and utilities
+
+For a European energy supplier, Synapse workspaces with self-hosted integration runtimes, Data Factory orchestration and Databricks across dev through production, in centralised Terraform modules with least-privilege networking throughout.
+
+## Professional education and training
+
+For a global professional education body, a zero-trust private LLM and RAG platform on GPU-accelerated Azure, where each use case runs on its own isolated vector store so data never crosses between them.
+
+## Media and streaming
+
+On a self-hosted media and video-streaming platform we did not build, the architecture was reverse-engineered, load tested with K6 and moved to autoscaling Azure. The cost of running it fell 70% over three years.
+
+## Legal and professional services
+
+For a 250-staff UK law firm, three VMware environments audited out of hours, sized and consolidated onto a single Nutanix AHV cluster alongside Azure services.
+
+## Employment and public services
+
+For a UK employment-services provider, Kubernetes and Docker Enterprise across five environments, 23 GitLab CI/CD projects, and 35 to 40% taken off the Azure bill.
+
+## What these estates have in common
+
+The sector matters less than the shape of the problem.
+
+01
+
+### Nobody left can explain it
+
+The people who built it have gone, the documentation is stale, and the risk of touching it is unknown. Reverse-engineering an estate is a large part of this work.
+
+02
+
+### The bill grew quietly
+
+Cloud spend rarely spikes. It accretes, through orphaned resources, over-provisioning and instances nobody owns. An audit finds it; the people who own it tell you what is safe to remove.
+
+03
+
+### Data cannot leave
+
+Regulated estates cannot send documents to a third-party inference API. That constraint drives the whole architecture, and it is one we have already built against.
+
+04
+
+### It has to keep running
+
+None of this happens on a greenfield site. The platform is live, it has users, and the work has to land without an outage.
+
+---
+
+URL: https://kamobo.co.uk/services/
+Title: Services: cloud, data and AI engineering
+
+Services
+
+# Cloud, data and AI engineering services
+
+Ten things we are genuinely good at. Every engagement is scoped honestly, built as code, documented and handed over, and any of them can graduate into a monthly retainer from £595.
+
+Not sure which one you need? Most people start with the £2,500 Azure Review : three days, read-only, a ranked list of what to fix and what each fix is worth.
+
+## SaaS & Software Development
+
+Multi-tenant SaaS products, web and mobile apps, and the components inside them, built end to end.
+
+## API Development & Tuning
+
+REST and GraphQL APIs designed, built, documented and made fast under production load.
+
+## DevOps, CI/CD & GitOps
+
+Pipelines that ship in minutes: GitOps workflows, GitHub Actions and Azure DevOps, no stored secrets.
+
+## Application Performance & Root-Cause
+
+Slow or broken apps reverse-engineered to the real cause, whether that is storage, queues, NGINX or Kubernetes, and fixed fast.
+
+## AI Agent Development
+
+AI embedded in your software where it earns its keep: support, operations and code agents with human approval.
+
+## Private LLM & RAG Platforms
+
+Self-hosted or frontier models on infrastructure you control, with private, isolated RAG for your documents.
+
+## Terraform & Azure Landing Zones
+
+CAF-aligned landing zones, subscription vending and cloud infrastructure built as code on Azure.
+
+## Azure Data Engineering
+
+Production data platforms on Synapse, Databricks and Data Factory, dev through prod on least privilege.
+
+## Synapse Link to Fabric Migration
+
+Move Dataverse off Synapse Link’s deprecated Delta export to Link to Microsoft Fabric, with every report repointed and nothing going dark. Already done in production.
+
+## Azure Cost Optimization
+
+FinOps with receipts: £150k a year removed from one Azure bill and £250k a year identified at another. Starts with a free assessment, because cost work should pay for itself before you commit to it.
+
+---
+
+URL: https://kamobo.co.uk/services/ai-agent-development/
+Title: Custom AI Agent Development UK
+
+Services
+
+# Custom AI agent development for UK businesses
+
+We build AI agents that do real work: triaging support tickets, watching logs, moving data and raising code fixes for a human to approve. Kamobo is a UK software and cloud consultancy, and we treat custom AI agent development as production engineering, not experimentation.
+
+Book a scoping call
+All services →
+
+18,000+ registered users on a platform our agents serve
+500+ daily actives working alongside those agents
+18+ yrs production engineering experience
+
+What we deliver
+
+## AI agents for customer support, operations and engineering
+
+Whether you are comparing AI agent development companies or ready to hire an AI agent developer for a single workflow, every build is scoped to a measurable outcome and wired into the systems you already run.
+
+### Customer support and service agents
+
+Agents that read incoming tickets, classify and triage them, draft replies and route anything ambiguous to your team. Our support triage agents run in production on a live online platform with 500+ daily active users, so we know what holds up when the queue is real.
+
+- Claude
+- GPT
+- Self-hosted LLMs
+
+### Workflow and operations agents
+
+AI workflow automation for the back office. Agents that watch logs and queues, chase missing data, reconcile records and push updates into your existing tools through proper APIs rather than brittle screen-scraping.
+
+- Python
+- TypeScript
+- REST APIs
+
+### Engineering and DevOps agents
+
+Agents embedded in the software lifecycle: monitoring for errors, diagnosing root causes and raising code fixes as pull requests for a human to review and merge. Nothing ships without an engineer's approval.
+
+- GitHub
+- CI/CD
+- Kubernetes
+
+How we work
+
+## How custom AI agent development works at Kamobo
+
+01
+### Scope the workflow
+
+We start with a scoping call. Together we pick one workflow with a clear return, define what success looks like in numbers, and map the systems and data the agent needs to touch.
+
+02
+### Design the guardrails
+
+We decide what the agent may do on its own and what needs human approval, choose the model (Claude, GPT, Gemini or self-hosted) and pick where it runs: your cloud, a private AI cloud or your own hardware.
+
+03
+### Build, evaluate, parallel-run
+
+We build the agent, test it against real historical cases, then run it alongside your team before it goes live. You see the evidence before you trust it with customers or code.
+
+04
+### Hand over, or let us run it
+
+You get documentation, runbooks and a clean handover. Or move onto our AgentOps managed plan, from £595 per month, and we monitor, tune and extend your agents as part of the service.
+
+Proof
+
+## Agentic AI, already in production
+
+### Agents serving 18,000+ users
+
+On a live online platform with 18,000+ registered users and 500+ daily actives, our agents triage support, monitor logs and raise code fixes as pull requests for human approval. They are part of daily operations, not a demo.
+
+- LLM agents
+- Pull-request approvals
+
+### Private RAG platform for a global education body
+
+We built a production RAG and LLM platform running in a private AI cloud, with multiple isolated use cases and a dedicated private vector store for each. Models are served with vLLM, Ollama and llama.cpp on GPU infrastructure defined in Terraform.
+
+- vLLM
+- Terraform
+
+### Engineering discipline behind every agent
+
+We have taken platforms through ISO 27001 audit twice and passed both times, and a migration we led cut the cost of running the platform by 70%. Agents inherit the same discipline: infrastructure as code, observability and least-privilege access.
+
+- ISO 27001
+- IaC
+
+FAQ
+
+## Common questions about custom AI agents
+
+Q: How much does it cost to build an AI agent?
+
+It depends on scope. Our engagements are anchored to senior engineering day rates from £850 per day, and we quote fixed prices after a short scoping call. A single well-defined workflow costs far less than a multi-agent platform, so we always start by narrowing the problem to the workflow with the clearest return.
+
+Q: How long does it take to develop and deploy an AI agent?
+
+A focused agent for one well-understood workflow typically takes a few weeks, including evaluation and a supervised parallel run. Multi-agent systems with several integrations take longer. We agree the timeline during scoping and ship in stages, so you see working software early rather than waiting for a big launch.
+
+Q: What is the difference between an AI agent and a chatbot?
+
+A chatbot answers questions in a conversation. An AI agent takes actions: it reads your systems through APIs, reasons about what to do next, uses tools and completes multi-step tasks such as triaging a ticket or raising a code change. Agents need engineering around them, including permissions, guardrails and monitoring, and that is where most of the real work lies.
+
+Q: Are AI agents safe to use with company data?
+
+They can be, if they are engineered that way. We restrict each agent to the minimum data and permissions it needs, log every action, and keep humans in the loop for consequential steps; in our production systems, code changes are raised as pull requests for human approval. Where data cannot leave your estate, we deploy self-hosted models in your cloud or a private AI cloud. We have taken platforms through ISO 27001 audit twice, and passed both times.
+
+Q: Which AI model should we use: Claude, GPT, Gemini or self-hosted?
+
+We are provider-agnostic. Frontier models such as Claude, GPT and Gemini are usually the fastest route to quality, while self-hosted models served with vLLM, Ollama or llama.cpp suit strict data-residency or cost constraints. We benchmark options against your actual workload during scoping, and we design agents so the model can be swapped later without a rebuild.
+
+Q: Can AI agents handle customer support on their own?
+
+Partly, and that is usually the right goal. Agents are strong at triage, tagging, drafting replies and answering routine questions, which removes a large share of the queue. We design them to escalate anything ambiguous or sensitive to your team, so quality stays high while response times fall. Full autonomy is something you grant gradually, based on measured accuracy, not on day one.
+
+Related
+
+## Related services
+
+### Private LLM & RAG Platforms
+
+Self-hosted models and retrieval over your own documents, running in your estate or a private AI cloud.
+
+### API Development & Tuning
+
+Agents are only as capable as the APIs they can call. We design and tune the interfaces they act through.
+
+### DevOps, CI/CD & GitOps
+
+Pipelines, environments and GitOps workflows that let humans and agents ship changes safely.
+
+---
+
+URL: https://kamobo.co.uk/services/api-development/
+Title: API Development Services UK
+
+Services
+
+# API development services that stay fast under load
+
+Kamobo provides API development services for teams whose products depend on them: design-first REST and GraphQL builds, third-party integrations, and tuning measured in response times rather than adjectives. We are a founder-led UK consultancy with 18+ years of production engineering behind every engagement.
+
+Book a scoping call
+All services →
+
+18+ years production engineering experience
+ISO 27001 audits taken and passed, both times
+70% cheaper to run, after a migration we led
+
+What we deliver
+
+## REST and GraphQL API development, integration and tuning
+
+Most engagements take one of three shapes. All of them ship with tests, documentation and a contract your consumers can rely on.
+
+### Design-first APIs on OpenAPI
+
+We write the OpenAPI contract before the code, so mocks, tests and client stubs exist from day one. Then we build REST or GraphQL services with authentication, versioning and rate limiting designed in, not bolted on afterwards.
+
+- OpenAPI
+- REST
+- GraphQL
+
+### API integration services
+
+We connect your product to the systems your business already runs on: payment providers, CRMs, ERPs and enterprise data via Dataverse and Dynamics 365 feeds. Integrations get retries, idempotency and monitoring, so a flaky third party does not become your outage.
+
+- OAuth 2.0
+- Webhooks
+- Dynamics 365
+
+### API performance tuning
+
+We profile slow endpoints, then fix the actual cause: query plans, N+1 calls, payload size, caching, connection pooling and ingress configuration. Results are measured in response times and throughput before and after, so you can see what changed.
+
+- NGINX
+- Redis
+- RabbitMQ
+
+How we work
+
+## From contract to production in four steps
+
+01
+### Scope
+
+A short call to pin down consumers, expected load, security requirements and what done looks like. You get a fixed quote or a day-rate estimate, in writing.
+
+02
+### Design the contract
+
+We draft the OpenAPI specification or GraphQL schema and review it with your team. Frontend work can start against a mock the same week.
+
+03
+### Build and ship
+
+Senior engineers implement the contract with automated tests, security controls and a CI/CD pipeline, so every change reaches production the same safe way.
+
+04
+### Hand over or stay on
+
+You get documentation, runbooks and a walkthrough for your team. If you want ongoing tuning and monitoring, we can carry on under a managed plan.
+
+Proof
+
+## Outcomes from real engagements
+
+### Ingress found, bottleneck fixed
+
+A platform we did not build was struggling under load. We reverse-engineered it and traced the slowness to NGINX misconfigured for the ingress volume and under-specified RabbitMQ nodes, then fixed both.
+
+- NGINX
+- RabbitMQ
+
+### 70% cheaper to run
+
+A migration we led cut the cost of running the platform by 70%. Modernising how services talk to each other is often where the savings hide: fewer moving parts, cleaner contracts, less compute doing wasted work.
+
+- Migration
+- Modernisation
+
+### Engineered to pass audit
+
+We have taken platforms through ISO 27001 audit twice, and passed both times. Security is designed into our APIs from the contract onwards: authentication, least-privilege access and audit trails are part of the build, not an afterthought.
+
+- ISO 27001
+- OAuth 2.0
+
+FAQ
+
+## Common questions about API development services
+
+Q: How much does it cost to develop an API?
+
+It depends on the number of endpoints, the security requirements and the integrations involved. Our senior engineering is anchored at £850 per day, and most API projects are quoted as a fixed price after a scoping call, so you know the number before we start. A single integration costs far less than a full public API platform with authentication, documentation and SDKs.
+
+Q: How long does API development take?
+
+A well-defined integration or small internal API can take days. A production API with authentication, rate limiting, documentation and a CI/CD pipeline typically takes weeks rather than months. Because we design the contract first, your frontend team can build against a mock while we implement, which shortens the overall timeline.
+
+Q: Should we use REST or GraphQL?
+
+REST is the right default for most services: simple, cacheable and well aligned with HTTP semantics. GraphQL earns its place when many clients need different views of the same data, or when over-fetching is hurting mobile performance. We build both, and we will recommend one based on your data model and consumers rather than fashion.
+
+Q: Why is my API slow?
+
+The database is usually involved: unindexed queries, connections opened per request, or endpoints returning far more data than the client needs. Payload size, chatty downstream calls and missing caching account for most of the rest. We measure first with profiling and traces, then fix the bottleneck that actually matters instead of guessing.
+
+Q: Can you tune an API you didn't build?
+
+Yes. We reverse-engineer entire platforms, including open-source systems we did not build, to find the real cause of slowness. Past root causes include NGINX misconfigured for the ingress volume, under-specified RabbitMQ nodes, persistent volumes on slow disks, and over-provisioned resources wasting money without adding speed.
+
+Q: Do you handle third-party API integrations?
+
+Yes. We connect products to payment providers, CRMs and enterprise systems, including Dataverse and Dynamics 365 feeds, with proper authentication, retries and monitoring built in. Where an official SDK is weak or missing, we write a clean client against the provider's API so the integration stays testable and maintainable.
+
+Q: Do you provide ongoing support after the API goes live?
+
+Yes. Every build ends with a clean handover: documentation, runbooks and a walkthrough for your team. If you would rather we keep running things, our Application Care managed plan starts at £595 per month for monitoring plus one senior engineering day, with a three-month minimum term.
+
+Related
+
+## Related services
+
+### SaaS & Software Development
+
+Full products built end to end, with the API treated as a first-class deliverable rather than plumbing.
+
+### Application Performance & Root-Cause
+
+Deep forensics on slow or unstable systems, including platforms we did not build.
+
+### DevOps, CI/CD & GitOps
+
+Pipelines, environments and GitOps workflows that ship your API safely on every merge.
+
+---
+
+URL: https://kamobo.co.uk/services/application-performance-troubleshooting/
+Title: Application Performance Consultants UK
+
+Services
+
+# Application performance consultants who find the real root cause
+
+Slow pages, timeouts and mystery outages rarely have the cause everyone first suspects. We are application performance consultants who trace the problem through code, databases, queues, proxies and infrastructure until the root cause is proven, then fix it properly. Founder-led UK consultancy, working remotely worldwide.
+
+Book a scoping call
+All services →
+
+18+ years production engineering experience
+70% cheaper to run, after a migration we led
+£400k+/yr cloud waste found across two clients
+
+What we deliver
+
+## Application performance troubleshooting for the whole stack
+
+Fixed-price investigations and day-rate engineering for slow, unstable or wasteful production systems. We follow the evidence wherever it leads, from application code down to the disks.
+
+### Slow web application diagnosis
+
+Pages that crawl, endpoints that time out, jobs that overrun their window. We profile the running system, trace requests end to end and read the slow query logs, so the bottleneck is measured rather than assumed before anything gets changed.
+
+- Profiling
+- Distributed tracing
+- Slow query analysis
+
+### NGINX, RabbitMQ & Kubernetes tuning
+
+Middleware defaults rarely survive real traffic. We tune NGINX for your actual ingress volume, size RabbitMQ nodes and prefetch for the real message rate, and dig out Kubernetes problems such as CPU throttling, evictions and persistent volumes on slow disks.
+
+- NGINX
+- RabbitMQ
+- Kubernetes
+
+### Production incident root cause analysis
+
+When something falls over, restart-and-hope is not a fix. We reconstruct the incident from logs, metrics and traces, prove the underlying cause, and leave you with the fixes, runbooks and alerts that make a repeat far less likely.
+
+- Log forensics
+- Postmortems
+- Runbooks
+
+How we work
+
+## From symptom to proven cause
+
+01
+### Scope the investigation
+
+A short call to hear the symptoms, the stack and what has already been tried. We agree what a result looks like and quote a fixed price or day rate before any work starts.
+
+02
+### Gather the evidence
+
+Starting with read-only access, we collect metrics, logs, traces and configuration, and reproduce the problem where we can. Nothing is changed until we understand the system.
+
+03
+### Prove the root cause, then fix it
+
+We test hypotheses against the evidence until one cause is proven, then implement the fix with your team. Changes go through your review process; humans stay in the loop.
+
+04
+### Hand over and stay close
+
+You get a plain-English write-up, the before-and-after measurements and runbooks your team can use. If you want us on hand month to month, our Application Care managed plan covers monitoring plus senior engineering days.
+
+Proof
+
+## Root causes our application performance consultants have found
+
+### Forensics on platforms we didn't build
+
+We reverse-engineer entire platforms, including open-source systems we had no part in building. Recent finds include persistent volumes sitting on slow disks, under-spec'd RabbitMQ nodes and NGINX configured well below the real ingress volume.
+
+- Kubernetes
+- RabbitMQ
+- NGINX
+
+### 70% cheaper to run
+
+A migration we led cut the cost of running the platform by 70%. Performance work and cost work are the same discipline: measure what the system really needs, then match the platform to it.
+
+- Migration
+- Right-sizing
+
+### £400k+ a year in cloud waste found
+
+Over-spec'd resources waste money as well as masking real limits. We removed £150k a year from one client's Azure bill and identified a further £250k a year at another.
+
+- Azure
+- FinOps
+
+FAQ
+
+## Common questions about application performance troubleshooting
+
+Q: Why is my web application slow in production but fast in development?
+
+Because production is a different world. Real data volumes expose queries that were instant on a seeded database, real traffic exhausts connection pools, and real infrastructure adds network latency, shared storage and default middleware settings that a laptop never sees. We measure the running production system, so the diagnosis reflects what your users actually experience rather than what a test environment suggests.
+
+Q: How do you find the root cause of application performance issues?
+
+We work from evidence, not guesses. That means profiling and tracing to see where time is really spent, reading slow query logs, checking queue depths and consumer rates, and reviewing NGINX, Kubernetes and storage configuration against the actual load. Each hypothesis is tested against the data until one cause is proven, and we confirm the fix with before-and-after measurements.
+
+Q: What are the most common causes of performance bottlenecks?
+
+The ones we find most often are unindexed or inefficient database queries, persistent volumes sitting on slow disks, under-spec'd message brokers such as RabbitMQ, NGINX or ingress settings never tuned for real traffic, memory pressure forcing paging, and resources over-provisioned in one place while starved in another. Most slow systems have two or three compounding causes rather than a single villain.
+
+Q: Can you troubleshoot a system you didn't build?
+
+Yes. We regularly reverse-engineer entire platforms we had no part in building, including open-source systems. We map the architecture from configuration, code and live behaviour, then trace the problem through it. You do not need the original developers or complete documentation to get a proven root cause.
+
+Q: How much does application performance troubleshooting cost?
+
+Senior day-rate engineering starts from £850 a day, and we quote fixed prices for defined investigations after a short scoping call. If you want ongoing cover once the immediate problem is fixed, our Application Care managed plan starts from £595 a month. Either way, you know the cost before we start.
+
+Q: Do you just write a report, or do you fix the problem?
+
+Both. Every engagement produces a written diagnosis with the evidence and ranked recommendations, but we would much rather implement the fix than hand you a PDF. We make the changes alongside your team, keep humans in the approval loop, and verify the improvement with measurements before we close the engagement.
+
+Q: Can you help during a live production incident?
+
+If we have capacity, yes. Email a summary of the symptoms and we will tell you quickly whether we can join. More often we are brought in just after an incident to run a proper root cause analysis, prove what actually failed and fix the weaknesses it exposed, which makes a repeat far less likely.
+
+Related
+
+## Related services
+
+### API Development & Tuning
+
+APIs designed and tuned to hold up under real traffic, not just the happy path in staging.
+
+### DevOps, CI/CD & GitOps
+
+Pipelines, observability and safe deployment practice that stop regressions reaching production.
+
+### Azure Cost Optimization
+
+Right-size over-provisioned cloud resources and cut spend without hurting performance.
+
+---
+
+URL: https://kamobo.co.uk/services/azure-cost-optimization/
+Title: Azure Cost Optimisation Services UK
+
+Services
+
+# Azure cost optimisation services that start with the architecture
+
+Most Azure bills carry spend that no workload needs: over-sized VMs, orphaned disks, expired reservations, storage in the wrong tier. Our Azure cost optimisation services start with a free assessment of your billing data and end with changes your own team has reviewed and approved. Senior engineers do the work, not a report generator.
+
+Book a free assessment
+All services →
+
+£400k+/yr savings found across two client Azure estates
+70% cheaper to run, after a migration we led
+18+ yrs production engineering experience
+
+What we deliver
+
+## Reduce your Azure bill without touching reliability
+
+Three strands of work, sequenced from quick wins to structural fixes. Each starts from your billing data and ends in changes you control.
+
+### Azure cost audit and free initial assessment
+
+We start with your Cost Management data and billing exports: spend broken down by subscription, resource group, service and environment, mapped against what is actually running. You get a prioritised findings list with an estimated value against each item, at no charge and with no obligation. This is the cost-only assessment; if you want architecture and security covered too, that is the £2,500 Azure Review .
+
+- Azure Cost Management
+- Azure Advisor
+- Cost exports
+
+### Reserved Instances, Savings Plans and Hybrid Benefit
+
+Commitment discounts are the biggest lever on most bills and the easiest to get wrong. We model your usage, layer Reserved Instances over the stable core and a Savings Plan over flexible compute, and check Azure Hybrid Benefit eligibility for Windows Server and SQL licences before you commit a penny.
+
+- Reserved Instances
+- Savings Plans
+- Azure Hybrid Benefit
+
+### Rightsizing, storage tiering and architecture fixes
+
+Measured utilisation drives every change: VMs rightsized against real load, blob storage moved to the correct access tier, autoscale in place of static peak capacity. When the waste is architectural we go deeper. We have traced spend to over-specified resources, under-specified queue nodes and disks doing the wrong job.
+
+- Rightsizing
+- Autoscale
+- Storage tiers
+
+How we work
+
+## Free assessment first, fixed-rate deep dives after
+
+01
+### Free initial assessment
+
+Read-only access to your billing data, or a cost export, is all we need. We review spend, usage and configuration, then present what we found and what it is worth. No charge, no obligation.
+
+02
+### Fixed-rate deep dive
+
+You choose the findings worth pursuing. Each piece of work is quoted as a fixed price after a scoping call, so there are no open-ended day-rate surprises.
+
+03
+### Engineer-led implementation
+
+Changes land through your normal review process: infrastructure as code where it exists, pull requests your team approves, nothing applied blind to production.
+
+04
+### Keep the bill down
+
+We leave you with tagging, budgets, alerts and a governance baseline. If you would rather not run that yourself, our FinOps-as-a-Service managed plans start at £595 a month for monitoring plus one senior engineering day.
+
+Proof
+
+## £400k+ a year found across two Azure estates
+
+### £150k a year removed
+
+An optimisation engagement removed £150k of annual spend from one client's Azure bill. We presented the findings, agreed priorities with their team, and delivered the changes through their existing review process.
+
+- Azure
+- Cost audit
+
+### £250k a year identified
+
+At a second client we identified £250k a year of potential savings across the Azure estate, prioritised by value and effort so their team could act on the highest-return items first.
+
+- FinOps
+- Azure
+
+### 70% cheaper to run
+
+A migration we led cut the cost of running the platform by 70%. Optimisation is not always trimming: sometimes the right answer is re-platforming, and we will tell you when it is.
+
+- Migration
+- Re-platforming
+
+FAQ
+
+## Common questions about Azure cost optimisation services
+
+Q: How much can we realistically save on our Azure bill?
+
+It depends on the estate, which is why we assess before we quote. Across two recent engagements we removed £150k a year from one client's Azure bill and identified £250k a year at another. Common wins are unused resources, over-provisioned VMs, missing reservations, unused Hybrid Benefit and storage in the wrong access tier. The free initial assessment tells you what your realistic range looks like before you spend anything.
+
+Q: Why is my Azure bill so high?
+
+Azure pricing is consumption-based and granular, so small inefficiencies compound quietly: VMs sized for peak load and left there, premium disks on idle machines, orphaned disks and public IP addresses, expired reservations, and machines shut down in the operating system but never deallocated. An audit breaks the bill down by subscription, service and environment so you can see exactly where the money goes.
+
+Q: Should we buy Azure Reserved Instances or a Savings Plan?
+
+Usually both, in layers. Reserved Instances give the deepest discount on a stable, predictable core of virtual machines, while a Savings Plan covers flexible compute that may change size, family or region. Neither covers storage or bandwidth, so commitments are only part of the answer. We model your actual usage before recommending either, because a bad reservation is just a different kind of waste.
+
+Q: What is Azure FinOps and do we need it?
+
+FinOps is the practice of making cloud spend visible, accountable and continuously optimised. You do not need a large programme to benefit: resource tagging, budgets, alerts and a monthly review deliver most of the value. We put those foundations in during an engagement and can run them for you afterwards under a managed plan.
+
+Q: How does the free initial assessment work?
+
+You grant us read-only access to your billing data, or share a cost export. We review spend, usage and configuration, then present our findings: what we would change, roughly what each change is worth, and a fixed price for the work. There is no charge for the assessment and no obligation to go further.
+
+Q: Will cutting Azure costs hurt performance or reliability?
+
+Not when it is engineering-led. Every recommendation is based on measured utilisation rather than guesswork, and we have fixed as many under-provisioned systems as over-provisioned ones. Changes go through your normal review process, so nothing is applied to production unseen.
+
+Q: Do you only work with UK companies?
+
+We are a UK consultancy and most of our clients are UK-based, but we work remotely worldwide. Engagements run over video calls and inside your own Azure tenant, so nothing sensitive leaves your environment.
+
+Related
+
+## Related services
+
+### Terraform & Azure Landing Zones
+
+Well-governed landing zones stop cost sprawl before it starts: policy, budgets and subscription vending, all in code.
+
+### Application Performance & Root-Cause
+
+When spend hides inside the architecture, we reverse-engineer the platform to find it: slow disks, mis-sized nodes, misconfigured ingress.
+
+### Azure Data Engineering
+
+Synapse, Databricks and Data Factory platforms designed to run efficiently, not just to run.
+
+---
+
+URL: https://kamobo.co.uk/services/azure-data-engineering/
+Title: Azure Data Platform Consultancy UK
+
+Services
+
+# Azure data platform and data engineering consultancy
+
+Kamobo is a founder-led Azure data engineering consultancy in the UK, working remotely worldwide. We build Data Factory pipelines, Synapse and Databricks lakehouses and Dataverse feeds from Dynamics 365: the plumbing your analytics and AI depend on. Senior delivery backed by 18+ years of production engineering, not a bench of juniors.
+
+Book a scoping call
+All services →
+
+18+ yrs production engineering experience
+70% cheaper to run, after a migration we led
+2× ISO 27001 audits taken and passed
+
+What we deliver
+
+## Data Factory pipelines, lakehouse platforms and Dynamics 365 feeds
+
+The three things clients most often need from us on Azure data work, delivered as engineered infrastructure with Terraform, CI/CD and code review behind every piece.
+
+### Azure Data Factory pipelines and ingestion
+
+ETL and ELT pipelines that pull from SaaS APIs, on-premises databases and file drops, with retries, alerting and lineage instead of silent failures. Self-hosted integration runtimes bring firewalled sources into scope without punching holes in your network.
+
+- Data Factory
+- Self-hosted IR
+- Azure SQL
+
+### Synapse, Databricks and Fabric lakehouses
+
+Warehouse and lakehouse builds on Azure Synapse Analytics, Azure Databricks or Microsoft Fabric: medallion architecture, Delta Lake, serverless SQL and Spark sized to your actual workloads. We advise honestly on Synapse versus Fabric because we resell neither.
+
+- Synapse
+- Databricks
+- Microsoft Fabric
+
+### Dynamics 365 and Dataverse integration
+
+Synapse Link for Dataverse and Data Factory feeds that stream Dynamics 365 data into your warehouse, so CRM and ERP records land alongside every other source and Power BI reports from one governed model instead of a dozen exports.
+
+- Dataverse
+- Synapse Link
+- Power BI
+
+How we work
+
+## How our Azure data engineering consultancy runs a build
+
+01
+### Scope
+
+A short call and a look at your sources, volumes and current estate. You get a written approach with effort and cost, not a sales deck.
+
+02
+### Design and estimate
+
+We design the platform as code: resource layout, networking, security and the first pipelines, priced as a fixed package or day-rate work from £850 a day.
+
+03
+### Build in increments
+
+A working pipeline against real data ships early, then we extend source by source. Everything is Terraform, CI/CD and code review; nothing lives only in a portal.
+
+04
+### Hand over or stay on
+
+Documentation, runbooks and a walkthrough for your team. If you want ongoing help, our DataOps managed plan keeps us on for monitoring and senior engineering days each month.
+
+Proof
+
+## Results we can put numbers on
+
+### Enterprise data platforms in production
+
+We have delivered Synapse, Databricks and Data Factory platforms for enterprise clients, complete with self-hosted integration runtimes reaching on-premises systems and Dataverse feeds from Dynamics 365.
+
+- Synapse
+- Data Factory
+
+### 70% cheaper to run
+
+A migration we led cut the cost of running the platform by 70%. The platform choices made early, from storage tiers to compute sizing, decide what a data estate costs for years.
+
+- Migration
+- Azure
+
+### Audited, twice
+
+We have taken platforms through ISO 27001 audit twice, and passed both times. Private endpoints, managed identities and least-privilege access are defaults in our builds, not add-ons.
+
+- ISO 27001
+- Private Endpoints
+
+FAQ
+
+## Common questions about Azure data platforms
+
+Q: Is Azure Synapse Link for Dataverse being retired?
+
+Not the service, but its Delta Lake (Parquet) export is: closed to new customers from 15 October 2026 and removed in December 2027. We have moved a production Dataverse estate to Fabric Link and run it as a fixed-scope migration . What is being retired, and how to choose between Fabric Link and Synapse Link CSV .
+
+Q: What does an Azure data engineering consultancy actually do?
+
+We design and build the infrastructure that moves, stores and serves your data on Azure: ingestion pipelines in Data Factory, warehouses and lakehouses in Synapse, Databricks or Microsoft Fabric, and the networking, security and CI/CD around them. The result is data your analysts and applications can rely on, engineered as a platform rather than a pile of one-off scripts.
+
+Q: Should we choose Azure Synapse, Databricks or Microsoft Fabric?
+
+It depends on your workloads and your team. Synapse remains solid for SQL-centric warehousing, Databricks leads for heavy Spark, streaming and machine learning, and Fabric suits teams that want a unified, capacity-billed platform close to Power BI. We resell none of them, so our recommendation is based on your data volumes, skills and budget, not a partner margin.
+
+Q: How long does it take to build a data platform on Azure?
+
+A first production increment usually takes weeks, not years. We stand up the platform foundations and one high-value pipeline first, then extend source by source. A focused ingestion-and-warehouse build is often reporting on real data within the first few weeks; a full enterprise estate is a phased programme that we scope stage by stage.
+
+Q: How much does an Azure data engineering consultant cost in the UK?
+
+Our engagements are anchored on senior day rates from £850 per day, with fixed prices quoted after a scoping call. We work on contract, fixed-price and retained terms, so you can start with a short architecture review before committing to a full build.
+
+Q: Can you integrate Dynamics 365 and Dataverse with our data platform?
+
+Yes. We have built enterprise platforms that feed Dataverse and Dynamics 365 data into Synapse-based warehouses using Synapse Link and Data Factory, landing CRM and ERP data alongside your other sources so reporting comes from one governed model.
+
+Q: Can you connect on-premises databases and legacy systems to Azure?
+
+Yes. We deploy self-hosted integration runtimes so Data Factory and Synapse pipelines can reach databases behind your firewall without exposing them to the internet, and we pair them with private endpoints and hub-spoke networking on the Azure side.
+
+Q: Do you support the data platform after the build?
+
+Yes. Every build ends with documentation, runbooks and a handover to your team. If you want us to stay on, our DataOps managed plan starts at £595 per month for monitoring plus one senior engineering day and scales to £3,450 per month for six days and a quarterly roadmap, with a three-month minimum.
+
+Related
+
+## Related services
+
+### Terraform & Azure Landing Zones
+
+The secure foundation under your data platform: landing zones, subscription vending and private networking, all as code.
+
+### Azure Cost Optimization
+
+Data platforms are Azure cost hotspots. We removed £150k a year from one client's bill and identified £250k a year at another.
+
+### Private LLM & RAG Platforms
+
+Once your data is in shape, put it to work: private LLM and RAG platforms running in your cloud or a private AI cloud.
+
+---
+
+URL: https://kamobo.co.uk/services/devops-cicd-gitops/
+Title: DevOps Consultancy UK: CI/CD & GitOps
+
+Services
+
+# A UK DevOps consultancy for CI/CD pipelines and GitOps
+
+Kamobo is a UK DevOps consultancy that designs, builds and repairs the path from commit to production. We work hands-on with GitHub Actions, Azure DevOps, Argo CD, Flux and Terraform, for teams in the UK and remote worldwide. Founder-led, with 18+ years of production engineering behind every engagement.
+
+Book a scoping call
+All services →
+
+18+ yrs production engineering experience
+2× ISO 27001 audits taken and passed
+70% cheaper to run, after a migration we led
+
+What we deliver
+
+## CI/CD consulting, GitOps and deployment automation
+
+Whether you are starting from manual deployments or scaling an estate of Kubernetes clusters, the work falls into three lanes.
+
+### CI/CD pipeline design and build
+
+We build pipelines that carry a change from commit to production without a human copying files: build, test, scan, package, release. Caching, parallel jobs and environment promotion are set up from day one, so builds stay fast as the codebase grows.
+
+- GitHub Actions
+- Azure Pipelines
+- GitLab CI
+
+### GitOps for Kubernetes
+
+Pull-based deployments with Argo CD or Flux, so clusters always match what is in Git. We design the repository structure, promotion workflow and drift detection, and wire in secrets management that stands up to an audit.
+
+- Argo CD
+- Flux
+- Helm
+
+### Pipeline rescue and release engineering
+
+Already have a pipeline that hurts? We audit it end to end, then attack what costs you most: slow builds, flaky tests, manual release steps and rollbacks nobody trusts. Small measured changes first, with before-and-after numbers.
+
+- Docker
+- Kubernetes
+- Terraform
+
+How we work
+
+## From pipeline audit to automated releases
+
+01
+### Scoping call
+
+A short call plus read access to your repositories and pipelines. You get a written plan with effort and price, not a sales deck.
+
+02
+### Audit and quick wins
+
+We map the route from commit to production and measure where the time goes. The highest-value fixes ship first: caching, parallelism, test triage.
+
+03
+### Build with your team
+
+We implement in your repositories through pull requests your engineers review, so the knowledge stays in your team rather than in our heads.
+
+04
+### Handover or stay on
+
+Every engagement closes with documentation and runbooks. If you want cover afterwards, our CloudOps managed plan starts at £595 per month for monitoring plus one senior engineering day.
+
+Proof
+
+## Pipelines and platforms we run in production
+
+### AI agents that ship through CI
+
+On a live online platform with 18,000+ registered users and 500+ daily actives, our AI agents monitor logs, triage support and raise code fixes as pull requests. Humans approve every change, and every change goes through the pipeline.
+
+- Pull requests
+- CI/CD
+
+### GPU infrastructure defined in Terraform
+
+The production RAG platform we built for a global education body runs in a private AI cloud. All of its GPU infrastructure is declared in Terraform, with isolated use cases and dedicated private vector stores per workload.
+
+- Terraform
+- vLLM
+
+### Enterprise Azure, delivered as code
+
+Azure landing zones, subscription vending, hub-spoke networks, private endpoints, PIM and Defender for Cloud, built for enterprise clients. We have taken platforms through ISO 27001 audit twice, and passed both times.
+
+- Azure
+- Terraform
+
+FAQ
+
+## Common questions about DevOps consultancy in the UK
+
+Q: What does a DevOps consultant actually do?
+
+We look at how your code gets from a developer's laptop to production, then remove the friction: manual deployments, slow builds, flaky tests, missing environments. In practice that means building or repairing CI/CD pipelines, introducing infrastructure as code, and adding the monitoring that tells you a release worked. We do the engineering ourselves rather than leaving you a slide deck.
+
+Q: How much does DevOps consulting cost in the UK?
+
+Our senior engineering starts from £850 per day, and we quote fixed prices for well-defined work after a scoping call. A pipeline audit with quick wins is typically a few days. A full CI/CD or GitOps build depends on how many services and environments you run, so we put a written quote in front of you before any work starts.
+
+Q: What is GitOps and do we need it?
+
+GitOps makes a Git repository the single source of truth for what runs in your clusters. An agent such as Argo CD or Flux continuously pulls changes and corrects drift, so production always matches what is in Git. It suits Kubernetes teams, especially with multiple clusters or strict audit requirements. If you deploy to VMs or managed services, a well-built conventional pipeline is often simpler, and we will say so.
+
+Q: How long does it take to set up a CI/CD pipeline?
+
+A dependable build, test and deploy pipeline for a single application usually takes days rather than months. Multi-service platforms with several environments, database migrations and compliance gates take longer, typically a few weeks. We stage the work so a working pipeline lands early and improvements follow incrementally.
+
+Q: Should we use GitHub Actions or Azure DevOps?
+
+Both are capable, and we use both daily. GitHub Actions is the natural fit when your code already lives on GitHub and you want its large marketplace of reusable actions. Azure DevOps remains strong for enterprise scenarios: fine-grained release approvals, Azure Artifacts feeds and teams already working in Azure Boards. We recommend based on your codebase and constraints, not our preference.
+
+Q: Can you improve our existing pipeline rather than rebuild it?
+
+Yes, and it is usually the right call. We audit the current pipeline end to end and measure where time and failures concentrate, then fix the worst offenders first: caching, parallel jobs, flaky test triage and artefact reuse. A rebuild only makes sense when the platform underneath it is being replaced.
+
+Related
+
+## Related services
+
+### Terraform & Azure Landing Zones
+
+Pipelines need solid ground. We design enterprise Azure landing zones, subscription vending and hub-spoke networks, all defined in Terraform.
+
+### Application Performance & Root-Cause
+
+When releases land but the platform misbehaves, we reverse-engineer the whole stack to find the real cause and fix it.
+
+### Azure Cost Optimization
+
+Delivery and spend are linked. We audit Azure estates and have found £400k+ a year of combined savings across two clients.
+
+---
+
+URL: https://kamobo.co.uk/services/private-llm-rag/
+Title: Private LLM Deployment & RAG Platforms
+
+Services
+
+# Private LLM deployment and RAG platforms on infrastructure you control
+
+Kamobo is a UK engineering consultancy for private LLM deployment: self-hosted models, retrieval pipelines and secure chat over your own documents, running in your cloud, a private AI cloud, or on your own hardware. We already run this in production, so you get an architecture that works rather than a proof of concept that stalls.
+
+Book a scoping call
+All services →
+
+Live private AI platform running for a global education body
+2× ISO 27001 audits taken and passed
+18+ yrs Founder-led production engineering
+
+What we deliver
+
+## Self-hosted LLMs, RAG implementation and secure enterprise AI
+
+Three capabilities, engineered as one platform. Each can also stand alone if you already have the others.
+
+### Self-hosted LLM deployment
+
+We stand up open-source models on vLLM, Ollama or llama.cpp, with GPU infrastructure defined in Terraform. The platform runs in your cloud subscription, a private AI cloud, or on-premise hardware, whichever your security posture demands. Where a frontier model fits better, we deploy Claude, GPT or Gemini through private endpoints instead.
+
+- vLLM
+- Ollama
+- llama.cpp
+
+### RAG implementation, end to end
+
+Ingestion, chunking, embeddings, private vector stores and retrieval tuning, built as one pipeline rather than a stack of demos. We measure answer quality against evaluation sets drawn from your real questions before anything reaches your users, so the platform earns trust instead of assuming it.
+
+- Private vector stores
+- Embeddings
+- Evaluation
+
+### A private ChatGPT alternative for your team
+
+A secure chat interface over your policies, contracts and internal knowledge, with role-based access and full audit logging. Your staff get fast, cited answers; your confidential documents stay inside your boundary and out of public AI tools. Isolated use cases each get their own dedicated vector store.
+
+- Access control
+- Audit logging
+- UK GDPR
+
+How we work
+
+## From scoping call to production inference
+
+01
+### Scope
+
+A scoping call to map your use cases, data sources and security constraints. We agree what success looks like and whether a frontier model or a self-hosted one fits your risk profile.
+
+02
+### Design
+
+We select the model and its home: your cloud, a private AI cloud, or custom hardware. GPU infrastructure is defined in Terraform, so the whole platform is reproducible and reviewable.
+
+03
+### Build and evaluate
+
+We build the retrieval pipeline, wire in your document sources, and test retrieval and answer quality against evaluation sets before rollout. Security controls go in from the start, not at the end.
+
+04
+### Hand over or stay managed
+
+You get documentation, runbooks and a clean handover. If you would rather we keep running it, our LLM Platform Care managed plan starts at £595 a month for monitoring plus a senior engineering day.
+
+Proof
+
+## Private AI already running in production
+
+### Multi-use-case RAG for a global education body
+
+A production RAG and LLM platform running in a private AI cloud, serving multiple isolated use cases, each with its own dedicated private vector store. Inference runs on vLLM, Ollama and llama.cpp, on GPU infrastructure defined in Terraform.
+
+- vLLM
+- Terraform
+
+### AI agents live for 18,000+ users
+
+On a live online platform with 18,000+ registered users and 500+ daily actives, our AI agents triage support, monitor logs and raise code fixes as pull requests, with every change approved by a human before it ships.
+
+- AI agents
+- Human-in-the-loop
+
+### Audited security, twice over
+
+We have taken platforms through ISO 27001 audit twice, and passed both times. We treat network isolation, secrets handling and audit trails as part of the build, not something bolted on for the certificate.
+
+- ISO 27001
+- Access control
+
+FAQ
+
+## Common questions about private LLM deployment
+
+Q: What is a private LLM and how is it different from ChatGPT?
+
+A private LLM is a large language model that runs on infrastructure you control: your cloud subscription, a private AI cloud, or your own hardware. Unlike public ChatGPT, your prompts, documents and logs never pass to a third-party provider, and nothing you type is used to train someone else's model. You choose the model, the region and the retention policy.
+
+Q: Is a self-hosted LLM secure enough for confidential company data?
+
+Yes, when it is engineered properly. Self-hosting removes the biggest exposure, which is sending confidential data to an external API, but you still need network isolation, access control and audit logging around the model. We build those controls in from day one, and we have taken platforms through ISO 27001 audit twice and passed both times.
+
+Q: How much does private LLM deployment cost?
+
+Our engagements are anchored to senior engineering from £850 a day, with fixed-price packages quoted after a scoping call. Running costs then depend on model size and traffic: a small pilot can run on a single modest GPU, while a busy production platform needs dedicated inference capacity. We size the infrastructure to the workload, not the other way round.
+
+Q: What is retrieval-augmented generation (RAG)?
+
+RAG connects a language model to your own content. When someone asks a question, the system retrieves the most relevant passages from your documents, and the model answers using that material, citing where it came from. Because the knowledge lives in an index rather than in the model, updating a document updates the answers. No retraining required.
+
+Q: Should we use RAG or fine-tuning for our company data?
+
+Start with RAG for factual company knowledge: it stays current, it can cite sources, and it is far cheaper to update. Fine-tuning earns its keep when you need a model to adopt a specific style, format or narrow task behaviour. The two combine well, but in our experience most business problems are retrieval problems first.
+
+Q: Can open-source models really match ChatGPT-quality answers?
+
+For many business tasks, yes, especially when the model is grounded in your documents through good retrieval. And where a frontier model genuinely is the better fit, we stay provider-agnostic: Claude, GPT or Gemini through private endpoints, or a self-hosted model where data cannot leave your boundary. We test candidate models against your own data before committing.
+
+Related
+
+## Related services
+
+### AI Agent Development
+
+Agents that act on your systems, with a human approving every change before it ships.
+
+### Azure Data Engineering
+
+The data platforms and pipelines that make retrieval accurate in the first place.
+
+### Terraform & Azure Landing Zones
+
+The secure, codified cloud foundations your private AI platform runs on.
+
+---
+
+URL: https://kamobo.co.uk/services/saas-software-development/
+Title: SaaS Development Company UK
+
+Services
+
+# A UK SaaS development company that builds for production
+
+Kamobo is a founder-led SaaS development company in the UK. We build MVPs that validate ideas quickly, multi-tenant platforms that scale without re-platforming, and bespoke software for teams whose current systems have run out of road. We also run our own SaaS product, so we build like owners rather than contractors.
+
+Book a scoping call
+All services →
+
+18+ years of production engineering, founder-led
+2× ISO 27001 audits taken and passed
+70% cheaper to run, after a migration we led
+
+What we deliver
+
+## MVP development, multi-tenant SaaS and bespoke software
+
+Whether you are validating an idea or scaling a platform, the standard is the same: software fit for production from the first commit.
+
+### SaaS MVP development
+
+The smallest product that can prove demand: one core workflow, authentication, billing and a deployment pipeline. Built cleanly enough that version two is an iteration, not a rewrite.
+
+- React
+- Node.js
+- PostgreSQL
+
+### Multi-tenant SaaS platforms
+
+Tenant isolation, role-based access, subscription billing and usage metering on an architecture that grows without re-platforming. We run our own multi-tenant SaaS, GrassrootsDNA, so we know where the sharp edges are.
+
+- TypeScript
+- Azure
+- Terraform
+
+### Bespoke software development
+
+Line-of-business systems, internal tools and rebuilds of software that has stalled. API-first by default, with AI embedded where it genuinely earns its place rather than sprinkled on top.
+
+- Python
+- APIs
+- Embedded AI
+
+How we work
+
+## From scoping call to shipped software
+
+01
+### Scope
+
+A short call, then a written proposal: what we will build, what we deliberately will not, and a fixed price or a day-rate plan anchored at £850 per day.
+
+02
+### Build
+
+Senior engineers deliver in weekly increments with demos you can react to. CI/CD, tests and infrastructure as code go in from the first week, not bolted on at the end.
+
+03
+### Launch and hand over
+
+We deploy to your cloud accounts and your repositories, then hand over documentation and runbooks. You own the code and the infrastructure outright.
+
+04
+### Care, if you want it
+
+Most products need steady attention after launch, so our Application Care managed plans start at £595 per month for monitoring plus one senior day.
+
+Proof
+
+## Results we can point to
+
+### We run our own multi-tenant SaaS
+
+GrassrootsDNA (grassrootsdna.co.uk) is our own multi-tenant SaaS product. Tenancy, billing, deployments and support are our problem every day, and that experience shapes every client build.
+
+- Multi-tenant
+- SaaS
+
+### AI embedded at production scale
+
+On a live online platform with 18,000+ registered users and 500+ daily actives, our AI agents handle support triage and log monitoring, and raise code fixes as pull requests for human approval.
+
+- AI agents
+- Production
+
+### Audit-grade engineering
+
+We have taken platforms through ISO 27001 audit twice and passed both times, and a migration we led cut the cost of running the platform by 70%. Pragmatic delivery and audit-ready rigour are not opposites.
+
+- ISO 27001
+- Terraform
+
+FAQ
+
+## Common questions about hiring a SaaS development company
+
+Q: How much does it cost to build a SaaS product?
+
+It depends on scope rather than a rate card. Our senior engineering is anchored at £850 per day, and we quote fixed prices after a short scoping call once we understand the workflows, integrations and compliance requirements involved. A focused MVP needs far less than a full multi-tenant platform, so we help you trim scope to the smallest product that can prove demand before you commit to the bigger build.
+
+Q: How long does it take to build a SaaS MVP?
+
+A tightly scoped MVP is typically a matter of weeks rather than months: one core workflow, one user type, authentication, billing and a deployment pipeline. Timelines stretch when scope creeps, so we agree what is out of the first release as explicitly as what is in. Complex integrations or regulated data add time, and we say so at scoping rather than halfway through the build.
+
+Q: Who owns the code and intellectual property?
+
+You do. The code, infrastructure definitions and documentation we produce for you are assigned to you, held in your own source control and cloud accounts from the start. There is no lock-in: any competent team can pick up the repositories, the Terraform and the runbooks and carry on without us.
+
+Q: What tech stack do you use for SaaS development?
+
+Our core stack is TypeScript and React on the front end, Node.js or Python services behind an API-first design, PostgreSQL for data, and infrastructure as code with Terraform on Azure, or lean clouds such as DigitalOcean and Hetzner. Where AI features earn their place we embed them, using frontier models or self-hosted ones. We choose proven technology your future hires can maintain over whatever is fashionable this quarter.
+
+Q: Should I hire a SaaS development agency or a freelancer?
+
+A freelancer suits a prototype, and an in-house team makes sense once you have product-market fit and the revenue to fund it. In between, a small senior consultancy usually fits best: you get architecture, build, cloud infrastructure and delivery discipline in one engagement, priced at a day rate rather than big-agency overheads. We work on contract, fixed-price and retained terms, whichever suits the stage you are at.
+
+Q: Can you take over an existing codebase or rescue a stalled project?
+
+Yes. We reverse-engineer entire platforms, including systems we did not build, to find what is actually wrong: storage on slow disks, under-specified message queues, ingress misconfigured for the traffic it faces, or over-provisioned resources quietly wasting money. We stabilise first, then refactor incrementally, so the product keeps serving users while it improves.
+
+Q: Do you support the product after launch?
+
+Yes. Many clients move to a managed plan after handover: Application Care starts at £595 per month for monitoring plus one senior day and rises to £3,450 per month for six days and a quarterly roadmap, with a three-month minimum and 30 days' notice. If you would rather run it in-house, we hand over documentation, runbooks and a full walkthrough instead.
+
+Related
+
+## Related services
+
+### API Development & Tuning
+
+API-first design, build and performance tuning for the services behind your product.
+
+### DevOps, CI/CD & GitOps
+
+Pipelines, environments and GitOps workflows so every merge ships safely.
+
+### AI Agent Development
+
+Production AI agents with humans in the loop, embedded in your product or operations.
+
+---
+
+URL: https://kamobo.co.uk/services/synapse-link-to-fabric-migration/
+Title: Synapse Link to Fabric Link Migration
+
+Services · Data platforms
+
+# Synapse Link to Fabric Link migration for Dataverse
+
+Kamobo moves Dynamics 365 and Power Apps data from Azure Synapse Link for Dataverse to Link to Microsoft Fabric, ahead of the Delta Lake export being removed in December 2027. We have already done this on a production Dataverse estate, and we run it as a fixed-price piece of work: inventory, side-by-side link, repoint, retire.
+
+Book a call
+Read the guide
+
+15 Oct 2026 Delta export closed to new customers
+30 Nov 2026 Export to Data Lake stops, no extensions
+Dec 2027 Delta export removed for everyone
+31 Mar 2026 Synapse Spark 3.4 out of support
+
+What the engagement covers
+
+## Six steps, in this order
+
+Creating the link is the short part. The work is in whatever reads the data, so that is where the engagement spends its time.
+
+01
+
+### Inventory every consumer
+
+Each report, semantic model, pipeline, notebook and serverless SQL view that reads the Synapse Link output, with an owner and a cut-over order. That list sets the size of the job.
+
+02
+
+### Check capacity, choose tables
+
+Dataverse database headroom checked in the Power Platform admin center, and a deliberate table list instead of the default, because every linked table consumes database storage.
+
+03
+
+### Link side by side
+
+Fabric Link created while Synapse Link carries on, with row counts reconciled table by table before anything is repointed.
+
+04
+
+### Fix what reads the data
+
+Serverless SQL moved to the Fabric SQL analytics endpoint, NULL and empty-string handling checked, and choice metadata queries updated for low-latency sync.
+
+05
+
+### Repoint one consumer at a time
+
+Starting with the reports that hurt least if they break, so nothing goes dark on cut-over day.
+
+06
+
+### Retire last
+
+The Synapse Link profile, Spark pool and storage account removed only once nothing reads them, so the old route is there until the new one is proven.
+
+Where to move
+
+## Synapse Link with CSV, or Link to Fabric
+
+Both are supported destinations for anyone leaving the Delta export. They are not the same thing, and the right one depends on what reads the data.
+
+Compared Synapse Link, CSV output Link to Microsoft Fabric
+
+Where the data lives Your own Azure storage account A Dataverse-managed replica, read in Fabric through OneLake shortcuts
+
+Format CSV Delta Parquet
+
+Storage it consumes Your storage account Dataverse database capacity
+
+What you run Your own pipelines and tools downstream No export pipeline; Fabric capacity to use the data
+
+Network control Your firewall rules and managed identities Inside the Dataverse governance boundary
+
+Choose it when Consumers are outside Microsoft, or the data must sit in your own lake Consumers are Power BI and Fabric
+
+Status Supported, no end date announced Supported; Microsoft’s recommended route for Delta output
+
+FAQ
+
+## Questions this usually raises
+
+Q: Is Azure Synapse Link for Dataverse being retired?
+
+No. The service stays, with CSV export to your own storage account. What is going is its Delta Lake (Parquet) export option: closed to new customers from 15 October 2026 and removed in December 2027.
+
+Q: When do we have to move by?
+
+If you use the Delta Lake (Parquet) export, by December 2027. If anything still depends on the older Export to Data Lake add-in for finance and operations, it stops on 30 November 2026 and Microsoft has said there will be no extensions.
+
+Q: Should we move to Fabric Link or to Synapse Link with CSV?
+
+Fabric Link if the data is read by Power BI and Fabric. Synapse Link with CSV output if it is read by tools outside Microsoft, or has to sit in a lake you control under your own network rules.
+
+Q: Does Fabric Link cost more than Synapse Link?
+
+It moves the cost rather than removing it. You stop paying for the storage account and the Spark pool that converts files to Delta, and start consuming Dataverse database capacity for the replica, plus Fabric capacity to use it. Which is cheaper depends on how many tables you link and how much database capacity you have spare.
+
+Q: How is the migration priced?
+
+As a fixed price agreed after a short scoping call. The size of the job is set by how many reports and pipelines read the data, not by its volume, so that is what we look at first. Day-rate work is £850 a day if you would rather.
+
+Q: Have you done this before?
+
+Yes. We have moved a production Dataverse estate from Azure Synapse Link to Link to Microsoft Fabric, and the six steps on this page are how we would run yours.
+
+## Related
+
+### The Delta export in Synapse Link is going
+
+What Microsoft is retiring and when, with the sources, and how to choose between the two destinations.
+
+### Azure data platforms
+
+Synapse, Data Factory and Databricks estates built as code from dev through to production.
+
+### The Azure Review
+
+A fixed-price, read-only look at the wider Azure estate, if the data platform is not the only question.
+
+---
+
+URL: https://kamobo.co.uk/services/terraform-azure-landing-zones/
+Title: Azure Landing Zone Consultancy
+
+Services
+
+# Azure landing zone consultancy, built in Terraform
+
+Kamobo is a UK Azure landing zone consultancy that delivers in Terraform. We design CAF-aligned foundations and build them as code: management groups, Azure Policy, hub-spoke networking, identity with PIM, and subscription vending. You end up with a governed platform your own team can run and extend, not a diagram and an invoice.
+
+Book a scoping call
+All services →
+
+18+ years of production engineering experience
+2× ISO 27001 audits taken and passed
+70% cheaper to run, after one migration we led
+
+What we deliver
+
+## Landing zones built with Terraform and Azure Verified Modules
+
+Everything is code from day one, so every environment after the first is a pull request, not a project.
+
+### CAF-aligned landing zone design and build
+
+We take Microsoft's Cloud Adoption Framework as the reference, then make the decisions that actually shape your platform: management group hierarchy, subscription layout, hub-spoke network topology, private endpoints, Entra ID roles with PIM, and a Defender for Cloud baseline. The output is a working platform deployed from a pipeline, with the design decisions written down.
+
+- Cloud Adoption Framework
+- Hub-spoke networking
+- Azure Policy
+
+### Subscription vending and platform automation
+
+Subscription vending turns "can we have an environment?" from a weeks-long ticket queue into an automated request. We build vending pipelines on Azure Verified Modules that stamp out subscriptions with networking, policy, budgets and access already in place, so application teams onboard in hours and the platform team keeps control.
+
+- Subscription vending
+- Azure Verified Modules
+- GitHub Actions
+
+### Infrastructure as code for existing Azure estates
+
+Already in Azure, but hand-built? We import brownfield estates into Terraform state, refactor them into reusable modules, and wire up plan-and-apply pipelines with review gates. Drift becomes visible, changes become reviewable, and the portal stops being the source of truth.
+
+- Brownfield imports
+- Terraform modules
+- CI/CD pipelines
+
+How we work
+
+## Scoping call to handover, with your engineers involved throughout
+
+01
+### Scope
+
+A short call, then a written view of your estate, the decisions ahead and a fixed price or day-rate estimate. No obligation, and no forty-page proposal.
+
+02
+### Design
+
+Focused workshops on the areas that matter: subscriptions, network topology, identity, policy and operations. Each decision is recorded with its trade-offs, so the design survives staff changes.
+
+03
+### Build
+
+We build the platform in Terraform from pipelines, never by hand in the portal, and review the code with your engineers as we go. Policy, vending and monitoring land as code alongside the infrastructure.
+
+04
+### Hand over
+
+Documentation, runbooks and pairing sessions so your team can operate the platform with confidence. If you would rather we kept running it, our CloudOps managed plan starts at £595 per month.
+
+Proof
+
+## Outcomes from production Azure estates
+
+### Enterprise foundations, delivered as code
+
+Our enterprise work covers Azure landing zones, subscription vending, hub-spoke networks, private endpoints, PIM and Defender for Cloud, all managed as Terraform and deployed from pipelines rather than portals.
+
+- Subscription vending
+- Private endpoints
+
+### Security that stands up to audit
+
+We have taken platforms through ISO 27001 audit twice, and passed both times. Landing zone governance is a large part of why: policy baselines, least-privilege access with PIM, and infrastructure history you can actually show an auditor.
+
+- ISO 27001
+- Azure Policy
+
+### Terraform well beyond the basics
+
+We used Terraform to build GPU infrastructure in a private AI cloud for a production LLM platform serving a global education body, with isolated environments and dedicated private vector stores per use case.
+
+- GPU infrastructure
+- Private AI cloud
+
+FAQ
+
+## Common questions about Azure landing zone consultancy
+
+Q: What is an Azure landing zone?
+
+An Azure landing zone is the governed foundation you deploy before any workloads: management groups, subscriptions, networking, identity, policy and monitoring, arranged so new applications land in a secure, consistent environment. Microsoft's Cloud Adoption Framework defines the reference design; we implement it in Terraform and right-size it to your organisation.
+
+Q: Should we use Terraform or Bicep for Azure landing zones?
+
+Microsoft's accelerators support both. Bicep suits Azure-only teams already invested in ARM templates. We recommend Terraform when you want one language across clouds and SaaS providers, a mature module ecosystem, and explicit state that makes drift visible. We build in Terraform on Azure Verified Modules because it also covers the rest of your stack, from DNS to GitHub.
+
+Q: How long does it take to build an Azure landing zone?
+
+A right-sized build for a small estate takes days of engineering plus a few design workshops. A full platform build with pipelines, a policy baseline and subscription vending typically runs several weeks. The biggest variables are network topology and identity decisions, which is why we start with a short scoping call before quoting a timeline.
+
+Q: How much does an Azure landing zone cost?
+
+There are two costs: the build and the Azure run-rate. Our engagements are day-rate anchored senior engineering from £850 per day, with fixed prices quoted after a scoping call. The platform run-rate covers things like firewalls, logging and Defender for Cloud, and we size it deliberately so a small estate is not paying enterprise prices.
+
+Q: Do smaller organisations need a full enterprise landing zone?
+
+No. The enterprise reference architecture exists for large estates. A smaller organisation usually needs a subset: production separated from non-production, role-based access, a policy baseline, budgets and centralised logging. We right-size the design so you get the governance without the overhead, and because it is all code, growing into more later is straightforward.
+
+Q: What is subscription vending?
+
+Subscription vending automates how new Azure subscriptions are requested, created and governed. Instead of hand-building each one, a pipeline stamps out subscriptions with networking, policy, budgets and access already applied. It is how platform teams hand application teams a compliant landing zone in hours rather than weeks, and we implement it in Terraform.
+
+Q: Can you bring an existing Azure environment under a landing zone?
+
+Yes, brownfield work is common. We map what exists, import resources into Terraform state, then introduce management groups, policy and networking incrementally so nothing breaks in flight. Most estates can adopt landing zone governance without a rebuild, though some workloads are worth migrating into fresh, vended subscriptions along the way.
+
+Related
+
+## Related services
+
+### DevOps, CI/CD & GitOps
+
+Pipelines, GitOps workflows and release automation for the platforms your landing zone hosts.
+
+### Azure Cost Optimization
+
+Audits that have found £400k+ a year of combined Azure savings across client estates.
+
+### Azure Data Engineering
+
+Synapse, Databricks and Data Factory platforms with self-hosted integration runtimes.
+
+---
+
+URL: https://kamobo.co.uk/work/
+Title: Work
+
+Work
+
+# Work that has already shipped
+
+Clients are described rather than named, because most of this sits under an NDA. The numbers are real and we will walk you through any of them on a call.
+
+01
+
+## An Azure bill that had quietly grown by six figures
+
+Cloud cost reduction for a global accountancy training organisation.
+
+£150,000 a year removed from the Azure bill
+
+02
+
+## A streaming platform nobody left in the building could explain
+
+Taking over, diagnosing and re-platforming a system we did not build.
+
+70% cheaper to run over three years
+
+03
+
+## A private AI platform for documents that cannot leave the building
+
+Self-hosted inference and RAG for a global professional education body.
+
+Zero documents sent to an outside AI service
+
+---
+
+URL: https://kamobo.co.uk/work/azure-bill-six-figures/
+Title: An Azure bill that had quietly grown by six figures
+
+Work
+
+# An Azure bill that had quietly grown by six figures
+
+Cloud cost reduction for a global accountancy training organisation.
+
+£150,000 a year removed from the Azure bill
+Hundreds unused resources deleted, all still being paid for
+
+## The problem
+
+Spend had grown faster than anyone could explain. Nobody owned the bill end to end, several third parties had built into the estate over the years, and the finance question ("why is this going up?") had no technical answer.
+
+## What we did
+
+Audited the estate end to end: every resource, what it cost, what it was attached to and whether anything still depended on it. That produced a ranked list of candidates with numbers against them. We then checked the list with the internal team and the third parties who had built into the estate over the years, because an audit can tell you a resource is idle but not whether someone is about to need it. Hundreds of orphaned resources were removed, virtual machines moved onto reserved instances where the usage pattern justified it, and savings plans applied to app services.
+
+## Where it landed
+
+A recurring saving of £150,000 a year, and a cost picture the team could keep current themselves.
+
+## What to take from this
+
+- Most cloud overspend is not inefficiency, it is abandoned work nobody has permission to delete.
+
+- The audit finds the waste. The people who own it tell you what is safe to delete, and that second step is what stops a cost exercise causing an outage.
+
+- Reserved instances only pay off where the usage pattern is genuinely stable. Buy them for the wrong workload and you have just prepaid for waste.
+
+- A saving that nobody can maintain comes back within a year. Leave the team the workbook.
+
+Sector
+
+Professional education, global
+
+Platform
+
+Microsoft Azure
+
+Engagement
+
+Cost optimisation
+
+Named
+
+No. Most of our work sits under NDA
+
+Services used
+
+- Cloud cost reduction
+
+All case studies
+
+---
+
+URL: https://kamobo.co.uk/work/private-ai-platform-zero-trust/
+Title: A private AI platform, zero trust
+
+Work
+
+# A private AI platform for documents that cannot leave the building
+
+Self-hosted inference and RAG for a global professional education body.
+
+Zero documents sent to an outside AI service
+Separate store per use case, so one team's documents can never surface in another team's answers
+
+## The problem
+
+Real demand for retrieval over internal documents, and an absolute constraint that those documents could not be sent to a third-party model API. Several separate use cases, each with its own sensitivity, which could not be allowed to see each other's data.
+
+## What we did
+
+Built GPU-accelerated Azure infrastructure defined in Terraform and Ansible, running self-hosted inference on vLLM, Ollama and llama.cpp. Added a document ingestion pipeline, vector storage on Postgres with pgvector plus Chroma and LanceDB, Redis for caching and RabbitMQ for message handling, behind a clustered NGINX reverse proxy. Built the API layer and a React chat front end with single sign-on and a configuration page. Every use case runs on its own isolated platform with its own dedicated private vector store, so data never crosses between them. Zero trust and least privilege throughout, containerised, automated with GitHub Actions, observable through Grafana.
+
+## Where it landed
+
+In production, serving several use cases, with scale handled by adding nodes rather than rebuilding.
+
+## What to take from this
+
+- "We cannot use the API models" is a platform problem, not a reason to abandon the use case.
+
+- Isolation per use case costs more than one shared index and is usually the only answer that survives a security review.
+
+- Self-hosted inference is an infrastructure project wearing an AI hat. Most of the work is GPU capacity, networking and identity.
+
+- Put the configuration in a page someone else can operate, or you become the dependency.
+
+Sector
+
+Professional education, global
+
+Constraint
+
+No data to third-party APIs
+
+Engagement
+
+Design, build, operate
+
+Named
+
+No
+
+Services used
+
+- Private LLM and RAG platforms
+
+- AI agents in production
+
+- Azure landing zones and Terraform
+
+All case studies
+
+---
+
+URL: https://kamobo.co.uk/work/streaming-platform-nobody-could-explain/
+Title: A streaming platform nobody could explain
+
+Work
+
+# A streaming platform nobody left in the building could explain
+
+Taking over, diagnosing and re-platforming a system we did not build.
+
+70% cheaper to run, over three years
+Hours to minutes to get a change released, after we rebuilt the pipeline
+
+## The problem
+
+A self-hosted video streaming platform, built by people who had moved on, with no current architecture documentation and no reliable account of how it was deployed. It was slow under load and nobody could say which part was the bottleneck.
+
+## What we did
+
+Reverse-engineered the microservice architecture and the build and deploy process from scratch, then audited the infrastructure for real capacity rather than assumed capacity. Load tested with K6 to find where it actually broke, which turned out to be mis-tuned NGINX, an under-spec'd RabbitMQ and badly sized components in both directions. Restructured the services to remove the bottlenecks, replaced an inherited Puppet codebase with Ansible playbooks, and moved the platform from on-premise to autoscaling Azure defined in Terraform.
+
+## Where it landed
+
+A platform that scales with demand, a 70% reduction in what it cost to run, measured over three years, and CI pipelines that finish in minutes rather than hours.
+
+## What to take from this
+
+- Load test before you re-architect. Over-provisioned components hide the real limit as effectively as under-provisioned ones.
+
+- "It needs more servers" is usually wrong. On this platform the binding constraint was configuration, not capacity.
+
+- Inheriting a system is a research job first and an engineering job second. Budget for the reading.
+
+- Lifting a badly understood system into the cloud unchanged just moves the bill. Fix the bottlenecks first, then move it.
+
+Sector
+
+Media and video streaming
+
+Starting point
+
+On-premise, undocumented
+
+Engagement
+
+Diagnosis, then re-platform
+
+Named
+
+No
+
+Services used
+
+- Performance and root-cause work
+
+- Azure landing zones and Terraform
+
+- DevOps, CI/CD and GitOps
+
+All case studies

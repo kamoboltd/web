@@ -24,6 +24,12 @@ Run:  python scripts/build.py && python scripts/protect-email.py \
 import io, os, re, sys, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import seo  # noqa: E402  JSON-LD, sitemap, robots.txt, llms.txt
+
+# Filled by page() as the site is built, then handed to seo.write_all().
+PAGES, LASTMODS = {}, {}
+LEDGER = seo.load_ledger()
 
 # Every booking action on the site. scripts/set-booking-url.py can repoint
 # these afterwards; the build emits the live Cal.com link directly so a fresh
@@ -47,6 +53,8 @@ SERVICES = [
      "Find what you are paying for and no longer use, and stop it coming back."),
     ("azure-data-engineering", "Azure data platforms",
      "Reporting and analytics pipelines that run reliably and cost what they should."),
+    ("synapse-link-to-fabric-migration", "Synapse Link to Fabric migration",
+     "Move Dataverse off Synapse Link's deprecated Delta export without breaking reporting."),
     ("private-llm-rag", "Private LLM and RAG",
      "AI across your own documents, without any of it leaving your tenant."),
     ("ai-agent-development", "AI agents in production",
@@ -74,7 +82,7 @@ PRACTICES = [
     ("02", "Data platforms",
      "Synapse, Data Factory and Databricks estates built as code from dev through to "
      "production, with least-privilege networking throughout.",
-     ["azure-data-engineering"]),
+     ["azure-data-engineering", "synapse-link-to-fabric-migration"]),
     ("03", "Private AI",
      "Self-hosted models and agents on infrastructure you control, with nothing leaving the "
      "tenant and a person approving anything that matters.",
@@ -244,32 +252,42 @@ def clients():
         % (f, n) for f, n in CLIENT_LOGOS)
 
 
-def head(title, desc, canonical):
+def head(title, desc, canonical, jsonld="", og_type="website"):
+    og_image = seo.og_image()
     return '''<!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>%s</title>
   <meta name="description" content="%s" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="theme-color" content="#0C1F2C" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://kamobo.co.uk%s" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="%s" />
   <meta property="og:title" content="%s" />
   <meta property="og:description" content="%s" />
   <meta property="og:url" content="https://kamobo.co.uk%s" />
-  <meta property="og:image" content="https://kamobo.co.uk/assets/og-card.png" />
+  <meta property="og:image" content="%s" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kamobo, UK-based Azure consultancy: platform engineering, AI and data platforms" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="Kamobo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="twitter:title" content="%s" />
+  <meta name="twitter:description" content="%s" />
+  <meta name="twitter:image" content="%s" />
+%s  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-''' % (title, desc, canonical, title, desc, canonical)
+''' % (title, desc, canonical, og_type, title, desc, canonical, og_image,
+       title, desc, og_image, jsonld)
 
 
 def header(active=""):
@@ -377,7 +395,12 @@ def page(path, title, desc, body, active="", closer=None):
     d = os.path.dirname(out)
     if d:
         os.makedirs(d, exist_ok=True)
-    html = (head(title, desc, path) + header(active) +
+    lastmod = seo.lastmod_for(path, body, LEDGER)
+    PAGES[path], LASTMODS[path] = (title, desc, body), lastmod
+    parts = [p for p in path.split("/") if p]
+    og_type = "article" if (len(parts) == 2 and parts[0] in ("insights", "work")) else "website"
+    ld = seo.jsonld_tag(seo.jsonld_for(path, title, desc, body, SERVICES, lastmod))
+    html = (head(title, desc, path, ld, og_type) + header(active) +
             '\n  <main id="main">\n' + body + (CTA if closer is None else closer) +
             "  </main>\n" + footer())
     io.open(out, "w", encoding="utf-8", newline="\n").write(html)
@@ -567,6 +590,156 @@ def sectors_page():
                 body, "/sectors/")
 
 
+# ---------------------------------------------------------------- Synapse Link migration
+
+# A service page for the offer, so an assistant asked "who can move us from
+# Synapse Link to Fabric" has something to recommend; the how-to lives in the
+# insight. Every date is from Microsoft Learn (checked 5 Nov 2026, sources on
+# the insight). The only first-hand claim is JD's: a production Dataverse
+# estate has been moved and the move is repeatable.
+MIGRATION_STEPS = [
+    ("Inventory every consumer",
+     "Each report, semantic model, pipeline, notebook and serverless SQL view that reads the "
+     "Synapse Link output, with an owner and a cut-over order. That list sets the size of the job."),
+    ("Check capacity, choose tables",
+     "Dataverse database headroom checked in the Power Platform admin center, and a deliberate "
+     "table list instead of the default, because every linked table consumes database storage."),
+    ("Link side by side",
+     "Fabric Link created while Synapse Link carries on, with row counts reconciled table by "
+     "table before anything is repointed."),
+    ("Fix what reads the data",
+     "Serverless SQL moved to the Fabric SQL analytics endpoint, NULL and empty-string handling "
+     "checked, and choice metadata queries updated for low-latency sync."),
+    ("Repoint one consumer at a time",
+     "Starting with the reports that hurt least if they break, so nothing goes dark on cut-over day."),
+    ("Retire last",
+     "The Synapse Link profile, Spark pool and storage account removed only once nothing reads "
+     "them, so the old route is there until the new one is proven."),
+]
+
+MIGRATION_FAQS = [
+    ("Is Azure Synapse Link for Dataverse being retired?",
+     "No. The service stays, with CSV export to your own storage account. What is going is its "
+     "Delta Lake (Parquet) export option: closed to new customers from 15 October 2026 and removed "
+     "in December 2027."),
+    ("When do we have to move by?",
+     "If you use the Delta Lake (Parquet) export, by December 2027. If anything still depends on the "
+     "older Export to Data Lake add-in for finance and operations, it stops on 30 November 2026 and "
+     "Microsoft has said there will be no extensions."),
+    ("Should we move to Fabric Link or to Synapse Link with CSV?",
+     "Fabric Link if the data is read by Power BI and Fabric. Synapse Link with CSV output if it is "
+     "read by tools outside Microsoft, or has to sit in a lake you control under your own network "
+     "rules."),
+    ("Does Fabric Link cost more than Synapse Link?",
+     "It moves the cost rather than removing it. You stop paying for the storage account and the "
+     "Spark pool that converts files to Delta, and start consuming Dataverse database capacity for "
+     "the replica, plus Fabric capacity to use it. Which is cheaper depends on how many tables you "
+     "link and how much database capacity you have spare."),
+    ("How is the migration priced?",
+     "As a fixed price agreed after a short scoping call. The size of the job is set by how many "
+     "reports and pipelines read the data, not by its volume, so that is what we look at first. "
+     "Day-rate work is &pound;850 a day if you would rather."),
+    ("Have you done this before?",
+     "Yes. We have moved a production Dataverse estate from Azure Synapse Link to Link to Microsoft "
+     "Fabric, and the six steps on this page are how we would run yours."),
+]
+
+
+def migration_page():
+    steps = "\n".join('''          <article class="principle">
+            <p class="principle-no">%02d</p>
+            <div>
+              <h3>%s</h3>
+              <p>%s</p>
+            </div>
+          </article>''' % (i + 1, t, d) for i, (t, d) in enumerate(MIGRATION_STEPS))
+    faq = "\n".join('            <details class="faq-item"><summary>%s</summary><p>%s</p></details>' % q
+                    for q in MIGRATION_FAQS)
+    body = '''    <section class="section service-hero">
+      <div class="wrap">
+        <p class="kicker"><a href="/services/">Services</a> &nbsp;&middot;&nbsp; Data platforms</p>
+        <h1>Synapse Link to Fabric Link migration for Dataverse</h1>
+        <p class="section-sub">Kamobo moves Dynamics 365 and Power Apps data from Azure Synapse Link for Dataverse to Link to Microsoft Fabric, ahead of the Delta Lake export being removed in December 2027. We have already done this on a production Dataverse estate, and we run it as a fixed-price piece of work: inventory, side-by-side link, repoint, retire.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" %s>Book a call</a>
+          <a class="btn btn-ghost btn-lg" href="/insights/synapse-link-to-fabric-link-dataverse/">Read the guide</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>15 Oct 2026</strong><span>Delta export closed to new customers</span></div>
+          <div><strong>30 Nov 2026</strong><span>Export to Data Lake stops, no extensions</span></div>
+          <div><strong>Dec 2027</strong><span>Delta export removed for everyone</span></div>
+          <div><strong>31 Mar 2026</strong><span>Synapse Spark 3.4 out of support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">What the engagement covers</p>
+          <h2>Six steps, in this order</h2>
+          <p class="section-sub">Creating the link is the short part. The work is in whatever reads the data, so that is where the engagement spends its time.</p>
+        </div>
+        <div class="principles">
+%s
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Where to move</p>
+          <h2>Synapse Link with CSV, or Link to Fabric</h2>
+          <p class="section-sub">Both are supported destinations for anyone leaving the Delta export. They are not the same thing, and the right one depends on what reads the data.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="compare">
+            <thead><tr><th scope="col"><span class="sr-only">Compared</span></th><th scope="col">Synapse Link, CSV output</th><th scope="col">Link to Microsoft Fabric</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Where the data lives</th><td>Your own Azure storage account</td><td>A Dataverse-managed replica, read in Fabric through OneLake shortcuts</td></tr>
+              <tr><th scope="row">Format</th><td>CSV</td><td>Delta Parquet</td></tr>
+              <tr><th scope="row">Storage it consumes</th><td>Your storage account</td><td>Dataverse database capacity</td></tr>
+              <tr><th scope="row">What you run</th><td>Your own pipelines and tools downstream</td><td>No export pipeline; Fabric capacity to use the data</td></tr>
+              <tr><th scope="row">Network control</th><td>Your firewall rules and managed identities</td><td>Inside the Dataverse governance boundary</td></tr>
+              <tr><th scope="row">Choose it when</th><td>Consumers are outside Microsoft, or the data must sit in your own lake</td><td>Consumers are Power BI and Fabric</td></tr>
+              <tr><th scope="row">Status</th><td>Supported, no end date announced</td><td>Supported; Microsoft&rsquo;s recommended route for Delta output</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Questions this usually raises</h2>
+        </div>
+        <div class="faq-list">
+%s
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:28px"><h2>Related</h2></div>
+        <div class="cases">
+          <article class="case"><h3><a href="/insights/synapse-link-to-fabric-link-dataverse/">The Delta export in Synapse Link is going</a></h3><p>What Microsoft is retiring and when, with the sources, and how to choose between the two destinations.</p></article>
+          <article class="case"><h3><a href="/services/azure-data-engineering/">Azure data platforms</a></h3><p>Synapse, Data Factory and Databricks estates built as code from dev through to production.</p></article>
+          <article class="case"><h3><a href="/azure-review/">The Azure Review</a></h3><p>A fixed-price, read-only look at the wider Azure estate, if the data platform is not the only question.</p></article>
+        </div>
+      </div>
+    </section>
+''' % (BOOK_ATTRS, steps, faq)
+    return page("/services/synapse-link-to-fabric-migration/",
+                "Synapse Link to Fabric Link Migration | Kamobo",
+                "Move Dataverse from Azure Synapse Link to Link to Microsoft Fabric before the Delta "
+                "export is removed. UK Azure consultancy; done in production.",
+                body, "/services/")
+
+
 # ---------------------------------------------------------------- re-house
 
 HEADING = re.compile(r"<(/?)h([1-4])\b")
@@ -619,7 +792,7 @@ def rehouse():
     done, skipped = 0, []
     for f in sorted(glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True)):
         rel = "/" + os.path.relpath(f, ROOT).replace("\\", "/").replace("index.html", "")
-        if rel.startswith("/assets") or rel in ("/", "/sectors/"):
+        if rel.startswith("/assets") or rel in ("/", "/sectors/", "/services/synapse-link-to-fabric-migration/"):
             continue
         s = io.open(f, encoding="utf-8").read()
         mt, md, mc, mm = TITLE.search(s), DESC.search(s), CANON.search(s), MAIN.search(s)
@@ -645,7 +818,11 @@ if __name__ == "__main__":
     n, skipped = rehouse()          # insights index must exist before homepage() reads it
     homepage()
     sectors_page()
-    print("re-housed %d pages, built homepage + sectors" % n)
+    migration_page()
+    seo.save_ledger(LEDGER)
+    seo.write_all(PAGES, SERVICES, STUDIES, LASTMODS)
+    print("re-housed %d pages, built homepage + sectors + migration; %d pages in sitemap and llms.txt"
+          % (n, len(PAGES)))
     if skipped:
         print("ABORT: could not parse:")
         for s in skipped:

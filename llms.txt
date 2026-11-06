@@ -1,0 +1,47 @@
+# Kamobo
+
+> Kamobo is a UK-based Azure consultancy for platform engineering, AI and data platforms. It designs, builds and recovers Azure estates as code, in the client's own tenant, and every engagement is led hands-on by the engineer doing the work.
+
+Kamobo Ltd is registered in England and Wales (company 16579058). Based in Hertfordshire, working remotely across the UK and worldwide. Principal: James Dettmer, 18+ years in infrastructure, cloud and platform engineering. Contact: hello@kamobo.co.uk. Book a 30-minute call: https://cal.com/kamobo/30min
+
+Engagements: the Azure Review (fixed price, GBP 2,500, three days, read-only), project work from GBP 850 a day or fixed price, and monthly retainers from GBP 595. Clients are described anonymously on the site because most work is under NDA.
+
+## Services
+- [Azure Cost Optimisation Services UK](https://kamobo.co.uk/services/azure-cost-optimization/): Azure cost optimisation services from a UK engineering consultancy. Free initial assessment, then fixed-rate deep dives. £400k+ a year found for clients.
+- [Azure Data Platform Consultancy UK](https://kamobo.co.uk/services/azure-data-engineering/): UK Azure data platform consultancy: Synapse, Data Factory and Databricks platforms, Dataverse and Fabric Link integration, built as code. From £850 a day.
+- [Synapse Link to Fabric Link Migration](https://kamobo.co.uk/services/synapse-link-to-fabric-migration/): Move Dataverse from Azure Synapse Link to Link to Microsoft Fabric before the Delta export is removed. UK Azure consultancy; done in production.
+- [Private LLM Deployment & RAG Platforms](https://kamobo.co.uk/services/private-llm-rag/): Private LLM deployment and RAG platforms from a UK consultancy. Self-hosted AI on vLLM and Ollama, so your documents stay inside your own boundary.
+- [Custom AI Agent Development UK](https://kamobo.co.uk/services/ai-agent-development/): Custom AI agent development from a UK consultancy. We ship production agents with human approval built in, proven on a platform with 18,000+ users.
+- [Azure Landing Zone Consultancy](https://kamobo.co.uk/services/terraform-azure-landing-zones/): UK Azure landing zone consultancy. CAF-aligned foundations built in Terraform: subscription vending, hub-spoke networks, policy and PIM. From £850/day.
+- [Application Performance Consultants UK](https://kamobo.co.uk/services/application-performance-troubleshooting/): UK application performance consultants. We trace slow apps and outages to a proven root cause, from NGINX and RabbitMQ to Kubernetes, then fix them.
+- [DevOps Consultancy UK: CI/CD & GitOps](https://kamobo.co.uk/services/devops-cicd-gitops/): DevOps consultancy in the UK: we build and repair CI/CD pipelines with GitHub Actions, Azure DevOps, Argo CD and Terraform. Founder-led, from £850/day.
+- [API Development Services UK](https://kamobo.co.uk/services/api-development/): API development services from a UK consultancy: design-first REST and GraphQL APIs, third-party integrations and performance tuning by senior engineers.
+- [SaaS Development Company UK](https://kamobo.co.uk/services/saas-software-development/): Kamobo is a UK SaaS development company building MVPs and multi-tenant platforms in React, Node and Azure. Founder-led, 18+ years in production.
+
+## Engagement and pricing
+- [The Azure Review, £2,500](https://kamobo.co.uk/azure-review/): Three days, read-only access, a fixed price of £2,500 and a ranked list of what to fix and what each fix is worth. The fee comes off the build.
+- [Pricing](https://kamobo.co.uk/pricing/): Day rate, fixed-price projects and retainers, with the numbers stated up front rather than on request.\
+- [Retainers](https://kamobo.co.uk/retainers/): A set number of senior days each month, monitoring and a written report. From £595 a month, three-month minimum, thirty days notice.
+- [How we work](https://kamobo.co.uk/how-we-work/): Four things you can hold us to, what we are good at, and what we will tell you to go elsewhere for.
+
+## Case studies
+- [An Azure bill that had quietly grown by six figures](https://kamobo.co.uk/work/azure-bill-six-figures/): How we removed £150,000 a year from a global accountancy training organisation's Azure bill, and stopped it growing back.\
+- [A streaming platform nobody could explain](https://kamobo.co.uk/work/streaming-platform-nobody-could-explain/): Taking over a self-hosted streaming platform we did not build: reverse-engineering, K6 load testing and a move to autoscaling Azure.\
+- [A private AI platform, zero trust](https://kamobo.co.uk/work/private-ai-platform-zero-trust/): Self-hosted vLLM and Ollama inference on GPU infrastructure in Terraform, with every use case isolated in its own private vector store.
+
+## Insights
+- [Synapse Link to Fabric Link for Dataverse](https://kamobo.co.uk/insights/synapse-link-to-fabric-link-dataverse/): The Delta export in Synapse Link for Dataverse is deprecated. What is being retired, when, and how to move to Fabric Link without breaking reports.
+- [Agents should raise pull requests, not push code](https://kamobo.co.uk/insights/agents-that-raise-pull-requests/): The difference between an agent that is useful and an agent nobody will let near production is almost always the approval gate.
+- [Cost tools cannot tell you what nobody needs](https://kamobo.co.uk/insights/interviews-find-more-savings-than-tooling/): An audit tells you what is running and what it costs. It cannot tell you whether anyone still needs it, and that is where the rest of the money is.
+- [Give every AI use case its own vector store](https://kamobo.co.uk/insights/isolate-the-vector-store-per-use-case/): One shared index is cheaper, simpler and the thing most likely to fail a security review. Here is why we build it the expensive way.
+- [Load test before you re-architect](https://kamobo.co.uk/insights/load-test-before-you-re-architect/): Over-provisioned components hide the real limit as effectively as under-provisioned ones. Until you have measured, you are guessing which.
+- [When reserved instances actually pay off](https://kamobo.co.uk/insights/reserved-instances-only-pay-off-when-usage-is-stable/): A one-year or three-year commitment on the wrong workload is not a discount. It is a prepayment for waste, with a lock-in attached.
+- [Taking over a system nobody can explain](https://kamobo.co.uk/insights/taking-over-a-system-nobody-can-explain/): Inheriting a platform is a research job first and an engineering job second. Budget for the reading.
+
+## Company
+- [About](https://kamobo.co.uk/about/): Kamobo Ltd is a UK cloud, data and AI consultancy led by James Dettmer. Eighteen years in production engineering, company number 16579058.
+- [Sectors](https://kamobo.co.uk/sectors/): Azure, data and AI engagements delivered across financial services, energy, professional education, media and streaming, legal and employment services.
+- [Contact](https://kamobo.co.uk/contact/): One email, a couple of paragraphs. A reply from the person who would do the work. No sales sequence.
+
+## Optional
+- [Full text of every page](https://kamobo.co.uk/llms-full.txt): the same content as the pages above, as plain markdown.

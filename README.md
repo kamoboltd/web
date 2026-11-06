@@ -59,6 +59,29 @@ asset's own bytes, so the query only changes when the asset does. It covers ever
 non-zero if a page has no stylesheet link, which is how a generated page that lost its
 `<head>` would get caught.
 
+### Search engines and AI assistants
+
+`scripts/seo.py` generates, on every build, from the pages themselves:
+
+- **JSON-LD** in every page head: the firm (`ProfessionalService`, with its full service
+  catalogue), James (`Person`), `WebSite`, `BreadcrumbList`, and per page type `Service`,
+  `BlogPosting`, `Article`, `AboutPage`, `ContactPage` or `CollectionPage`. **`FAQPage` only from
+  FAQs a visitor can see** (`<details class="faq-item">`); phantom FAQ markup is treated as spam.
+- **`sitemap.xml`** with `lastmod`, driven by `scripts/lastmod.json`, which records the date a
+  page's *visible text* last changed. Fingerprinting rewrites every file whenever the stylesheet
+  changes, so file dates would be wrong.
+- **`llms.txt`** (llmstxt.org format) and **`llms-full.txt`** (every page as plain markdown), for
+  assistants that read them.
+- **`robots.txt`**, explicitly allowing AI search, answer and training crawlers.
+
+**Cloudflare overrides the last one.** With the zone's managed robots.txt and "Block AI bots"
+switched on, Cloudflare prepends its own disallow rules and returns 403 to `GPTBot`, `ClaudeBot`
+and `CCBot` before this file is ever read. Those two settings live in the Cloudflare dashboard
+(AI Crawl Control / Bots), not in this repo.
+
+Nothing claimed in the schema may go beyond `freelance/proposals/_facts-pack.md`; `KNOWS_ABOUT`
+in `seo.py` is the list to keep honest.
+
 ### Client logos
 
 The logo row renders every mark as a uniform silhouette (`filter: grayscale(1) brightness(0)`
