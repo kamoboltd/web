@@ -389,12 +389,33 @@ CONTACT_CLOSE = '''
 ''' % (BOOK_ATTRS, MAIL)
 
 
+COMPARE = re.compile(r'<table class="compare">.*?</table>', re.S)
+
+
+def label_compare(body):
+    """Give each cell of a .compare table its column heading as data-label.
+
+    On a phone the table stacks into one block per row (styles.css), and the
+    label is what tells the reader which option a cell describes. Cells that
+    already carry a label are left alone, so re-housed pages stay stable."""
+    def one(m):
+        t = m.group(0)
+        heads = [re.sub(r"<[^>]+>", "", h).strip() for h in
+                 re.findall(r'<th scope="col">(.*?)</th>', t, re.S)]
+        def row(r):
+            cells = iter(heads[1:])
+            return re.sub(r"<td>", lambda _m: '<td data-label="%s">' % next(cells, ""), r.group(0))
+        return re.sub(r"<tr>.*?</tr>", row, t, flags=re.S)
+    return COMPARE.sub(one, body)
+
+
 def page(path, title, desc, body, active="", closer=None):
     out = os.path.join(ROOT, path.strip("/"), "index.html") if path != "/" \
         else os.path.join(ROOT, "index.html")
     d = os.path.dirname(out)
     if d:
         os.makedirs(d, exist_ok=True)
+    body = label_compare(body)
     lastmod = seo.lastmod_for(path, body, LEDGER)
     PAGES[path], LASTMODS[path] = (title, desc, body), lastmod
     parts = [p for p in path.split("/") if p]

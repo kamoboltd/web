@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=93c873c1" />
+  <link rel="stylesheet" href="/styles.css?v=76a58170" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -135,13 +135,13 @@
           <table class="compare">
             <thead><tr><th scope="col"><span class="sr-only">Compared</span></th><th scope="col">Synapse Link, CSV output</th><th scope="col">Link to Microsoft Fabric</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Where the data lives</th><td>Your own Azure storage account</td><td>A Dataverse-managed replica, read in Fabric through OneLake shortcuts</td></tr>
-              <tr><th scope="row">Format</th><td>CSV</td><td>Delta Parquet</td></tr>
-              <tr><th scope="row">Storage it consumes</th><td>Your storage account</td><td>Dataverse database capacity</td></tr>
-              <tr><th scope="row">What you run</th><td>Your own pipelines and tools downstream</td><td>No export pipeline; Fabric capacity to use the data</td></tr>
-              <tr><th scope="row">Network control</th><td>Your firewall rules and managed identities</td><td>Inside the Dataverse governance boundary</td></tr>
-              <tr><th scope="row">Choose it when</th><td>Consumers are outside Microsoft, or the data must sit in your own lake</td><td>Consumers are Power BI and Fabric</td></tr>
-              <tr><th scope="row">Status</th><td>Supported, no end date announced</td><td>Supported; Microsoft&rsquo;s recommended route for Delta output</td></tr>
+              <tr><th scope="row">Where the data lives</th><td data-label="Synapse Link, CSV output">Your own Azure storage account</td><td data-label="Link to Microsoft Fabric">A Dataverse-managed replica, read in Fabric through OneLake shortcuts</td></tr>
+              <tr><th scope="row">Format</th><td data-label="Synapse Link, CSV output">CSV</td><td data-label="Link to Microsoft Fabric">Delta Parquet</td></tr>
+              <tr><th scope="row">Storage it consumes</th><td data-label="Synapse Link, CSV output">Your storage account</td><td data-label="Link to Microsoft Fabric">Dataverse database capacity</td></tr>
+              <tr><th scope="row">What you run</th><td data-label="Synapse Link, CSV output">Your own pipelines and tools downstream</td><td data-label="Link to Microsoft Fabric">No export pipeline; Fabric capacity to use the data</td></tr>
+              <tr><th scope="row">Network control</th><td data-label="Synapse Link, CSV output">Your firewall rules and managed identities</td><td data-label="Link to Microsoft Fabric">Inside the Dataverse governance boundary</td></tr>
+              <tr><th scope="row">Choose it when</th><td data-label="Synapse Link, CSV output">Consumers are outside Microsoft, or the data must sit in your own lake</td><td data-label="Link to Microsoft Fabric">Consumers are Power BI and Fabric</td></tr>
+              <tr><th scope="row">Status</th><td data-label="Synapse Link, CSV output">Supported, no end date announced</td><td data-label="Link to Microsoft Fabric">Supported; Microsoft&rsquo;s recommended route for Delta output</td></tr>
             </tbody>
           </table>
         </div>

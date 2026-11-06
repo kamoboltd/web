@@ -413,4 +413,13 @@ strong { color: var(--ink); font-weight: 600; }
   .spec div:nth-child(2n) { border-right: 0; }
   .study-metrics { grid-template-columns: 1fr; }
   .practice { padding: 26px 22px 24px; }
+  /* Comparison tables stack: one block per row, each cell labelled with its
+     column (data-label, added by build.py), so nothing hides off-screen. */
+  .compare { min-width: 0; }
+  .compare thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .compare tbody, .compare tr, .compare th, .compare td { display: block; width: auto; }
+  .compare tr { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
+  .compare tbody th { width: auto; padding: 0 0 8px; border: 0; }
+  .compare td { padding: 0 0 8px; border: 0; }
+  .compare td::before { content: attr(data-label); display: block; margin-bottom: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 }
