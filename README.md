@@ -79,6 +79,10 @@ switched on, Cloudflare prepends its own disallow rules and returns 403 to `GPTB
 and `CCBot` before this file is ever read. Those two settings live in the Cloudflare dashboard
 (AI Crawl Control / Bots), not in this repo.
 
+**IndexNow.** After a deploy is live, run `python -I scripts/indexnow.py` to tell Bing (which
+feeds ChatGPT search and Copilot) which pages changed today; `--since YYYY-MM-DD` or `--all`
+widen it. The key is the hex-named `.txt` file in the site root; keep exactly one.
+
 Nothing claimed in the schema may go beyond `freelance/proposals/_facts-pack.md`; `KNOWS_ABOUT`
 in `seo.py` is the list to keep honest.
 
